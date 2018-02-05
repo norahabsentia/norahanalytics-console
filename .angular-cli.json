@@ -31,7 +31,6 @@
         "../node_modules/font-awesome/scss/font-awesome.scss",
         "../node_modules/nebular-icons/scss/nebular-icons.scss",
         "../node_modules/pace-js/templates/pace-theme-flash.tmpl.css",
-        "../node_modules/angular-text-input-highlight/text-input-highlight.css",
         "./app/@theme/styles/styles.scss"
       ],
       "scripts": [
@@ -74,9 +73,6 @@
     }
   },
   "defaults": {
-    "schematics": {
-      "collection": "@schematics/angular"
-    },
     "styleExt": "scss",
     "component": {}
   }
