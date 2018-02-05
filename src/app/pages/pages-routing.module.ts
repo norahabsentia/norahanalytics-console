@@ -11,23 +11,8 @@ const routes: Routes = [{
     path: 'dashboard',
     component: DashboardComponent,
   }, {
-    path: 'filler-library',
-    loadChildren: './filler-library/filler-library.module#FillerLibraryModule',
-  }, {
     path: 'ui-features',
     loadChildren: './ui-features/ui-features.module#UiFeaturesModule',
-  }, {
-    path: 'components',
-    loadChildren: './components/components.module#ComponentsModule',
-  }, {
-    path: 'maps',
-    loadChildren: './maps/maps.module#MapsModule',
-  }, {
-    path: 'charts',
-    loadChildren: './charts/charts.module#ChartsModule',
-  }, {
-    path: 'forms',
-    loadChildren: './forms/forms.module#FormsModule',
   }, {
     path: 'tables',
     loadChildren: './tables/tables.module#TablesModule',
