@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table';
 
 import { SmartTableService } from '../../../@core/data/smart-table.service';
+import { DataService } from '../../../@core/data/getcountrydata.service';
 
 @Component({
   selector: 'ngx-smart-table',
@@ -10,17 +11,46 @@ import { SmartTableService } from '../../../@core/data/smart-table.service';
     nb-card {
       transform: translate3d(0, 0, 0);
     }
+    .rightposition{
+       float:right;
+       margin:10px 0px;
+    }
+      .icon-setting{
+        display:inline-block;
+        padding: .375rem .75rem !important;
+      }
+      .dropdown, .dropup, .btn-group {
+    margin-bottom: 1rem;
+  }
+  .setwidth{
+    width: 25%;
+  }
+  .dropdownset{
+    height: 200px;
+    overflow: scroll;
+    width: 25%;
+  }
+
+  nb-card-body {
+    overflow: visible;
+  }
   `],
 })
-export class SmartTableComponent {
-
+export class SmartTableComponent implements OnInit {
   settings = {
-    add: {
-      addButtonContent: '<i class="nb-plus"></i>',
-      createButtonContent: '<i class="nb-checkmark"></i>',
-      cancelButtonContent: '<i class="nb-close"></i>',
-    },
-    edit: {
+     hideSubHeader: false,
+     actions:
+      {
+        position: 'right',
+        add : false,
+      custom: [
+        {
+          name: '<i class="nb-loop" (click)="onClick()"></i>',
+          title: '<i class="nb-loop" (click)="onClick()"></i>',
+        },
+      ],
+     },
+   edit: {
       editButtonContent: '<i class="nb-edit"></i>',
       saveButtonContent: '<i class="nb-checkmark"></i>',
       cancelButtonContent: '<i class="nb-close"></i>',
@@ -29,37 +59,58 @@ export class SmartTableComponent {
       deleteButtonContent: '<i class="nb-trash"></i>',
       confirmDelete: true,
     },
+    reset: {
+      reset: '<i class="nb-loop"></i>',
+      },
     columns: {
-      id: {
-        title: 'ID',
+      ProductID: {
+        title: 'Product ID',
         type: 'number',
-      },
-      firstName: {
-        title: 'First Name',
+         editable: false,
+         filter: false,
+        },
+      AndroidBase: {
+        title: 'Android Base Price',
         type: 'string',
+         editable: false,
+          filter: false,
       },
-      lastName: {
-        title: 'Last Name',
+      IOSBase: {
+        title: 'IOS Base Price',
         type: 'string',
+         editable: false,
+          filter: false,
       },
-      username: {
-        title: 'Username',
+      AndroidRecommended: {
+        title: 'Android Recommended Price Range',
         type: 'string',
+         editable: false,
+          filter: false,
       },
-      email: {
-        title: 'E-mail',
+      IOSRecommended: {
+        title: 'IOS Recommended Price Range',
         type: 'string',
+        editable: false,
+         filter: false,
       },
-      age: {
-        title: 'Age',
-        type: 'number',
+      AndroidCustom: {
+        title: 'Android Custom Price Range',
+        type: 'string',
+        editable: true,
+         filter: false,
+      },
+      IOSCustom: {
+        title: 'IOS Custom Price Range',
+        type: 'string',
+        editable: true,
+         filter: false,
       },
     },
   };
 
   source: LocalDataSource = new LocalDataSource();
-
-  constructor(private service: SmartTableService) {
+public tabledata: any
+  constructor(private service: SmartTableService, public dataservice: DataService) {
     const data = this.service.getData();
     this.source.load(data);
   }
@@ -71,4 +122,16 @@ export class SmartTableComponent {
       event.confirm.reject();
     }
   }
+ ngOnInit() {
+   this.getDataFromJson()
+  }
+getDataFromJson() {
+  this.dataservice.getData()
+                   .subscribe((data) => { this.tabledata
+                    this.tabledata = data.data;
+                  });
+
+}
+    changeonddl(): void {
+    }
 }
