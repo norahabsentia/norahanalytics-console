@@ -11,6 +11,7 @@ export class DataService {
 
     constructor(private http: Http) { }
    getData() {
+       debugger;
         return this.http.get('assets/country-currency.json')
                  .map((res: Response) => res.json());
     }
