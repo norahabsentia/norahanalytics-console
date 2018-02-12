@@ -1,0 +1,33 @@
+@import '../../@theme/styles/themes';
+@import '~@nebular/theme/styles/global/bootstrap/hero-buttons';
+
+@include nb-install-component() {
+  ngx-user-chart {
+    display: block;
+    height: 400px !important;
+    width: 100%;
+
+    /deep/ chart,
+    /deep/ .echart {
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+
+    /deep/ .list-icon {
+      margin-top: 10px;
+      i {
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        cursor: pointer;
+        font-size: 25px;
+      }
+    }
+  }
+
+  nb-card {
+    nb-card-body {
+      height: 470px;
+    }
+  }
+}
