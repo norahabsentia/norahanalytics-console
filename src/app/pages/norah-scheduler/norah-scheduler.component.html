@@ -4,93 +4,73 @@
          <!--Table Start-->
          <div class="notification-scheduler">
             <div class="container">
-               <div class="col-md-8 col-md-offset-2">
+              <div class="col-md-8 col-md-offset-2">
                   <div class="nf-detail">
                      <div class="page-title">
-                        <a href="#"><img src="assets/images/Arrow.png" alt=""></a>
+                        <a href="#"><img src="images/Arrow.png" alt=""></a>
                         <h1>notification scheduler</h1>
                      </div>
                      <div class="table-responsive">
-                      
+                        <form class="sched_btn" (ngSubmit)="onTransfer(fmTransfer)" #fmTransfer="ngForm">
                         <table data-toggle="table" data-cache="false" data-height="300" class="table table-bordered table-striped">
                            <thead>
                               <tr>
                                  <th>Customer Segments</th>
-                                 <th>Scheduling</th>
+                                 <th colspan="2" style="text-align: center;">Scheduling</th>
+                                 
                               </tr>
                            </thead>
-                           <form (ngSubmit)="onTransfer(fmTransfer)" #fmTransfer="ngForm">
                            <tbody>
                               <tr>
                                  <td>High Churner</td>
                                  <td>
                                     <div class="rail-select">
                                        <div class="select-side">
-                                          <i class="glyphicon glyphicon-triangle-bottom"></i>
+                                         <i class="fa fa-caret-down fa-2x" style="margin: 25%;"></i>
                                        </div>
-                                       <!-- <select class="form-control" id="sel1">
-                                          <option>Once a day</option>
-                                          <option>Once a day 2</option>
-                                          <option>Once a day 3</option>
-                                          <option>Once a day 4</option>
-                                       </select> -->
-                                    <select class="form-control" name ="optionSelected" id="sel1" required [(ngModel)]='norahscheduler[0].high_churner.first'>
+                                       
+                                       <select class="form-control" name ="optionSelected" id="sel1" required [(ngModel)]='norahscheduler[0].high_churner.first'>
                                         <option class='option' *ngFor='let option of options' [value]="option">{{option}}</option>
-                                    </select>
-                                   
-                                    
+                                      </select>
                                     </div>
-                                    <br>
-                                    <span class="green">* {{norahscheduler[0].high_churner.first}}</span>
-
+                                    <div class="message"><span class="green">*{{norahscheduler[0].high_churner.first}}</span></div>
                                  </td>
                                  <td>
                                     <div class="rail-select">
                                        <div class="select-side">
-                                          <i class="glyphicon glyphicon-triangle-bottom"></i>
+                                          <i class="fa fa-caret-down fa-2x" style="margin: 25%;"></i>
                                        </div>
-                                       <!-- <select class="form-control" id="sel1">
-                                          <option>Once a day</option>
-                                          <option>Once a day 2</option>
-                                          <option>Once a day 3</option>
-                                          <option>Once a day 4</option>
-                                       </select> -->
-                                    <select class="form-control" id="sel1" name ="optionSelected4" required [(ngModel)]='norahscheduler[0].high_churner.second'>
+                                       <select class="form-control" id="sel1" name ="optionSelected4" required [(ngModel)]='norahscheduler[0].high_churner.second'>
                                         <option class='option' *ngFor='let option of options2' [value]="option">{{option}}</option>
                                     </select>
-                                   
-                                    
                                     </div>
-                                    <br><br>
-                                    <span class="green">*{{norahscheduler[0].high_churner.second}}</span>
+                                     <div class="message"><span class="red">*{{norahscheduler[0].high_churner.second}}</span></div>
                                  </td>
                               </tr>
-
                               <tr>
                                  <td>Regular</td>
                                  <td>
                                     <div class="rail-select">
                                        <div class="select-side">
-                                          <i class="glyphicon glyphicon-triangle-bottom"></i>
+                                          <i class="fa fa-caret-down fa-2x" style="margin: 25%;"></i>
                                        </div>
-                                        <select class="form-control" id="sel1" name ="optionSelected2" required [(ngModel)]='norahscheduler[0].regular.first' >
+                                       <select class="form-control" id="sel1" name ="optionSelected2" required [(ngModel)]='norahscheduler[0].regular.first' >
                                         <option class='option' *ngFor='let option of options' [value]="option">{{option}}</option>
-                                    </select>
+                                      </select>
                                     </div>
-                                    <br>
-                                    <span class="red">*{{norahscheduler[0].regular.first}}</span>
+
+                                     <div class="message"><span class="red">*{{norahscheduler[0].regular.first}}</span></div>
                                  </td>
                                  <td>
                                     <div class="rail-select">
                                        <div class="select-side">
-                                          <i class="glyphicon glyphicon-triangle-bottom"></i>
+                                          <i class="fa fa-caret-down fa-2x" style="margin: 25%;"></i>
                                        </div>
-                                        <select class="form-control" name ="optionSelected5"  id="sel1" required [(ngModel)]='norahscheduler[0].regular.second'>
+                                       <select class="form-control" name ="optionSelected5"  id="sel1" required [(ngModel)]='norahscheduler[0].regular.second'>
                                         <option class='option' *ngFor='let option of options2' [value]="option">{{option}}</option>
-                                    </select>
+                                      </select>
                                     </div>
-                                    <br><br>
-                                    <span class="red">*{{norahscheduler[0].regular.second}}</span>
+                                     <div class="message"><span class="red">*{{norahscheduler[0].regular.second}}</span></div>
                                  </td>
                               </tr>
                               <tr>
@@ -98,60 +78,55 @@
                                  <td>
                                     <div class="rail-select">
                                        <div class="select-side">
-                                          <i class="glyphicon glyphicon-triangle-bottom"></i>
+                                          <i class="fa fa-caret-down fa-2x" style="margin: 25%;"></i>
                                        </div>
                                        <select class="form-control" id="sel1" name ="optionSelected3" required [(ngModel)]='norahscheduler[0].loyal.first'>
                                         <option class='option' *ngFor='let option of options' [value]="option">{{option}}</option>
                                     </select>
                                     </div>
-                                    <br>
-                                    <span class="red">* {{norahscheduler[0].loyal.first}}</span>
+                                     <div class="message"><span class="red">*{{norahscheduler[0].loyal.first}}</span></div>
                                  </td>
                                  <td>
                                     <div class="rail-select">
                                        <div class="select-side">
-                                          <i class="glyphicon glyphicon-triangle-bottom"></i>
+                                          <i class="fa fa-caret-down fa-2x" style="margin: 25%;"></i>
                                        </div>
                                        <select class="form-control" id="sel1" name ="optionSelected6" required [(ngModel)]='norahscheduler[0].loyal.second'>
                                         <option class='option' *ngFor='let option of options2' [value]="option">{{option}}</option>
-                                    </select>
+                                      </select>
                                     </div>
-                                    <br><br>
-                                    <span class="red">* {{norahscheduler[0].loyal.second}}</span>
+                                     <div class="message"><span class="red">*{{norahscheduler[0].loyal.second}}</span></div>
                                  </td>
                               </tr>
                               <tr>
-                                 <td colspan="3">High Affluence</td>
-                                 <td colspan="3"></td>
+                                 <td>High Affluence</td>
+                                 <td colspan="2"></td>
                               </tr>
                               <tr>
-                                 <td colspan="3"></td>
-                                 <td colspan="3"></td>
+                                 <td ></td>
+                                 <td colspan="2"></td>
                               </tr>
                               <tr>
-                                 <td colspan="3"></td>
-                                 <td colspan="3"></td>
+                                 <td ></td>
+                                 <td colspan="2"></td>
                               </tr>
                               <tr>
-                                 <td colspan="3"></td>
-                                 <td colspan="3"></td>
+                                 <td></td>
+                                 <td colspan="2"></td>
                               </tr>
                               <tr>
-                                 <td colspan="3"></td>
-                                 <td colspan="3"></td>
+                                 <td></td>
+                                 <td colspan="2"></td>
                               </tr>
                            </tbody>
-                           <button type="submit"  class="btn btn-primary" >Save</button>
-                           <button type="button" (click)="reset()" class="btn btn-primary" >Reset</button>
-                        </form>
                         </table>
-                       
-
-                        <div class="action-btn">
-                            <a href="#"><img src="assets/images/check.png" alt=""></a>
-                            <a href="#"><img src="assets/images/close.png" alt=""></a>
-                            <a href="#"><img src="assets/images/refresh.png" alt=""></a>
+                         <div class="action-btn">
+                            <a href="javascript:void(0);" (click)="onTransfer(fmTransfer)"><img src="assets/images/check.png" alt=""></a>
+                           <!--  <a href="#" (click)="reset()"><img src="assets/images/close.png" alt=""></a> -->
+                            <a href="javascript:void(0);" (click)="reset()"><img src="assets/images/refresh.png" alt=""></a>
                         </div>
+                      </form>
+                       
                      </div>
                   </div>
                </div>

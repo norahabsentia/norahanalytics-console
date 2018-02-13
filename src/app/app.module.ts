@@ -9,19 +9,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { CoreModule } from './@core/core.module';
-
-import { AngularFireModule } from 'angularfire2';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
-import { FormsModule} from '@angular/forms';  
-
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
-import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { ThemeModule } from './@theme/theme.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
-
-
 
 @NgModule({
   declarations: [AppComponent],
@@ -31,13 +23,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HttpModule,
     AppRoutingModule,
 
-    AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireDatabaseModule,
-
     NgbModule.forRoot(),
     ThemeModule.forRoot(),
     CoreModule.forRoot(),
-
   ],
   bootstrap: [AppComponent],
   providers: [
