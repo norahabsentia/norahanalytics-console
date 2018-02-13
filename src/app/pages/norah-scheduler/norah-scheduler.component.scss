@@ -1,3 +1,5 @@
+
+
 @media (min-width: 1200px) and (max-width: 1300px) {} 
 
 
@@ -331,10 +333,27 @@ img
     margin: 0 10px 0 0;
 }
 .action-btn {
-    position: absolute;
-    bottom: 50px;
-    right: 40px;
+    position: fixed;
+    bottom: 27%;
+    right: 23%;
 }
 /*--------------- header wrapper start -------*/
 
+.nf-detail[_ngcontent-c11] table[_ngcontent-c11] tbody[_ngcontent-c11] tr[_ngcontent-c11] td[_ngcontent-c11] span[_ngcontent-c11]{padding: 5px 15px 0;width: 100%;}
 
+.nf-detail[_ngcontent-c11] table[_ngcontent-c11] tbody[_ngcontent-c11] tr[_ngcontent-c11] td[_ngcontent-c11]{height: 90px;width: 33%;}
+
+.message{float:left;width:100%;margin-top:10%;}
+.sched_btn{position:relative;height: 300px;overflow-y: auto;overflow-x: hidden;padding-bottom: 40px;}
+
+.fa fa-caret-down {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    
+    }
