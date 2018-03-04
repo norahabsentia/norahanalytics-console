@@ -1,4 +1,82 @@
-<nb-card>
+<div class="row">
+  <div class="col-md-6 col-xs-12">
+    <nb-card>
+      <nb-card-body>
+        <div class="label-top">
+          Chart Prediction Overview
+        </div>
+        <chart type="doughnut" [data]="data" [options]="options"></chart>
+      </nb-card-body>
+    </nb-card>
+  </div>
+  <div class="col-md-6 col-xs-12">
+    <nb-card>
+      <nb-card-body>
+        <nb-tabset fullWidth="true" (changeTab)="changeTab1($event)">
+          <nb-tab *ngFor="let item of dataSet1" [tabTitle]="item.lab"></nb-tab>
+        </nb-tabset>
+        <chart *ngIf="dataBarData1Options.type === 'Histogram' && dataBarData1Options" type="bar" [data]="dataBarData1" [options]="optionsBar"></chart>
+
+        <div class="table-wrap-scroll" *ngIf="dataBarData1Options.type === 'Table'">
+            <!--<ng2-smart-table *ngIf="dataBar1Options.type === 'Table'" [settings]="settings" [source]="source" reset></ng2-smart-table>-->
+          <div  *ngIf="dataBarData1Options.type === 'Table' && dataTable1" class="tbody-smart">
+            <div class="row-table-smart">
+              <div class="row-table-item column-4" style="border-left: 0;">
+                <div>
+                  {{selectedLocation}}
+                </div>
+              </div>
+              <div class="row-table-item column-4">
+                <div>
+                  High risk
+                </div>
+              </div>
+              <div class="row-table-item column-4">
+                <div>
+                  Medium risk
+                </div>
+              </div>
+              <div class="row-table-item column-4">
+                <div>
+                  Low risk
+                </div>
+              </div>
+            </div>
+            <div *ngFor="let item of dataTable1" class="row-table-smart">
+              <div class="row-table-item column-4" style="border-left: 0;">
+                <div>
+                  {{item.value}}
+                </div>
+              </div>
+              <div class="row-table-item column-4">
+                <div>
+                  {{item.High_Risk}}
+                </div>
+              </div>
+              <div class="row-table-item column-4">
+                <div>
+                  {{item.Medium_Risk}}
+                </div>
+              </div>
+              <div class="row-table-item column-4">
+                <div>
+                  {{item.Low_Risk}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="switcher-wrap">
+          <switcher [charts]="charts" (changeEvent)="changeTabData1($event)"></switcher>
+        </div>
+
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>
+
+<!-- <nb-card>
   <nb-card-body>
     <div class="container">
       <div class="row">
@@ -51,9 +129,80 @@
       </div>
     </div>
   </nb-card-body>
-</nb-card>
+</nb-card> -->
 
-<nb-card>
+<div class="row">
+  <div class="col-md-12 col-xs-12">
+    <nb-card class="auto-height">
+      <nb-card-body>
+        <div class="label-top">User Distribution on basis of origin</div>
+
+        <nb-tabset fullWidth="true" (changeTab)="changeTab2($event)">
+          <nb-tab *ngFor="let item of dataSet2" [tabTitle]="item.lab"></nb-tab>
+        </nb-tabset>
+
+        <chart *ngIf="dataBarData2Options.type === 'Histogram' && dataBarData2Options" type="bar" [data]="dataBarData2" [options]="optionsBar"></chart>
+        
+        <div class="table-wrap-scroll" *ngIf="dataBarData2Options.type === 'Table'">
+          <!--<ng2-smart-table *ngIf="dataBar1Options.type === 'Table'" [settings]="settings" [source]="source" reset></ng2-smart-table>-->
+          <div *ngIf="dataBarData2Options.type === 'Table' && dataTable2" class="tbody-smart">
+            <div class="row-table-smart">
+              <div class="row-table-item column-4" style="border-left: 0;">
+                <div>
+                  <!-- {{selectedLocation}} -->
+                </div>
+              </div>
+              <div class="row-table-item column-4">
+                <div>
+                  High risk
+                </div>
+              </div>
+              <div class="row-table-item column-4">
+                <div>
+                  Medium risk
+                </div>
+              </div>
+              <div class="row-table-item column-4">
+                <div>
+                  Low risk
+                </div>
+              </div>
+            </div>
+            <div *ngFor="let item of dataTable2" class="row-table-smart">
+              <div class="row-table-item column-4" style="border-left: 0;">
+                <div>
+                  {{item.value}}
+                </div>
+              </div>
+              <div class="row-table-item column-4">
+                <div>
+                  {{item.High_Risk}}
+                </div>
+              </div>
+              <div class="row-table-item column-4">
+                <div>
+                  {{item.Medium_Risk}}
+                </div>
+              </div>
+              <div class="row-table-item column-4">
+                <div>
+                  {{item.Low_Risk}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="switcher-wrap">
+          <switcher [charts]="charts" (changeEvent)="changeTabData2($event)"></switcher>
+        </div>
+
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>
+
+<!-- <nb-card>
   <nb-card-body>
     <div class="container">
       <div class="row">
@@ -63,9 +212,9 @@
           </div>
           <div>
             <chart *ngIf="dataBar1Options.type === 'Histogram' && dataBar1" type="bar" [data]="dataBar1" [options]="optionsBar"></chart>
-            <div class="table-wrap-scroll" *ngIf="dataBar1Options.type === 'Table'">
+            <div class="table-wrap-scroll" *ngIf="dataBar1Options.type === 'Table'"> -->
                 <!--<ng2-smart-table *ngIf="dataBar1Options.type === 'Table'" [settings]="settings" [source]="source" reset></ng2-smart-table>-->
-              <div  *ngIf="dataBar1Options.type === 'Table' && dataTable1" class="tbody-smart">
+              <!-- <div  *ngIf="dataBar1Options.type === 'Table' && dataTable1" class="tbody-smart">
                 <div class="row-table-smart">
                   <div class="row-table-item column-4" style="border-left: 0;">
                     <div>
@@ -141,9 +290,212 @@
       </div>
     </div>
   </nb-card-body>
-</nb-card>
+</nb-card> -->
 
-<nb-card>
+<div class="row">
+  <div class="col-md-6 col-xs-12">
+    <nb-card>
+      <nb-card-body>
+        <nb-tabset fullWidth="true" (changeTab)="changeTab3($event)">
+          <nb-tab *ngFor="let item of dataSet3" [tabTitle]="item.lab"></nb-tab>
+        </nb-tabset>
+        <chart *ngIf="dataBarData3Options.type === 'Histogram' && dataBarData3Options" type="bar" [data]="dataBarData3" [options]="optionsBar"></chart>
+        
+        <div class="table-wrap-scroll" *ngIf="dataBarData3Options.type === 'Table'">
+          <!--<ng2-smart-table *ngIf="dataBar1Options.type === 'Table'" [settings]="settings" [source]="source" reset></ng2-smart-table>-->
+          <div *ngIf="dataBarData3Options.type === 'Table' && dataTable3" class="tbody-smart">
+            <div class="row-table-smart">
+              <div class="row-table-item column-4" style="border-left: 0;">
+                <div>
+                  <!-- {{selectedLocation}} -->
+                </div>
+              </div>
+              <div class="row-table-item column-4">
+                <div>
+                  High risk
+                </div>
+              </div>
+              <div class="row-table-item column-4">
+                <div>
+                  Medium risk
+                </div>
+              </div>
+              <div class="row-table-item column-4">
+                <div>
+                  Low risk
+                </div>
+              </div>
+            </div>
+            <div *ngFor="let item of dataTable3" class="row-table-smart">
+              <div class="row-table-item column-4" style="border-left: 0;">
+                <div>
+                  {{item.value}}
+                </div>
+              </div>
+              <div class="row-table-item column-4">
+                <div>
+                  {{item.High_Risk}}
+                </div>
+              </div>
+              <div class="row-table-item column-4">
+                <div>
+                  {{item.Medium_Risk}}
+                </div>
+              </div>
+              <div class="row-table-item column-4">
+                <div>
+                  {{item.Low_Risk}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="switcher-wrap">
+          <switcher [charts]="charts" (changeEvent)="changeTabData3($event)"></switcher>
+        </div>
+      </nb-card-body>
+    </nb-card>
+  </div>
+  <div class="col-md-6 col-xs-12">
+    <nb-card>
+      <nb-card-body>
+        <nb-tabset fullWidth="true" (changeTab)="changeTab4($event)">
+          <nb-tab *ngFor="let item of dataSet4" [tabTitle]="item.display"></nb-tab>
+        </nb-tabset>
+        <chart *ngIf="dataBarData4Options.type === 'Histogram' && dataBarData4Options" type="bar" [data]="dataBarData4" [options]="optionsBar"></chart>
+
+        <div class="table-wrap-scroll" *ngIf="dataBarData4Options.type === 'Table'">
+          <!--<ng2-smart-table *ngIf="dataBar1Options.type === 'Table'" [settings]="settings" [source]="source" reset></ng2-smart-table>-->
+          <div *ngIf="dataBarData4Options.type === 'Table' && dataTable4" class="tbody-smart">
+            <div class="row-table-smart">
+              <div class="row-table-item column-4" style="border-left: 0;">
+                <div>
+                  <!-- {{selectedLocation}} -->
+                </div>
+              </div>
+              <div class="row-table-item column-4">
+                <div>
+                  High risk
+                </div>
+              </div>
+              <div class="row-table-item column-4">
+                <div>
+                  Medium risk
+                </div>
+              </div>
+              <div class="row-table-item column-4">
+                <div>
+                  Low risk
+                </div>
+              </div>
+            </div>
+            <div *ngFor="let item of dataTable4" class="row-table-smart">
+              <div class="row-table-item column-4" style="border-left: 0;">
+                <div>
+                  {{item.value}}
+                </div>
+              </div>
+              <div class="row-table-item column-4">
+                <div>
+                  {{item.High_Risk}}
+                </div>
+              </div>
+              <div class="row-table-item column-4">
+                <div>
+                  {{item.Medium_Risk}}
+                </div>
+              </div>
+              <div class="row-table-item column-4">
+                <div>
+                  {{item.Low_Risk}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="switcher-wrap">
+          <switcher [charts]="charts" (changeEvent)="changeTabData4($event)"></switcher>
+        </div>
+
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12 col-xs-12">
+    <nb-card class="auto-height">
+      <nb-card-body>
+        <!-- <div class="label-top">User `Distribution on basis of origin</div> -->
+
+        <nb-tabset fullWidth="true" (changeTab)="changeTab5($event)">
+          <nb-tab *ngFor="let item of dataSet5" [tabTitle]="item.display"></nb-tab>
+        </nb-tabset>
+
+        <chart *ngIf="dataBarData5Options.type === 'Histogram' && dataBarData5Options" type="bar" [data]="dataBarData5" [options]="optionsBar"></chart>
+
+        <div class="table-wrap-scroll" *ngIf="dataBarData5Options.type === 'Table'">
+          <!--<ng2-smart-table *ngIf="dataBar1Options.type === 'Table'" [settings]="settings" [source]="source" reset></ng2-smart-table>-->
+          <div *ngIf="dataBarData5Options.type === 'Table' && dataTable5" class="tbody-smart">
+            <div class="row-table-smart">
+              <div class="row-table-item column-4" style="border-left: 0;">
+                <div>
+                  <!-- {{selectedLocation}} -->
+                </div>
+              </div>
+              <div class="row-table-item column-4">
+                <div>
+                  High risk
+                </div>
+              </div>
+              <div class="row-table-item column-4">
+                <div>
+                  Medium risk
+                </div>
+              </div>
+              <div class="row-table-item column-4">
+                <div>
+                  Low risk
+                </div>
+              </div>
+            </div>
+            <div *ngFor="let item of dataTable5" class="row-table-smart">
+              <div class="row-table-item column-4" style="border-left: 0;">
+                <div>
+                  {{item.value}}
+                </div>
+              </div>
+              <div class="row-table-item column-4">
+                <div>
+                  {{item.High_Risk}}
+                </div>
+              </div>
+              <div class="row-table-item column-4">
+                <div>
+                  {{item.Medium_Risk}}
+                </div>
+              </div>
+              <div class="row-table-item column-4">
+                <div>
+                  {{item.Low_Risk}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="switcher-wrap">
+          <switcher [charts]="charts" (changeEvent)="changeTabData5($event)"></switcher>
+        </div>
+
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>
+
+<!-- <nb-card>
     <nb-card-body>
       <div class="container">
         <div class="row">
@@ -230,7 +582,7 @@
         </div>
       </div>
     </nb-card-body>
-  </nb-card>
+  </nb-card> -->
 
 <nb-card>
   <nb-card-body>

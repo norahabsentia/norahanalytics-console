@@ -178,3 +178,9 @@
     height: 2px;
     margin: 3px;
 }
+
+nb-card {
+    &.auto-height {
+        max-height: 100%;
+    }
+}
