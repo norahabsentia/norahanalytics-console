@@ -188,7 +188,14 @@ chart-switcher > nb-card > nb-card-body > div:nth-child(4) > div > ng2-smart-tab
   
   .full-modal > .modal-dialog {
     max-width: 80% !important;
-    min-height: calc(100% - (1.75rem * 2));
+    min-height: 80vh;
+    height: 80vh;
+
+    & .modal-content {
+      min-height: 80vh;
+      height: 80vh;
+
+    }
   }
 }
 
