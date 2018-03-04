@@ -183,6 +183,15 @@ chart-switcher > nb-card > nb-card-body > div:nth-child(4) > div > ng2-smart-tab
   }
 }
 
+// setting modal height to 100%
+@media screen and (min-width: 576px) {
+  
+  .full-modal > .modal-dialog {
+    max-width: 80% !important;
+    min-height: calc(100% - (1.75rem * 2));
+  }
+}
+
 // Smart-table-Table
 .header-table-smart{
   display: flex;

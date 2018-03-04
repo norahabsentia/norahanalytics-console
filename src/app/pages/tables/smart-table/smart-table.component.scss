@@ -10,26 +10,27 @@
   margin-bottom: 12px;
 }
 
-// setting modal height to 100%
-.modal-wrap .modal-wrap-second {
-  height: 100%;
 
-  & .modal-wrap-iside {
-    bottom: 0;
-    display: flex;
-    flex-direction: column;
+
+
+.header-table-smart .column .prise-range {
+  & .max-range, & .min-range {
+    height: 42px;
+    line-height: 42px;
+    padding-top: 0;
   }
+}
 
-  & .main-content-wrap {
-    flex-grow: 1;
-  }
-
+.header-table-smart .column .range-header {
+  height: 42px;
+  line-height: 42px;
+  padding-top: 0;
 }
 
 
 nb-card {
   transform: translate3d(0, 0, 0);
-  max-height: 800px;
+  max-height: none;
 }
 .rightposition {
   float: right;

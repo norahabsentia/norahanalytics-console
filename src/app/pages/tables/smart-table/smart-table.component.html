@@ -1,163 +1,181 @@
-<div style="position: relative; height: 100%">
-    <div *ngIf="showModal" class="modal-wrap">
-        <div class="modal-wrap-second">
-          <div class="modal-wrap-iside">
-                <div class="heared-modal">
-                        Product ID Price Tiers
-                        <button (click)="showModal = !true" class="close-icon-wrap">
-                        <!-- <i class="material-icons icon-close">close</i> -->
-                                <i class="ion-close-round"></i>
-                        </button>
-                    </div>
-                    <div class="main-content-wrap">
-                        <div class="prew-button">
-                            <!-- <i class="material-icons">keyboard_arrow_right</i> -->
-                            <button>
-                                <i class="ion-chevron-left"></i>
-                            </button>
-                        </div>
-                        <div class="main-content chart-modal">
-                          <chart id="stackbar" *ngIf="dataBar1 " type="bar" [data]="dataBar1" [options]="optionsBar"></chart>
-                        </div>
-                        <div class="next-button">
-                            <!-- <i class="material-icons">keyboard_arrow_right</i> -->
-                            <button>
-                                <i class="ion-chevron-right"></i>
-                            </button>
-                        </div>
-                    </div>
-          </div>
-        </div>
+<ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-header">
+        <h4 class="modal-title">Product ID Price Tiers </h4>
+            <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
     </div>
-    
+    <div class="modal-body d-flex justify-content-center align-items-center">
 
-    <nb-card>
-        
-        <nb-card-header class="header-smart-table">
-            <div class="system-wrap">
+        <div class="main-content-wrap d-flex align-items-center justify-content-center">
+            <div class="prew-button">
+                <!-- <i class="material-icons">keyboard_arrow_right</i> -->
                 <button>
-                    Android
-                </button>
-                <button>
-                    IOS
+                    <i class="ion-chevron-left"></i>
                 </button>
             </div>
-            <div class="dropdown dropdown-smart-table" ngbDropdown>
-                Currency &nbsp;
-                <!-- <button class="btn btn-primary setwidth" type="button" ngbDropdownToggle>
+            <div class="main-content chart-modal">
+                <chart id="stackbar" *ngIf="dataBar1 " type="bar" [data]="dataBar1" [options]="optionsBar"></chart>
+            </div>
+            <div class="next-button">
+                <!-- <i class="material-icons">keyboard_arrow_right</i> -->
+                <button>
+                    <i class="ion-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>
+    </div>
+</ng-template>
+
+
+<nb-card>
+
+    <nb-card-header class="header-smart-table">
+        <div class="system-wrap">
+            <button>
+                Android
+            </button>
+            <button>
+                IOS
+            </button>
+        </div>
+        <div class="dropdown dropdown-smart-table" ngbDropdown>
+            Currency &nbsp;
+            <!-- <button class="btn btn-primary setwidth" type="button" ngbDropdownToggle>
             Dropdown
           </button>
           <ul  class="dropdown-menu dropdownset" ngbDropdownMenu>
             <li *ngFor="let item of tabledata" class="dropdown-item">{{item.currency}}</li>
     
           </ul> -->
-                <select>
-            <option (change)="changeonddl()"  *ngFor="let item of tabledata" value="{{item.currency}}">{{item.currency}}</option>
-    
-          </select>
-    
+            <select>
+                <option (change)="changeonddl()" *ngFor="let item of tabledata" value="{{item.currency}}">{{item.currency}}</option>
+
+            </select>
+
             <!-- <button (click)="showModal = true">ClicK</button> -->
-            </div>
-    
-            <!-- <button class="btn btn-hero-success btn-demo icon-setting" (click)="onClick()"><i class="nb-loop"></i></button> -->
-        </nb-card-header>
-    
-        <nb-card-body class="smart-table-body">
-            <div class="table-smart">
-                <div class="header-table-smart">
-                    <div class="column center-alingh" style="border-left: 0;">
-                        <div>
-                            Product ID
-                        </div>
+        </div>
+
+        <!-- <button class="btn btn-hero-success btn-demo icon-setting" (click)="onClick()"><i class="nb-loop"></i></button> -->
+    </nb-card-header>
+
+    <nb-card-body class="smart-table-body">
+        <div class="table-smart">
+            <div class="header-table-smart">
+                <div class="column center-alingh" style="border-left: 0;">
+                    <div>
+                        Product ID
                     </div>
-                    <div class="column center-alingh small-cell">
-                            <div>
-                                Base Price
-                            </div>
-                        </div>
-                    <div class="column column-range big-cell-range">
-                        <div class="range-header ">
-                            Recommendet Price Range
-                        </div>
-                        <div class="prise-range">
-                            <div class="min-range">
-                                Min
-                            </div>
-                            <div class="max-range">
-                                Max
-                            </div>
-                        </div>
+                </div>
+                <div class="column center-alingh small-cell">
+                    <div>
+                        Base Price
                     </div>
-                    <div class="column column-range big-cell-range">
-                        <div class="range-header">
-                            Custom Price Range
-                        </div>
-                        <div class="prise-range">
-                            <div class="min-range">
-                                Min
-                            </div>
-                            <div class="max-range">
-                                Max
-                            </div>
-                        </div>
+                </div>
+                <div class="column column-range big-cell-range">
+                    <div class="range-header ">
+                        Recommendet Price Range
                     </div>
-                    <div class="column center-alingh small-cell-icon">
-                        <div>
-                            Actions
+                    <div class="prise-range">
+                        <div class="min-range">
+                            Min
+                        </div>
+                        <div class="max-range">
+                            Max
                         </div>
                     </div>
                 </div>
-                <div class="tbody-smart">
-                    <div *ngFor="let item of dataTCopy; let i = index" class="row-table-smart">
-                        <div class="row-table-item" style="border-left: 0;">
-                            <div class="row-table-item-iside text-hiden">
-                                {{item.ProductID}}
-                            </div>
+                <div class="column column-range big-cell-range">
+                    <div class="range-header">
+                        Custom Price Range
+                    </div>
+                    <div class="prise-range">
+                        <div class="min-range">
+                            Min
                         </div>
-                        <div class="row-table-item small-cell">
-                            <div class="row-table-item-iside text-hiden">{{item.BasePrice}}</div>
-                        </div>
-                        <div class="row-table-item big-cell-range" style="border:0;">
-                            <div class="row-table-item"  style="width: calc(50% - -1px);">
-                                <div class="row-table-item-iside text-hiden">{{item.RPRMin}}</div>
-                            </div>
-                            <div class="row-table-item" style="width: calc(50% + 1px);">
-                                <div class="row-table-item-iside text-hiden">{{item.RPRMax}}</div>
-                                <i (click)="showModal = true" class="ion-stats-bars icon-position"></i>
-                            </div>
-                        </div>
-                        <div class="row-table-item big-cell-range" style="border:0;">
-                            <div class="row-table-item" style="width: calc(50%);">
-                                <div *ngIf="!option[i]" class="row-table-item-iside text-hiden">{{item.CPRMin}}</div>
-                                <input *ngIf="option[i]" class="input-smart-table" type="text" [(ngModel)]="item.CPRMin" placeholder="">
-                            </div>
-                            <div class="row-table-item" style="width: calc(50%);">
-                                <div *ngIf="!option[i]" class="row-table-item-iside text-hiden">{{item.CPRMax}}</div>
-                                <input *ngIf="option[i]" class="input-smart-table" type="text" [(ngModel)]="item.CPRMax" placeholder="">
-                                <i (click)="showModal = true" class="ion-stats-bars icon-position"></i>
-                            </div>
-                        </div>
-                        <div class="row-table-item small-cell-icon">
-                            <div class="row-table-item-iside icon-wrap-smart-table">
-                                <i *ngIf="option[i]" (click)="option[i] = false" class="fa fa fa-save"></i>
-                                <i *ngIf="!option[i]" (click)="option[i] = true" class="ion-edit"></i>
-                                <i (click)="remove(i)" class="ion-trash-b"></i>
-                                <i (click)="refresh(i)" class="ion-loop"></i>
-                            </div>
+                        <div class="max-range">
+                            Max
                         </div>
                     </div>
                 </div>
+                <div class="column center-alingh small-cell-icon">
+                    <div>
+                        Actions
+                    </div>
+                </div>
             </div>
-            <!-- <ng2-smart-table [settings]="settings" [source]="source" (deleteConfirm)="onDeleteConfirm($event)" reset>
+            <div class="tbody-smart">
+                <div *ngFor="let item of dataTCopy; let i = index" class="row-table-smart">
+                    <div class="row-table-item" style="border-left: 0;">
+                        <div class="row-table-item-iside text-hiden">
+                            {{item.ProductID}}
+                        </div>
+                    </div>
+                    <div class="row-table-item small-cell">
+                        <div class="row-table-item-iside text-hiden">{{item.BasePrice}}</div>
+                    </div>
+                    <div class="row-table-item big-cell-range" style="border:0;">
+                        <div class="row-table-item" style="width: calc(50% - -1px);">
+                            <div class="row-table-item-iside text-hiden">{{item.RPRMin}}</div>
+                        </div>
+                        <div class="row-table-item" style="width: calc(50% + 1px);">
+                            <div class="row-table-item-iside text-hiden">{{item.RPRMax}}</div>
+                            <i (click)="open(content)" class="ion-stats-bars icon-position"></i>
+                        </div>
+                    </div>
+                    <div class="row-table-item big-cell-range" style="border:0;">
+                        <div class="row-table-item" style="width: calc(50%);">
+                            <div *ngIf="!option[i]" class="row-table-item-iside text-hiden">{{item.CPRMin}}</div>
+                            <input *ngIf="option[i]" class="input-smart-table" type="text" [(ngModel)]="item.CPRMin" placeholder="">
+                        </div>
+                        <div class="row-table-item" style="width: calc(50%);">
+                            <div *ngIf="!option[i]" class="row-table-item-iside text-hiden">{{item.CPRMax}}</div>
+                            <input *ngIf="option[i]" class="input-smart-table" type="text" [(ngModel)]="item.CPRMax" placeholder="">
+                            <i (click)="open(content)" class="ion-stats-bars icon-position"></i>
+                        </div>
+                    </div>
+                    <div class="row-table-item small-cell-icon">
+                        <div class="row-table-item-iside icon-wrap-smart-table">
+                            <i *ngIf="option[i]" (click)="option[i] = false" class="fa fa fa-save"></i>
+                            <i *ngIf="!option[i]" (click)="option[i] = true" class="ion-edit"></i>
+                            <i (click)="remove(i)" class="ion-trash-b"></i>
+                            <i (click)="refresh(i)" class="ion-loop"></i>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <nav class="mt-3" aria-label="Page navigation example">
+            <ul class="pagination d-flex justify-content-center">
+                <li class="page-item">
+                    <a class="page-link" href="#">Previous</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link active" href="#">1</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#">2</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#">3</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- <ng2-smart-table [settings]="settings" [source]="source" (deleteConfirm)="onDeleteConfirm($event)" reset>
             </ng2-smart-table>
             <div class="container-btn rightposition">
                 <button class="btn btn-hero-primary btn-demo">Export For Android</button>&nbsp;
                 <button class="btn btn-hero-primary btn-demo">Export For IOS</button>
             </div> -->
-    
-        </nb-card-body>
-    </nb-card>
-    
-    
-</div>
 
+    </nb-card-body>
+</nb-card>
