@@ -32,34 +32,8 @@ import { DataService } from '../../../@core/data/getcountrydata.service';
 @Component({
   selector: 'ngx-smart-table',
   templateUrl: './smart-table.component.html',
-  styles: [`
-    nb-card {
-      transform: translate3d(0, 0, 0);
-    }
-    .rightposition{
-       float:right;
-       margin:10px 0px;
-    }
-      .icon-setting{
-        display:inline-block;
-        padding: .375rem .75rem !important;
-      }
-      .dropdown, .dropup, .btn-group {
-    margin-bottom: 1rem;
-  }
-  .setwidth{
-    width: 25%;
-  }
-  .dropdownset{
-    height: 200px;
-    overflow: scroll;
-    width: 25%;
-  }
+  styleUrls: ['./smart-table.component.scss'],
 
-  nb-card-body {
-   
-  }
-  `],
 })
 export class SmartTableComponent implements OnInit {
 
@@ -80,6 +54,41 @@ export class SmartTableComponent implements OnInit {
       "CPRMax": 50,
       "CPRMin": 10,
     },
+
+    {
+      "ProductID": "12321312",
+      "BasePrice": "10000",
+      "RPRMax": 50,
+      "RPRMin": 10,
+      "CPRMax": 50,
+      "CPRMin": 10,
+    },
+    {
+      "ProductID": "12321312",
+      "BasePrice": "10000",
+      "RPRMax": 50,
+      "RPRMin": 10,
+      "CPRMax": 50,
+      "CPRMin": 10,
+    },
+
+    {
+      "ProductID": "12321312",
+      "BasePrice": "10000",
+      "RPRMax": 50,
+      "RPRMin": 10,
+      "CPRMax": 50,
+      "CPRMin": 10,
+    },
+    {
+      "ProductID": "12321312",
+      "BasePrice": "10000",
+      "RPRMax": 50,
+      "RPRMin": 10,
+      "CPRMax": 50,
+      "CPRMin": 10,
+    },
+
   ]
 
 
