@@ -88,6 +88,38 @@ export class SmartTableComponent implements OnInit {
       "CPRMax": 50,
       "CPRMin": 10,
     },
+    {
+      "ProductID": "12321312",
+      "BasePrice": "10000",
+      "RPRMax": 50,
+      "RPRMin": 10,
+      "CPRMax": 50,
+      "CPRMin": 10,
+    },
+    {
+      "ProductID": "12321312",
+      "BasePrice": "10000",
+      "RPRMax": 50,
+      "RPRMin": 10,
+      "CPRMax": 50,
+      "CPRMin": 10,
+    },
+    {
+      "ProductID": "12321312",
+      "BasePrice": "10000",
+      "RPRMax": 50,
+      "RPRMin": 10,
+      "CPRMax": 50,
+      "CPRMin": 10,
+    },
+    {
+      "ProductID": "12321312",
+      "BasePrice": "10000",
+      "RPRMax": 50,
+      "RPRMin": 10,
+      "CPRMax": 50,
+      "CPRMin": 10,
+    },
 
   ]
 
