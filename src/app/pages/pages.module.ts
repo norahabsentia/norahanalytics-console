@@ -15,6 +15,7 @@ import {SwitcherComponent} from "./charts/chart-switcher/switcher/switcher.compo
 import { PerformanceAnalysisOverviewComponent } from './retention-booster/user-churn/performance-analysis/performance-analysis-overview/performance-analysis-overview.component';
 import { PerformanceAnalysisUserOriginBasisComponent } from './retention-booster/user-churn/performance-analysis/performance-analysis-user-origin-basis/performance-analysis-user-origin-basis.component';
 import { PerformanceAnalysisUserBehaviorBasisComponent } from './retention-booster/user-churn/performance-analysis/performance-analysis-user-behavior-basis/performance-analysis-user-behavior-basis.component';
+
 import {ChartSwitcherTableComponent} from "./charts/chart-switcher/chart-switcher-table/chart-switcher-table.component";
 
 const PAGES_COMPONENTS = [
