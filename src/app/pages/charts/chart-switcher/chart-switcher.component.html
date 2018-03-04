@@ -1,5 +1,6 @@
 <nb-card style="height: 100%">
-    <div *ngIf="enabledTypeSelect" *ngFor="let item of charts">
+  <ng-container *ngIf="enableTypeSelect">
+    <div  *ngFor="let item of charts">
         <div *ngIf="item.show && (item.type === 'Pie' || item.type === 'Histogram' || item.type === 'StackBar')" class="dropdawn-wrap-outer">
             <div class="right-content-select"  style="">
                 <div class="lable">
@@ -21,6 +22,7 @@
               </div>
         </div>
       </div>
+    </ng-container>
   <nb-card-header>
     <div>
           <span *ngFor="let item of charts" [hidden]="!item.show || title">
