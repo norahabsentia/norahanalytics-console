@@ -136,6 +136,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
         link: '/pages/smart-pricing/user-trends',
       },
       {
+        title: 'Pricing Console',
+        link: '/pages/tables/smart-table',
+      },
+      {
         title: 'Predictions',
         link: '/pages/smart-pricing/predictions',
       },
