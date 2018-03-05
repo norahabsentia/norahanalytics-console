@@ -12,7 +12,6 @@ import {NbColorHelper, NbThemeService} from "@nebular/theme";
 export class ChartSwitcherComponent implements OnInit {
 
 
-
   dataT = [
     {
       "ProductID": "12321312",
@@ -124,8 +123,6 @@ export class ChartSwitcherComponent implements OnInit {
   @Input() title;
   @Input() showMap;
   @Input() data;
-  @Input() enableTypeSelect = true;
-  @Input() enableVisualitionOptions = true;
 
   constructor(private service: SmartTableService, public dataservice: DataService, private theme: NbThemeService) {
     const data = this.service.getData();

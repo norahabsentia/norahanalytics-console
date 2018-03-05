@@ -28,13 +28,38 @@ import {LocalDataSource, ViewCell} from 'ng2-smart-table';
 
 import { SmartTableService } from '../../../@core/data/smart-table.service';
 import { DataService } from '../../../@core/data/getcountrydata.service';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap/modal/modal';
 
 @Component({
   selector: 'ngx-smart-table',
   templateUrl: './smart-table.component.html',
-  styleUrls: ['./smart-table.component.scss'],
+  styles: [`
+    nb-card {
+      transform: translate3d(0, 0, 0);
+    }
+    .rightposition{
+       float:right;
+       margin:10px 0px;
+    }
+      .icon-setting{
+        display:inline-block;
+        padding: .375rem .75rem !important;
+      }
+      .dropdown, .dropup, .btn-group {
+    margin-bottom: 1rem;
+  }
+  .setwidth{
+    width: 25%;
+  }
+  .dropdownset{
+    height: 200px;
+    overflow: scroll;
+    width: 25%;
+  }
 
+  nb-card-body {
+   
+  }
+  `],
 })
 export class SmartTableComponent implements OnInit {
 
@@ -55,100 +80,6 @@ export class SmartTableComponent implements OnInit {
       "CPRMax": 50,
       "CPRMin": 10,
     },
-
-    {
-      "ProductID": "12321312",
-      "BasePrice": "10000",
-      "RPRMax": 50,
-      "RPRMin": 10,
-      "CPRMax": 50,
-      "CPRMin": 10,
-    },
-    {
-      "ProductID": "12321312",
-      "BasePrice": "10000",
-      "RPRMax": 50,
-      "RPRMin": 10,
-      "CPRMax": 50,
-      "CPRMin": 10,
-    },
-
-    {
-      "ProductID": "12321312",
-      "BasePrice": "10000",
-      "RPRMax": 50,
-      "RPRMin": 10,
-      "CPRMax": 50,
-      "CPRMin": 10,
-    },
-    {
-      "ProductID": "12321312",
-      "BasePrice": "10000",
-      "RPRMax": 50,
-      "RPRMin": 10,
-      "CPRMax": 50,
-      "CPRMin": 10,
-    },
-    {
-      "ProductID": "12321312",
-      "BasePrice": "10000",
-      "RPRMax": 50,
-      "RPRMin": 10,
-      "CPRMax": 50,
-      "CPRMin": 10,
-    },
-
-    {
-      "ProductID": "12321312",
-      "BasePrice": "10000",
-      "RPRMax": 50,
-      "RPRMin": 10,
-      "CPRMax": 50,
-      "CPRMin": 10,
-    },
-    {
-      "ProductID": "12321312",
-      "BasePrice": "10000",
-      "RPRMax": 50,
-      "RPRMin": 10,
-      "CPRMax": 50,
-      "CPRMin": 10,
-    },
-
-    {
-      "ProductID": "12321312",
-      "BasePrice": "10000",
-      "RPRMax": 50,
-      "RPRMin": 10,
-      "CPRMax": 50,
-      "CPRMin": 10,
-    },
-    {
-      "ProductID": "12321312",
-      "BasePrice": "10000",
-      "RPRMax": 50,
-      "RPRMin": 10,
-      "CPRMax": 50,
-      "CPRMin": 10,
-    },
-
-    {
-      "ProductID": "12321312",
-      "BasePrice": "10000",
-      "RPRMax": 50,
-      "RPRMin": 10,
-      "CPRMax": 50,
-      "CPRMin": 10,
-    },
-    {
-      "ProductID": "12321312",
-      "BasePrice": "10000",
-      "RPRMax": 50,
-      "RPRMin": 10,
-      "CPRMax": 50,
-      "CPRMin": 10,
-    },
-
   ]
 
 
@@ -234,9 +165,7 @@ export class SmartTableComponent implements OnInit {
 
   source: LocalDataSource = new LocalDataSource();
 public tabledata: any
-  constructor(private service: SmartTableService, 
-    public dataservice: DataService,
-    private modalService: NgbModal) {
+  constructor(private service: SmartTableService, public dataservice: DataService) {
     const data = this.service.getData();
     this.source.load(data);
   }
@@ -248,11 +177,6 @@ public tabledata: any
       event.confirm.reject();
     }
   }
-
-  open(content) {
-    this.modalService.open(content, {size: 'lg', windowClass:'full-modal'});
-  }
-
 
   dataTCopy = [];
 option = {};
@@ -316,7 +240,7 @@ getDataFromJson() {
   showModal;
   onClick(){
     console.log(2323)
-    this.showModal = true;
+  this.showModal = true;
   }
 
   dataBar1
