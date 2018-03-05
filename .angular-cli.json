@@ -48,7 +48,9 @@
         "./assets/vendors/echarts.world.min.js",
         "../node_modules/chart.js/dist/Chart.min.js",
         "../node_modules/d3v4/build/d3.js",
-        "../node_modules/venn.js/venn.js"
+        "../node_modules/venn.js/venn.js",
+        "../node_modules/popper.js/dist/popper.js",
+        "../node_modules/bootstrap/dist/js/bootstrap.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
