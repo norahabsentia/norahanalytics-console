@@ -1,34 +1,35 @@
 <div class="row">
-    <div class="col-sm-12">
-  
-      <div class="row">
-        <div class="col-sm-6 stackbar">
-          <chart-switcher [enableVisualitionOptions]="false" 
-            [enableTypeSelect]="false" *ngIf="country" [title]="'Country'" [showMap]="true" [data]="country"></chart-switcher>
-        </div>
-        <div class="col-sm-6 stackbar">
-            <chart-switcher [enableVisualitionOptions]="false"
-              [enableTypeSelect]="false" *ngIf="region" [title]="'Region'" [data]="region"></chart-switcher>
-          </div>
+  <div class="col-sm-12">
+
+    <div class="row">
+      <div class="col-sm-12 stackbar">
+        <chart-switcher *ngIf="country" [title]="'Country'" [showMap]="true" [data]="country"></chart-switcher>
       </div>
-  
-      <div class="row">
-          <div class="col-sm-3 stackbar">
-            <chart-switcher [enableTypeSelect]="false" *ngIf="Platform" [title]="'Platform'" [data]="Platform"></chart-switcher>
-          </div>
-  
-          <div class="col-sm-9 stackbar">
-              <chart-switcher [enableTypeSelect]="false" *ngIf="mobile" [title]="'Mobile Brand'" [data]="mobile"></chart-switcher>
-            </div>
-      </div>
-    
-      <div class="row mt-4">
-        <div class="col-sm-6 stackbar">
-          <chart-switcher [enableTypeSelect]="false" *ngIf="affluence" [title]="'Affluence'" [data]="affluence"></chart-switcher>
-        </div>
-      </div>
-  
-  
     </div>
+
+    <div class="row">
+      <div class="col-sm-12 stackbar">
+        <chart-switcher *ngIf="region" [title]="'Region'" [data]="region"></chart-switcher>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12 stackbar">
+        <chart-switcher *ngIf="mobile" [title]="'Mobile Brand'" [data]="mobile"></chart-switcher>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12 stackbar">
+        <chart-switcher *ngIf="affluence" [title]="'Affluence'" [data]="affluence"></chart-switcher>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12 stackbar">
+        <chart-switcher *ngIf="Platform" [title]="'Platform'" [data]="Platform"></chart-switcher>
+      </div>
+    </div>
+
   </div>
-  
+</div>
