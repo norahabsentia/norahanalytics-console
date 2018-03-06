@@ -1,33 +1,33 @@
-<div class="row">
-  <div class="col-sm-12 col-md-6 col-lg-3 pl-2 pr-2">
+<div class="row" *ngIf="data">
+  <div class="col-sm-12 col-md-6 col-lg-3">
     <nb-card>
       <div class="details">
         <div class="status">active users</div>
-        <div class="title">3,129,431</div>
+        <div class="title">{{data.top_stats.active_users}}</div>
       </div>
     </nb-card>
   </div>
-  <div class="col-sm-12 col-md-6 col-lg-3 pl-2 pr-2">
+  <div class="col-sm-12 col-md-6 col-lg-3">
     <nb-card>
       <div class="details">
         <div class="status">User predicted to churn</div>
-        <div class="title">17,421</div>
+        <div class="title">{{data.top_stats.predicted_to_churn}}</div>
       </div>
     </nb-card>
   </div>
-  <div class="col-sm-12 col-md-6 col-lg-3 pl-2 pr-2">
+  <div class="col-sm-12 col-md-6 col-lg-3">
     <nb-card>
       <div class="details">
         <div class="status">Churned users</div>
-        <div class="title">21,431</div>
+        <div class="title">{{data.top_stats.churned}}</div>
       </div>
     </nb-card>
   </div>
-  <div class="col-sm-12 col-md-6 col-lg-3 pl-2 pr-2">
+  <div class="col-sm-12 col-md-6 col-lg-3">
     <nb-card>
       <div class="details">
         <div class="status">Accuracy</div>
-        <div class="title">86.4%</div>
+        <div class="title">{{data.top_stats.accuracy}}%</div>
       </div>
     </nb-card>
   </div>

@@ -52,9 +52,9 @@ export class PerformanceAnalysisUserBehaviorBasisComponent implements OnInit {
       this.Loyalty_Index = data.Loyality;
       console.log(data.Loyalty_Index)
     });
-    this.http.get('../../../json/new/editednew_platform-aggr-format.json').subscribe((data: any) => {
-      this.Platform = data.Platform;
-      console.log(data.Platform)
+    this.http.get('../../../json/new/editednew_out of lives-aggr-format.json').subscribe((data: any) => {
+      this.Out_of_Lives = data.Out_of_Lives;
+      console.log(data.Out_of_Lives)
     });
   }
 

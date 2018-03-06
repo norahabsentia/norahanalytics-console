@@ -8,6 +8,7 @@ import {ChurnPredictionsComponent} from "./churn-predictions/churn-predictions.c
 import {PerformanceAnalysisUserBehaviorBasisComponent} from "./retention-booster/user-churn/performance-analysis/performance-analysis-user-behavior-basis/performance-analysis-user-behavior-basis.component";
 import {PerformanceAnalysisOverviewComponent} from "./retention-booster/user-churn/performance-analysis/performance-analysis-overview/performance-analysis-overview.component";
 import {PerformanceAnalysisUserOriginBasisComponent} from "./retention-booster/user-churn/performance-analysis/performance-analysis-user-origin-basis/performance-analysis-user-origin-basis.component";
+import {PerformanceAnalysisBoosterComponent} from "./retention-booster/performance-analysis.component";
 
 const routes: Routes = [{
   path: '',
@@ -21,7 +22,7 @@ const routes: Routes = [{
   },{
     path: 'norah-scheduler',
     loadChildren: './norah-scheduler/norah-scheduler.module#NorahSchedulerModule',
-  }, 
+  },
   {
       path: 'notificationslist',
       loadChildren: './notifications/notificationlist.module#NotificationlistModule',
@@ -59,6 +60,11 @@ const routes: Routes = [{
       path: 'retention-booster/user-churn/performance-analysis/performance-analysis-user-origin-basis',
       component: PerformanceAnalysisUserOriginBasisComponent,
     },
+    {
+      path: 'retention-booster/churn-predictions',
+      component: PerformanceAnalysisBoosterComponent,
+    },
+
     {
     path: '',
     redirectTo: 'dashboard',

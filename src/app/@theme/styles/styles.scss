@@ -183,6 +183,22 @@ chart-switcher > nb-card > nb-card-body > div:nth-child(4) > div > ng2-smart-tab
   }
 }
 
+// setting modal height to 100%
+@media screen and (min-width: 576px) {
+  
+  .full-modal > .modal-dialog {
+    max-width: 80% !important;
+    min-height: 80vh;
+    height: 80vh;
+
+    & .modal-content {
+      min-height: 80vh;
+      height: 80vh;
+
+    }
+  }
+}
+
 // Smart-table-Table
 .header-table-smart{
   display: flex;
@@ -350,31 +366,32 @@ chart-switcher > nb-card > nb-card-body > div:nth-child(4) > div > ng2-smart-tab
   font-size: 40px;
 }
 
+
 // size doble-page
 
 .small-wrap > div > chart-switcher > nb-card{
   max-height: 334px !important;
 }
 
-// CHART SIZE
-.stackbar > chart-switcher > nb-card > nb-card-body > .wrapper > div:nth-child(1) > #stackbar > canvas{
-  width: 914px !important;
-  height: 457px !important;
-  position: relative;
-  left: 31px;
-}
+// // CHART SIZE
+// .stackbar > chart-switcher > nb-card > nb-card-body > .wrapper > div:nth-child(1) > #stackbar > canvas{
+//   width: 914px !important;
+//   height: 457px !important;
+//   position: relative;
+//   left: 31px;
+// }
 
-.chart-modal > #stackbar > canvas{
-  width: 600px !important;
-  height: 300px !important;
-}
+// .chart-modal > #stackbar > canvas{
+//   width: 600px !important;
+//   height: 300px !important;
+// }
 
 
 // icon nav-bar
 // nb-sidebar.menu-sidebar.left.expanded > div > div > nb-menu > ul > li:nth-child(3) > a > i.ion.chevron.ion-chevron-down, nb-sidebar.menu-sidebar.left.expanded > div > div > nb-menu > ul > li:nth-child(3) > ul > li > ul > li > a > i, nb-sidebar.menu-sidebar.left.expanded > div > div > nb-menu > ul > li:nth-child(3) > ul > li > a > i{
 //   transform: rotate(180deg);
 // }
-.menu-item > a > i{
+.menu-item > a > i.ion.chevron{
   transform: rotate(180deg);
 }
 
@@ -383,5 +400,100 @@ chart-switcher > nb-card > nb-card-body > div:nth-child(4) > div > ng2-smart-tab
   height: 45px !important;
 }
 .row-height > div{
-  height: 45px !important;
+  height: 40px !important;
+}
+
+
+// churn table-header
+.small-card > nb-card > nb-layout-header > nav{
+  height: 100% !important;
+  padding: 0 !important;
+}
+
+// ng2-smart-table > ng2-smart-table-pager
+ 
+churn-predictions > nb-card > nb-card-body > div > div > div:nth-child(2) > ng2-smart-table > ng2-smart-table-pager{
+  display: none;
+}
+
+performance-analysis-user-origin-basis > div > div > div > div > chart-switcher > nb-card, performance-analysis-user-behavior-basis > div > div > div > div > chart-switcher > nb-card{
+  height: calc(100% - 23px);
+}
+.table-smart{
+  font-size: 14px;
+}
+
+
+//CART SIZE CURN PREDICTIONS
+div.small-card.big-size > nb-card > nb-card-body > div > div > div > div > chart > canvas{
+  width: 914px !important;
+  height: 457px !important;
+  position: relative;
+  left: 31px;
+} 
+div.small-card.big-size > nb-card > nb-card-body > div > div > div > div > div.table-wrap-scroll{
+  height: 457px;
+}
+
+//CART SIZE Performance Analysis
+performance-analysis-user-origin-basis > div > div > div:nth-child(2) > div> chart-switcher > nb-card > nb-card-body, performance-analysis-user-origin-basis > div > div > div:nth-child(3) > div> chart-switcher > nb-card > nb-card-body, performance-analysis-user-behavior-basis > div > div > div:nth-child(2) > div > chart-switcher > nb-card > nb-card-body, performance-analysis-user-behavior-basis > div > div > div:nth-child(3) > div > chart-switcher > nb-card > nb-card-body{
+  height: 359px !important;
+}
+.stackbar-curent > chart-switcher > nb-card > nb-card-body > .wrapper > div:nth-child(1) > #stackbar > canvas{
+  width: 914px !important;
+  height: 457px !important;
+  position: relative;
+  left: 31px;
+}
+nb-sidebar.menu-sidebar.left > div > nb-sidebar-header{
+  display: none;
+}
+nb-sidebar.menu-sidebar.left > div > div{
+  padding-top: 0 !important;
+}
+a.active{
+  border: none !important;
+  font-weight: 500;
+  color: #4aa3df;
+}
+
+.card-content-height{
+	height: 82px !important;
+}
+mat-card-content > div.card-content-height > h3{
+  font-size: 16px;
+}
+body > ngx-app > ngx-pages > ngx-sample-layout > nb-layout > div > div > div > div > div > nb-layout-column > performance-analysis > performance-analysis-user-behavior-basis > div > div > div:nth-child(3) > div.col-md-8.col-xs-12.col-sm-12 > chart-switcher > nb-card > nb-card-body > .wrapper > div > chart > canvas{
+  width: 460px !important;
+  height: 230px !important;
+  position: relative;
+  left: 85px;
+}
+
+ performance-analysis > performance-analysis-user-behavior-basis > div > div > div:nth-child(2) > div:nth-child(1) > chart-switcher > nb-card > nb-card-body > .wrapper > div > chart > canvas,  performance-analysis > performance-analysis-user-behavior-basis > div > div > div:nth-child(2) > div:nth-child(2) > chart-switcher > nb-card > nb-card-body > .wrapper > div > chart > canvas,  performance-analysis > performance-analysis-user-behavior-basis > div > div > div:nth-child(2) > div:nth-child(3) > chart-switcher > nb-card > nb-card-body > .wrapper > div > chart > canvas,  performance-analysis > performance-analysis-user-behavior-basis > div > div > div:nth-child(3) > div:nth-child(2) > chart-switcher > nb-card > nb-card-body > .wrapper > div > chart > canvas{
+  position: relative;
+  top: 40px;
+}
+performance-analysis-user-origin-basis > div > div > div:nth-child(2) > div.col-md-4.col-xs-12.stackbar > chart-switcher > nb-card > nb-card-body > .wrapper > div > chart > canvas{
+  height: 170px !important;
+  width: 284px !important;
+  position: relative;
+  top: 60px;
+}
+// #small-chart-platform > chart-switcher > nb-card > nb-card-body > .wrapper{
+//   height: 100%;  
+// }
+// #small-chart-platform > chart-switcher > nb-card > nb-card-body > .wrapper > div:nth-child(1){
+//   height: 100%;
+//   display: flex;
+//   align-items: center;
+// }
+#venn{
+  font-size: 13px;
+}
+#venn > svg > g:nth-child(2) > text{
+  transform: translate(62px,0px); 
+}
+#venn > svg > g:nth-child(1) > text{
+  transform: translate(-68px,0px);
 }

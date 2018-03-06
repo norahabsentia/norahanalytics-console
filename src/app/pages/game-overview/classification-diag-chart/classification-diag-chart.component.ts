@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, OnDestroy} from '@angular/core';
+import {AfterViewInit, Component, Input, OnDestroy} from '@angular/core';
 import { NbThemeService } from '@nebular/theme';
 
 declare var d3;
@@ -94,16 +94,19 @@ export class ClassificationDiagChartComponent implements OnDestroy, AfterViewIni
     });
   }
 
+  @Input() data;
+
   ngAfterViewInit(){
     // setTimeout(() => {
-    console.log(2)
 // define sets and set set intersections
-      var sets = [ {sets: ['A'], size: 3},
-        {sets: ['B'], size: 3},
-        {sets: ['A','B'], size: 1}];
+      var sets = [ {label: 'Predicted Churn',sets: ['A'], size: this.data.confusion_matrix.predicted_churn + this.data.confusion_matrix.predicted_notChurn, style: 'color: #4aa3df', },
+        {label: 'Observed Churn',sets: ['B'], size: this.data.confusion_matrix.predicted_churn + this.data.confusion_matrix.notPredicted_churn, color: '#dddde0', style: 'color: #dddde0'},
+        {sets: ['A','B'], size: this.data.confusion_matrix.predicted_churn}];
 
-      var chart = venn.VennDiagram().width(500).height(300);;
+      var chart = venn.VennDiagram().styled(false).width(500).height(300);;
       d3.select("#venn").datum(sets).call(chart);
+
+    d3.selectAll("#inverted text").style("fill", "white");
 
 
     // }, 5000);
