@@ -26,15 +26,50 @@ export class ChurnPredictionsComponent implements OnInit, OnDestroy {
       label: 'Display stacked bar',
     },
   ];
+
+  // dataSet1 =  {
+  //   'platform' : null,
+  //   'app version': null
+  // };
+
+  dataSet1 = [];
+  dataSet2 = [];
+  dataSet3 = [];
+  dataSet4 = [];
+  dataSet5 = [];
+
+  dataBarData1 = [];
+  dataBarData2 = [];
+  dataTable1 = [];
+  dataTable2 = [];
+  dataTable3 = [];
+  dataTable4 = [];
+  dataTable5 = [];
+
+  dataBarData1Options = this.charts[1];
+  dataBarData2Options = this.charts[1];
+  dataBarData3Options = this.charts[1];
+  dataBarData4Options = this.charts[1];
+  dataBarData5Options = this.charts[1];
+
+
+
   dataBar1Options = this.charts[1];
   dataBar2Options = this.charts[1];
-  dataTable1 = []
-  dataTable2 = []
+  dataBar3Options = this.charts[1];
+  dataBar4Options = this.charts[1];
+  dataBar5Options = this.charts[1];
+
+
   data: any;
   options: any;
   themeSubscription: any;
   dataBar1: any;
   dataBar2: any;
+  dataBar3: any;
+  dataBar4: any;
+  dataBar5: any;
+
   optionsBar: any;
   showDownload;
   showEngagement;
@@ -62,31 +97,38 @@ export class ChurnPredictionsComponent implements OnInit, OnDestroy {
   objEngagement = {
     'current level': {
       url: 'new2_currentlevel-aggr-format',
-      lab: 'currentlevel'
+      lab: 'currentlevel',
+      display: 'Level'
     },
     'engagement': {
       url: 'new2_engagement-aggr-format',
-      lab: 'Engagement'
+      lab: 'Engagement',
+      display: 'Engagement'
     },
     'total time in game': {
       url: 'new2_Total time in game-aggr-format',
-      lab: 'Total time in game'
+      lab: 'Total time in game',
+      display: 'Total time'
     },
     'last action': {
       url: 'new2_lastaction-aggr-format',
-      lab: 'LastAction'
+      lab: 'LastAction',
+      display: 'Last Action'
     },
     'level stickiness': {
       url: 'new2_levelstickness-aggr-format',
-      lab: 'Levelstickness'
+      lab: 'Levelstickness',
+      display: 'Stuck at level'
     },
     'loyalty': {
       url: 'new2_Loyality-aggr-format',
-      lab: 'Loyality'
+      lab: 'Loyality',
+      display: 'Loyality'
     },
     'out of lives': {
       url: 'new2_out of lives-aggr-format',
-      lab: 'Out of lives'
+      lab: 'Out of lives',
+      display: 'Out of lives'
     },
   };
 
@@ -117,7 +159,29 @@ export class ChurnPredictionsComponent implements OnInit, OnDestroy {
     },
   };
 
+  changeTabData1(item) {
+    console.log(item);
+    this.dataBarData1Options = item;
+  }
+
+  changeTabData2(item) {
+    this.dataBarData2Options = item;
+  }
+
+  changeTabData3(item) {
+    this.dataBarData3Options = item;
+  }
+
+  changeTabData4(item) {
+    this.dataBarData4Options = item;
+  }
+
+  changeTabData5(item) {
+    this.dataBarData5Options = item;
+  }
+
   clickLocation(item){
+    // console.log('item',item)
     this.selectedLocation = item.name;
     this.showLocation = false;
     this.dataBar1 = null;
@@ -155,6 +219,7 @@ export class ChurnPredictionsComponent implements OnInit, OnDestroy {
   settings = {
     hideSubHeader: false,
     actions: false,
+    pager: false,
     columns: {
       ProductID: {
         title: 'User ID',
@@ -176,11 +241,104 @@ export class ChurnPredictionsComponent implements OnInit, OnDestroy {
   source: LocalDataSource = new LocalDataSource();
   public tabledata: any
 
+  changeTab1(e) {
+    let name = e.tabTitle.toLowerCase();
+    if(name == 'appversion') {
+      name = "app version";
+    }
+    this.http.get('../../../json/churn-predictions/basis of origin/' + this.objLocation[name].url + '.json').subscribe((res: any) => {
+      this.setData('dataBarData1', res[this.objLocation[name].lab]);
+      this.dataTable1 = res[this.objLocation[name].lab];
+    });
+  }
+
+  changeTab2(e) {
+    let name = e.tabTitle.toLowerCase();
+    if (name == 'mobile') {
+      name = "mobile brand";
+    }
+    this.http.get('../../../json/churn-predictions/basis of origin/' + this.objLocation[name].url + '.json').subscribe((res: any) => {
+      this.setData('dataBarData2', res[this.objLocation[name].lab]);
+      this.dataTable2 = res[this.objLocation[name].lab];
+    });
+  }
+
+  changeTab3(e) {
+    let name = e.tabTitle.toLowerCase();
+    console.log(e)
+    if (name == 'loyality') {
+      name = "loyalty";
+    }
+    this.http.get('../../../json/churn-predictions/basis of behavior/' + this.objEngagement[name].url + '.json').subscribe((res: any) => {
+      this.setData('dataBarData3', res[this.objEngagement[name].lab]);
+      this.dataTable3 = res[this.objEngagement[name].lab];
+      console.log(this.dataTable3);
+    });
+  }
+
+  changeTab4(e) {
+    let name = e.tabTitle.toLowerCase();
+    console.log(e)
+    if (name == 'total time') {
+      name = "total time in game";
+    }
+    if (name == 'stuck at level') {
+      name = "level stickiness";
+    }
+    this.http.get('../../../json/churn-predictions/basis of behavior/' + this.objEngagement[name].url + '.json').subscribe((res: any) => {
+      this.setData('dataBarData4', res[this.objEngagement[name].lab]);
+      this.dataTable4 = res[this.objEngagement[name].lab];
+      console.log(this.dataTable3);
+    });
+  }
+
+  changeTab5(e) {
+    let name = e.tabTitle.toLowerCase();
+    console.log(e)
+    if (name == 'level') {
+      name = "current level";
+    }
+
+    this.http.get('../../../json/churn-predictions/basis of behavior/' + this.objEngagement[name].url + '.json').subscribe((res: any) => {
+      this.setData('dataBarData5', res[this.objEngagement[name].lab]);
+      this.dataTable5 = res[this.objEngagement[name].lab];
+      console.log(this.dataTable3);
+    });
+  }
 
   constructor(private theme: NbThemeService, private service: SmartTableService, public dataservice: DataService, private http: HttpClient) {
 
     const data = this.service.getData();
     this.source.load(data);
+
+    //dataSet1
+    this.dataSet1.push(this.objLocation.platform);
+    this.dataSet1.push(this.objLocation["app version"]);
+
+    // dataSet2
+    this.dataSet2.push(this.objLocation.country);
+    this.dataSet2.push(this.objLocation.region);
+    this.dataSet2.push(this.objLocation.affluence);
+    this.dataSet2.push(this.objLocation["mobile brand"]);
+
+    // dataSet3
+    this.dataSet3.push(this.objEngagement.engagement);
+    this.dataSet3.push(this.objEngagement.loyalty);
+
+    //dataSet4
+    this.dataSet4.push(this.objEngagement["total time in game"]);
+    this.dataSet4.push(this.objEngagement["out of lives"]);
+    this.dataSet4.push(this.objEngagement["level stickiness"]);
+
+    //dataSet5
+    this.dataSet5.push(this.objEngagement["current level"]);
+
+    this.http.get('../../../json/churn-predictions/basis of origin/new2_platform-aggr-format.json').subscribe((res: any) => {
+      console.log(res)
+      this.setData('dataBarData1', res.Platform);
+      this.dataTable1 = res.Platform;
+    });
+    
 
     this.themeSubscription = this.theme.getJsTheme().subscribe(config => {
 
