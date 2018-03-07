@@ -183,7 +183,7 @@ chart-switcher > nb-card > nb-card-body > div:nth-child(4) > div > ng2-smart-tab
 
 // setting modal height to 100%
 @media screen and (min-width: 576px) {
-  
+
   .full-modal > .modal-dialog {
     max-width: 80% !important;
     min-height: 80vh;
@@ -409,7 +409,7 @@ chart-switcher > nb-card > nb-card-body > div:nth-child(4) > div > ng2-smart-tab
 }
 
 // ng2-smart-table > ng2-smart-table-pager
- 
+
 churn-predictions > nb-card > nb-card-body > div > div > div:nth-child(2) > ng2-smart-table > ng2-smart-table-pager{
   display: none;
 }
@@ -428,7 +428,7 @@ div.small-card.big-size > nb-card > nb-card-body > div > div > div > div > chart
   height: 457px !important;
   position: relative;
   left: 31px;
-} 
+}
 div.small-card.big-size > nb-card > nb-card-body > div > div > div > div > div.table-wrap-scroll{
   height: 457px;
 }
@@ -482,7 +482,7 @@ performance-analysis-user-origin-basis > div > div > div:nth-child(2) > div.col-
   top: 60px;
 }
 // #small-chart-platform > chart-switcher > nb-card > nb-card-body > .wrapper{
-//   height: 100%;  
+//   height: 100%;
 // }
 // #small-chart-platform > chart-switcher > nb-card > nb-card-body > .wrapper > div:nth-child(1){
 //   height: 100%;
@@ -493,7 +493,7 @@ performance-analysis-user-origin-basis > div > div > div:nth-child(2) > div.col-
   font-size: 13px;
 }
 #venn > svg > g:nth-child(2) > text{
-  transform: translate(62px,0px); 
+  transform: translate(62px,0px);
 }
 #venn > svg > g:nth-child(1) > text{
   transform: translate(-68px,0px);
@@ -501,17 +501,18 @@ performance-analysis-user-origin-basis > div > div > div:nth-child(2) > div.col-
 
 
 .menu-items .menu-item > .menu-items{
-  font-family: 'Avenir-Regular';
+  font-family: 'Avenir-Regular' !important;
 }
 .menu-item a{
-  font-family: 'Avenir-Regular';
+  font-family: 'Avenir-Regular' !important;
 }
 .nb-theme-default nb-sidebar.fixed.right.collapsed + .content{
-  font-family: 'Avenir-Regular';
+  font-family: 'Avenir-Regular' !important;
 }
-.header-table > div{
-  font-family: 'Avenir-Regular';
+nb-card-header, .header-table > div{
+  font-family: 'Avenir-Regular' !important;
 }
+
 .nb-theme-default nb-menu .menu-item a:hover .menu-icon, .nb-theme-default nb-menu .menu-item a:hover .chevron, .nb-theme-default nb-menu .menu-item a.active .menu-icon, .nb-theme-default nb-menu .menu-item a.active .chevron{
   color: #4aa3df;
 }
