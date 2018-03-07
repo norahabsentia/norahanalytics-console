@@ -480,7 +480,7 @@ export class CountryComponent implements OnDestroy {
         	    dataView : {show: true, readOnly: false},
 	            restore : {show: true},
         	    saveAsImage : {show: true}
-	        }	
+	        }
 	    },
 	    dataRange: {
         	min: 0,
@@ -488,10 +488,20 @@ export class CountryComponent implements OnDestroy {
         	text:['High','Low'],
 	        realtime: false,
 	        calculable : true,
-	        color: ['orangered','yellow','lightskyblue']
+	        color: ['#4aa3df', '#81b7dc' , '#bcbabe', '#dddde0']
 	    },
+          visualMap: {
+            min: 0,
+            max: 1000000,
+            text:['High','Low'],
+
+            inRange: {
+              color: ['#4aa3df', '#81b7dc' , '#bcbabe', '#dddde0']
+            }
+          },
 	    series : [
         	{
+            scaleLimit: {max: 1, min: 1},
 	            name: 'World Population (2010)',
         	    type: 'map',
 	            mapType: 'world',
@@ -520,7 +530,7 @@ export class CountryComponent implements OnDestroy {
 	            }),
 
         	}
-	    ]	
+	    ]
 	};
       });
 
@@ -581,7 +591,7 @@ export class CountryComponent implements OnDestroy {
 
 
       var range = upper.pct - lower.pct;
-  
+
       var rangePct = (pct - lower.pct) / range;
       var pctLower = 1 - rangePct;
       var pctUpper = rangePct;
@@ -592,7 +602,7 @@ export class CountryComponent implements OnDestroy {
       };
       return 'rgb(' + [color.r, color.g, color.b].join(',') + ')';
     // or output as hex if preferred
-}  
+}
 
 
 }
