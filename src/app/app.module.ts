@@ -12,7 +12,7 @@ import { CoreModule } from './@core/core.module';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
-import { FormsModule} from '@angular/forms';  
+import { FormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
@@ -24,6 +24,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {NorahService } from '../app/pages/norah-scheduler/shared/norah.service';
 import { CanDeactivateGurad } from '../app/pages/norah-scheduler/shared/can-deactivate-guard.service';
 import { DialogService } from '../app/pages/norah-scheduler/shared/dialog.service';
+import {AngularFireAuthModule} from "angularfire2/auth";
+import {AuthGuard} from "./auth.guard";
 
 
 
@@ -38,7 +40,7 @@ import { DialogService } from '../app/pages/norah-scheduler/shared/dialog.servic
 
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
-
+    AngularFireAuthModule,
     NgbModule.forRoot(),
     ThemeModule.forRoot(),
     CoreModule.forRoot(),
@@ -46,7 +48,7 @@ import { DialogService } from '../app/pages/norah-scheduler/shared/dialog.servic
   ],
   bootstrap: [AppComponent],
   providers: [
-    { provide: APP_BASE_HREF, useValue: '/' },
+    { provide: APP_BASE_HREF, useValue: '/' }, AuthGuard
   ],
 })
 export class AppModule {
