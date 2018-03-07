@@ -13,6 +13,35 @@ export class PerformanceAnalysisUserOriginBasisComponent implements OnInit {
   mobile;
   affluence;
   Platform;
+  horizontalOptions = [
+    {
+      type: 'StackBarHorizontal',
+      icon: 'fa-bar-chart',
+      show: true,
+      label: 'Display bar chart',
+    },
+    {
+      type: 'Table',
+      icon: 'fa-table',
+      show: false,
+      label: 'Display table',
+    },
+  ];
+
+  horizontalOptions2 = [
+    {
+      type: 'StackBarHorizontal',
+      icon: 'fa-bar-chart',
+      show: true,
+      label: 'Display bar chart',
+    },
+    {
+      type: 'Table',
+      icon: 'fa-table',
+      show: false,
+      label: 'Display table',
+    },
+  ]
   constructor(private http: HttpClient){
     this.http.get('../../../json/new/editednew_country-aggr-format.json').subscribe((data: any) => {
       this.country = data.country;

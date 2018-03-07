@@ -10,7 +10,7 @@ import { AnalyticsService } from '../../../@core/utils/analytics.service';
   templateUrl: './header.component.html',
 })
 export class HeaderComponent implements OnInit {
-
+  showLocation;
 
   @Input() position = 'normal';
 
@@ -44,6 +44,6 @@ export class HeaderComponent implements OnInit {
   }
 
   startSearch() {
-    this.analyticsService.trackEvent('startSearch');
+    this.analyticsService.trackEvent('startSearch'  );
   }
 }

@@ -13,9 +13,23 @@
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/qtip2/3.0.3/jquery.qtip.css">
   <!--https://d3js.org/d3.v4.min.js-->
+    <style>
+        @font-face {
+            font-family: 'Avenir';
+            src:    url('fonts/Avenir/Avenir-Regular.eot?#') format('eot'),
+                    url('fonts/Avenir/Avenir-Regular.woff') format('woff'),
+                    url('fonts/Avenir/Avenir-Regular.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'Avenir';
+            font-weight: bold;
+            src:    url('fonts/Avenir/Avenir-Bold.eot?#') format('eot'),
+                    url('fonts/Avenir/Avenir-Bold.woff') format('woff'),
+                    url('fonts/Avenir/Avenir-Bold.ttf') format('truetype');
+        }
+    </style>
 
 
-  
 </head>
 
 <body>
@@ -103,6 +117,9 @@
         nb-card{
           max-height: 560px;
         }
+        [data-venn-sets="A"]   { fill: #4aa3df !important; }
+        [data-venn-sets="B"]   { fill: #dddde0 !important; }
+        [data-venn-sets="A_B"] { fill: #a5c0df !important; }
     </style>
     <div id="nb-global-spinner" class="spinner">
         <div class="blob blob-0"></div>
@@ -113,7 +130,7 @@
         <div class="blob blob-5"></div>
     </div>
 
-    
+
 </body>
 
 </html>
