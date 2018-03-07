@@ -9,6 +9,7 @@
       "outDir": "dist",
       "assets": [
         "assets",
+        "fonts",
         "json",
         "favicon.ico",
         "favicon.png",
