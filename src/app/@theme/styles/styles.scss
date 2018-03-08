@@ -500,18 +500,25 @@ performance-analysis-user-origin-basis > div > div > div:nth-child(2) > div.col-
 }
 
 
-.menu-items .menu-item > .menu-items{
-  font-family: 'Avenir-Regular' !important;
+//.menu-items .menu-item > .menu-items{
+//  font-family: 'Avenir-Regular' !important;
+//}
+//.menu-item a{
+//  font-family: 'Avenir-Regular' !important;
+//}
+//.nb-theme-default nb-sidebar.fixed.right.collapsed + .content{
+//  font-family: 'Avenir-Regular' !important;
+//}
+//nb-card-header, .header-table > div{
+//  font-family: 'Avenir-Regular' !important;
+//}
+
+:not(i) {
+  font-family: 'Avenir' !important;
+
 }
-.menu-item a{
-  font-family: 'Avenir-Regular' !important;
-}
-.nb-theme-default nb-sidebar.fixed.right.collapsed + .content{
-  font-family: 'Avenir-Regular' !important;
-}
-nb-card-header, .header-table > div{
-  font-family: 'Avenir-Regular' !important;
-}
+
+
 
 .nb-theme-default nb-menu .menu-item a:hover .menu-icon, .nb-theme-default nb-menu .menu-item a:hover .chevron, .nb-theme-default nb-menu .menu-item a.active .menu-icon, .nb-theme-default nb-menu .menu-item a.active .chevron{
   color: #4aa3df;
