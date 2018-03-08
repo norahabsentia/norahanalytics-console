@@ -16,6 +16,8 @@ import { PerformanceAnalysisOverviewComponent } from './retention-booster/user-c
 import { PerformanceAnalysisUserOriginBasisComponent } from './retention-booster/user-churn/performance-analysis/performance-analysis-user-origin-basis/performance-analysis-user-origin-basis.component';
 import { PerformanceAnalysisUserBehaviorBasisComponent } from './retention-booster/user-churn/performance-analysis/performance-analysis-user-behavior-basis/performance-analysis-user-behavior-basis.component';
 import {ChartSwitcherTableComponent} from "./charts/chart-switcher/chart-switcher-table/chart-switcher-table.component";
+import { LoginComponent } from './login/login.component';
+import { AngularFireAuthModule} from "angularfire2/auth";
 
 const PAGES_COMPONENTS = [
   PagesComponent,
@@ -36,6 +38,7 @@ const PAGES_COMPONENTS = [
   declarations: [
     ...PAGES_COMPONENTS,
     ChurnPredictionsComponent,
+    LoginComponent,
   ],
 })
 export class PagesModule {
