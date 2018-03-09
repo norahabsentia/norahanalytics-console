@@ -596,12 +596,20 @@ export class ChartSwitcherComponent implements OnInit {
       let series = [];
       keys = Object.keys(item);
       keys.splice(keys.indexOf('value'), 1);
-      for(let key of keys){
+      // for(let key of keys){
+      //   series.push({
+      //     "name": key,
+      //     "value": item[key]
+      //   })
+      // }
+      console.log(9999999999999999, item)
         series.push({
-          "name": key,
-          "value": item[key]
+          "name": 'pop_churned',
+          "value": item['pop_churned']
+        },{
+          "name": 'pop_notChurned',
+          "value": item['pop_notChurned']
         })
-      }
       this.dataStackBarHorizontal.push({
         "name": item.value,
         "series": series
