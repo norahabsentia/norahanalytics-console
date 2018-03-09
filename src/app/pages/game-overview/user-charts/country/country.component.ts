@@ -27,7 +27,7 @@ export class CountryComponent implements OnDestroy {
       .subscribe(config => {
         const colors = config.variables;
         //this.bubbleTheme = config.variables.bubbleMap;
-        this.geoColors = [colors.primary, colors.info, colors.success, colors.warning, colors.danger];
+        this.geoColors = ['#4aa3df', '#81b7dc' , '#bcbabe', '#dddde0'];
 
         this.latlong = {
           'AD': { 'latitude': 42.5, 'longitude': 1.5 },
@@ -480,7 +480,7 @@ export class CountryComponent implements OnDestroy {
         	    dataView : {show: true, readOnly: false},
 	            restore : {show: true},
         	    saveAsImage : {show: true}
-	        }	
+	        }
 	    },
 	    dataRange: {
         	min: 0,
@@ -488,10 +488,20 @@ export class CountryComponent implements OnDestroy {
         	text:['High','Low'],
 	        realtime: false,
 	        calculable : true,
-	        color: ['orangered','yellow','lightskyblue']
+	        color: ['#4aa3df', '#81b7dc' , '#bcbabe', '#dddde0']
 	    },
+          visualMap: {
+            min: 0,
+            max: 1000000,
+            text:['High','Low'],
+
+            inRange: {
+              color: ['#4aa3df', '#81b7dc' , '#bcbabe', '#dddde0']
+            }
+          },
 	    series : [
         	{
+            scaleLimit: {max: 1, min: 1},
 	            name: 'World Population (2010)',
         	    type: 'map',
 	            mapType: 'world',
@@ -520,7 +530,7 @@ export class CountryComponent implements OnDestroy {
 	            }),
 
         	}
-	    ]	
+	    ]
 	};
       });
 
@@ -550,7 +560,7 @@ export class CountryComponent implements OnDestroy {
   private getCalculateGeoColor(value) {
     var perc = ((value - this.min)/(this.max-this.min))*100;
 
-    return this.getColorForPercentage(perc/100);
+    return this.getColorForPercentage(value);
 
 
   }
@@ -563,10 +573,24 @@ export class CountryComponent implements OnDestroy {
 
 
    private getColorForPercentage (pct){
+    console.log(pct, 111)
+     if(pct < 2324004){
+      return '#dddde0'
+     }
+     if(pct > 5324004 && pct < 10324004){
+       return '#bcbabe'
+     }
+
+     if(pct > 10324004 && pct < 20324004){
+       return '#81b7dc'
+     }
+     if(pct < 20324004){
+       return '#4aa3df'
+     }
       var percentColors = [
         { pct: 0.0, color: { r: 0xc8, g: 0xbf, b: 0xe7 } },
         { pct: 1.0, color: { r: 0x00, g: 0x00, b: 0xff } } ];
-
+     // '#4aa3df', '#81b7dc' , '#bcbabe', '#dddde0'
       /*for (var i = 1; i < percentColors.length - 1; i++) {
         if (pct < percentColors[i].pct) {
             break;
@@ -581,7 +605,7 @@ export class CountryComponent implements OnDestroy {
 
 
       var range = upper.pct - lower.pct;
-  
+
       var rangePct = (pct - lower.pct) / range;
       var pctLower = 1 - rangePct;
       var pctUpper = rangePct;
@@ -590,9 +614,9 @@ export class CountryComponent implements OnDestroy {
         g: Math.floor(lower.color.g * pctLower + upper.color.g * pctUpper),
         b: Math.floor(lower.color.b * pctLower + upper.color.b * pctUpper)
       };
-      return 'rgb(' + [color.r, color.g, color.b].join(',') + ')';
+      // return 'rgb(' + [color.r, color.g, color.b].join(',') + ')';
     // or output as hex if preferred
-}  
+}
 
 
 }

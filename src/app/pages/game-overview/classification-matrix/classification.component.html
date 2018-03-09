@@ -1,69 +1,73 @@
-<nb-card>
-    <div class="col-sm-12">
+<nb-card *ngIf="data">
+  <div class="col-sm-12">
+    <div class="row">
+      <div class="col-sm-6 br-1">
         <div class="row">
-            <div class="col-sm-6 br-1">
-                <div class="row">
-                    <div class="col-sm-12 bb-1">
-                        <div class="title header-title-left">classification<br> matrix</div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-6 br-1">
-                        <div class="title body-left-text">Predicted Churn</div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="row">
-                            <div class="col-sm-12 bb-1">
-                                <div class="title body-right-text">positive</div>
-                            </div>
-                            <div class="col-sm-12">
-                                <div class="title body-right-text">negative</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 b-2">
-                <div class="row">
-                    <div class="col-sm-12 pt-2 pb-2 bb-1">
-                        <div class="title">Observed Churn</div>
-                    </div>
-                    <div class="col-sm-6 pt-2 pb-2 bb-1 br-1">
-                        <div class="title">positive</div>
-                    </div>
-                    <div class="col-sm-6 pt-2 pb-2 bb-1">
-                        <div class="title">negative</div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="row bb-1">
-                            <div class="col-sm-6 br-1">
-                                <div class="value">
-                                    13,712
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="value">
-                                    7,142
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-6 br-1">
-                                <div class="value">
-                                    1,334
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="value">
-                                    13,395
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          <div class="col-sm-12 bb-1">
+            <div class="title header-title-left">classification<br> matrix</div>
+          </div>
         </div>
+        <div class="row">
+          <div class="col-sm-6 br-1">
+            <div class="title body-left-text">modal response</div>
+          </div>
+          <div class="col-sm-6">
+            <div class="row">
+              <div class="col-sm-12 bb-1">
+                <div class="title body-right-text">positive</div>
+              </div>
+              <div class="col-sm-12">
+                <div class="title body-right-text">negative</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 b-2">
+        <div class="row">
+          <div class="col-sm-12 pt-2 pb-2 bb-1">
+            <div class="title">target behaviour</div>
+          </div>
+          <div class="col-sm-6 pt-2 pb-2 bb-1 br-1">
+            <div class="title">positive</div>
+          </div>
+          <div class="col-sm-6 pt-2 pb-2 bb-1">
+            <div class="title">negative</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="row bb-1">
+              <div class="col-sm-6 br-1">
+                <div class="value">
+                  {{data.confusion_matrix.predicted_churn}}
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="value">
+                  {{data.confusion_matrix.predicted_notChurn}}
+
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6 br-1">
+                <div class="value">
+                  {{data.confusion_matrix.notPredicted_churn}}
+
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="value">
+                  {{data.confusion_matrix.notPredicted_notChurned}}
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </nb-card>
+

@@ -38,6 +38,7 @@ import {SwitcherComponent} from "../charts/chart-switcher/switcher/switcher.comp
 import {PerformanceAnalysisOverviewComponent} from "../retention-booster/user-churn/performance-analysis/performance-analysis-overview/performance-analysis-overview.component";
 import {PerformanceAnalysisUserOriginBasisComponent} from "../retention-booster/user-churn/performance-analysis/performance-analysis-user-origin-basis/performance-analysis-user-origin-basis.component";
 import {PerformanceAnalysisUserBehaviorBasisComponent} from "../retention-booster/user-churn/performance-analysis/performance-analysis-user-behavior-basis/performance-analysis-user-behavior-basis.component";
+import {PerformanceAnalysisBoosterComponent} from "../retention-booster/performance-analysis.component";
 
 @NgModule({
   imports: [
@@ -57,6 +58,7 @@ import {PerformanceAnalysisUserBehaviorBasisComponent} from "../retention-booste
     ChartsService,
   ],
   declarations: [
+    PerformanceAnalysisBoosterComponent,
     PerformanceAnalysisOverviewComponent,
     PerformanceAnalysisUserOriginBasisComponent,
     PerformanceAnalysisUserBehaviorBasisComponent,

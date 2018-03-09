@@ -8,10 +8,14 @@ import {ChurnPredictionsComponent} from "./churn-predictions/churn-predictions.c
 import {PerformanceAnalysisUserBehaviorBasisComponent} from "./retention-booster/user-churn/performance-analysis/performance-analysis-user-behavior-basis/performance-analysis-user-behavior-basis.component";
 import {PerformanceAnalysisOverviewComponent} from "./retention-booster/user-churn/performance-analysis/performance-analysis-overview/performance-analysis-overview.component";
 import {PerformanceAnalysisUserOriginBasisComponent} from "./retention-booster/user-churn/performance-analysis/performance-analysis-user-origin-basis/performance-analysis-user-origin-basis.component";
+import {PerformanceAnalysisBoosterComponent} from "./retention-booster/performance-analysis.component";
+import {LoginComponent} from "./login/login.component";
+import {AuthGuard} from "../auth.guard";
 
 const routes: Routes = [{
   path: '',
   component: PagesComponent,
+  canActivate: [AuthGuard],
   children: [{
     path: 'dashboard',
     component: DashboardComponent,
@@ -21,13 +25,14 @@ const routes: Routes = [{
   },{
     path: 'norah-scheduler',
     loadChildren: './norah-scheduler/norah-scheduler.module#NorahSchedulerModule',
-  }, 
+  },
   {
       path: 'notificationslist',
       loadChildren: './notifications/notificationlist.module#NotificationlistModule',
   },{
     path: 'ui-features',
     loadChildren: './ui-features/ui-features.module#UiFeaturesModule',
+    canActivate: [AuthGuard]
   }, {
     path: 'components',
     loadChildren: './components/components.module#ComponentsModule',
@@ -60,6 +65,10 @@ const routes: Routes = [{
       component: PerformanceAnalysisUserOriginBasisComponent,
     },
     {
+      path: 'retention-booster/churn-predictions',
+      component: PerformanceAnalysisBoosterComponent,
+    },
+    {
     path: '',
     redirectTo: 'dashboard',
     pathMatch: 'full',
@@ -72,7 +81,8 @@ const routes: Routes = [{
   },{
     path: 'game-overview',
     pathMatch: 'full',
-  }],
+  }
+  ],
 }];
 
 @NgModule({
