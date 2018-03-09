@@ -47,7 +47,11 @@ export const MENU_ITEMS: NbMenuItem[] = [
         title: 'Performance Analysis',
         link: '/pages/smart-pricing/performance-analysis',
       },
-    ],
+      {
+        title: 'Pricing Console',
+        link: '/pages/tables/smart-table',
+      },
+],
   },
   {
     title: 'Dashboard',

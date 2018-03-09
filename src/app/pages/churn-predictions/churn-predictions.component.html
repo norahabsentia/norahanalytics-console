@@ -3,12 +3,19 @@
   <div class="col-md-6">
     <div class="small-card">
       <nb-card class="small-card">
+        <nb-layout-header>
+          <div class="header-table">
+            <div class="small-cell-churn-3 active-item  " style="width: 100% !important;">
+              Chart Prediction Overview
+            </div>
+          </div>
+        </nb-layout-header>
         <nb-card-body class="vertical-center" >
           <div class="row">
             <div class="col-md-5 col-xs-12 col-sm-12">
-              <div class="label-top">
-                  Chart Prediction Overview
-              </div>
+              <!--<div class="label-top">-->
+                  <!--Chart Prediction Overview-->
+              <!--</div>-->
               <div>
                 <chart *ngIf="data" type="doughnut" [data]="data" [options]="options"></chart>
               </div>
@@ -208,7 +215,7 @@
                       </div>
                     </div>
                   </div>
-                  
+
                 </div>
               </div>
               <!-- <div class="col-md-4 col-xs-12">
@@ -315,7 +322,7 @@
                             </div>
                           </div>
                         </div>
-                        
+
                       </div>
                     </div>
                     <!-- <div class="col-md-4 col-xs-12">
@@ -421,13 +428,13 @@
                               </div>
                             </div>
                           </div>
-                          
+
                         </div>
                       </div>
                     </div>
                   </div>
                 </nb-card-body>
-                <div class="switcher-wrap-small-tb" style="bottom: 10px;"> 
+                <div class="switcher-wrap-small-tb" style="bottom: 10px;">
                   <switcher [charts]="charts" (changeEvent)="dataBar4Options = $event"></switcher>
                 </div>
               </nb-card>
@@ -436,7 +443,7 @@
 
    <div class="container">
     <div class="row">
-      <div class="col-md-12"> 
+      <div class="col-md-12">
         <div class="small-card" style="height: unset">
           <nb-card>
              <nb-layout-header>
@@ -504,10 +511,10 @@
                           </div>
                         </div>
                       </div>
-                      
+
                     </div>
                   </div>
-    
+
                 </div>
               </div>
             </nb-card-body>

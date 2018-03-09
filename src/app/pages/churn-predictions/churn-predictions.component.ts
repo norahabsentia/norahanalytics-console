@@ -325,7 +325,7 @@ export class ChurnPredictionsComponent implements OnInit, OnDestroy {
     //     this.setData('dataBar2', res['currentlevel']);
     //     this.dataTable2 = res.currentlevel;
     //   });
-    //   this.optionsBar = barOptions;
+      this.optionsBar = barOptions;
     });
   }
 

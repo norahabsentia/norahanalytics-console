@@ -214,20 +214,20 @@ chart-switcher > nb-card > nb-card-body > div:nth-child(4) > div > ng2-smart-tab
         text-align: center;
         border-top: 1px solid #e7e7e7;
         border-right: 1px solid #e7e7e7;
-        height: 50px;
-        padding-top: 15px;
+        height: 40px;
+        padding-top: 11px;
       }
       .max-range{
         width: 100%;
         border-top: 1px solid #e7e7e7;
         text-align: center;
-        height: 50px;
-        padding-top: 15px;
+        height: 40px;
+        padding-top: 11px;
       }
     }
     .range-header{
-      height: 50px;
-      padding-top: 15px;
+      height: 40px;
+      padding-top: 11px;
     }
   }
   .column-range{
@@ -243,7 +243,7 @@ chart-switcher > nb-card > nb-card-body > div:nth-child(4) > div > ng2-smart-tab
     border: 1px solid #e7e7e7;
     border-right: 0;
     border-top: 0;
-    height: 60px;
+    height: 42px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -310,9 +310,14 @@ chart-switcher > nb-card > nb-card-body > div:nth-child(4) > div > ng2-smart-tab
 .smart-table-body{
   padding-left: 0 !important;
   padding-right: 0 !important;
+  height: 500px;
+  overflow-y: auto;
 }
 
 // Modal page
+ngx-smart-table > nb-card > div > div > div > div.main-content-wrap > div.main-content.chart-modal > chart > canvas{
+  height: 420px !important;
+}
 .modal-wrap{
   position: absolute;
   z-index: 1000;
@@ -323,14 +328,16 @@ chart-switcher > nb-card > nb-card-body > div:nth-child(4) > div > ng2-smart-tab
   top: 0%;
   border-radius: 5px;
   padding: 10px;
+
   .modal-wrap-second{
     position: relative;
     .modal-wrap-iside{
       position: absolute;
       background: white;
       width: 100%;
-      top: -7px;
+      top: 10px;
       border-radius: 5px;
+      height: 500px;
       .heared-modal{
         text-align: center;
         border-bottom: 1px solid #cbcbcb;
@@ -500,25 +507,10 @@ performance-analysis-user-origin-basis > div > div > div:nth-child(2) > div.col-
 }
 
 
-//.menu-items .menu-item > .menu-items{
-//  font-family: 'Avenir-Regular' !important;
-//}
-//.menu-item a{
-//  font-family: 'Avenir-Regular' !important;
-//}
-//.nb-theme-default nb-sidebar.fixed.right.collapsed + .content{
-//  font-family: 'Avenir-Regular' !important;
-//}
-//nb-card-header, .header-table > div{
-//  font-family: 'Avenir-Regular' !important;
-//}
-
 :not(i) {
   font-family: 'Avenir' !important;
 
 }
-
-
 
 .nb-theme-default nb-menu .menu-item a:hover .menu-icon, .nb-theme-default nb-menu .menu-item a:hover .chevron, .nb-theme-default nb-menu .menu-item a.active .menu-icon, .nb-theme-default nb-menu .menu-item a.active .chevron{
   color: #4aa3df;
