@@ -530,7 +530,65 @@
   </div>
 </div>
 
-<nb-card>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12" style="padding: 0;">
+      <div class="small-card" style="height: unset">
+        <nb-card>
+           <nb-layout-header>
+                  <div class="header-table">
+                    <div class="small-cell-churn-3 active-item  " style="width: 100% !important;">
+                      USER LIST
+                    </div>
+                  </div>
+            </nb-layout-header>
+          <nb-card-body class="big-cart">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12 col-xs-12">
+                  <div>
+                    <div class="table-wrap-scroll">
+                      <div  class="tbody-smart">
+                        <div class="row-table-smart">
+                          <div class="row-table-item column-2" style="border-left: 0;">
+                            <div>
+                              User ID
+                            </div>
+                          </div>
+                          <div class="row-table-item column-2">
+                            <div>
+                              Churn Probability
+                            </div>
+                          </div>
+                        </div>
+                        <div *ngFor="let item of dataTable5" class="row-table-smart">
+                          <div class="row-table-item column-2" style="border-left: 0;">
+                            <div>
+                              {{item.value}}
+                            </div>
+                          </div>
+                          <div class="row-table-item column-2">
+                            <div>
+                              {{item.High_Risk}}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </nb-card-body>
+        </nb-card>
+      </div>
+    </div>
+  </div>
+ </div>
+
+<!-- <nb-card>
   <nb-card-body>
     <div class="container">
       <div class="row">
@@ -543,7 +601,7 @@
       </div>
     </div>
   </nb-card-body>
-</nb-card>
+</nb-card> -->
 
   <!--<div class="page-button-wrap" style="margin-top: -15px;">-->
     <!--<button>-->

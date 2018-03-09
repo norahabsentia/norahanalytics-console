@@ -1,6 +1,6 @@
 <nb-card>
     <div *ngFor="let item of charts">
-        <div *ngIf="item.show && (item.type === 'Pie' || item.type === 'Histogram')" class="dropdawn-wrap-outer">
+        <div *ngIf="item.show && (item.type === 'Pie' || item.type === 'Histogram' || item.type === 'StackBar')" class="dropdawn-wrap-outer">
             <div class="right-content-select" style="">
                 <div class="lable">
                   Basic:
@@ -40,20 +40,8 @@
             <ngx-echarts-bar *ngIf="item.show && item.type === 'Histogram' && dataEBar && reload" [data]="dataEBar"></ngx-echarts-bar>
 
             <chart class="" id="stackbar" *ngIf="item.show && item.type === 'StackBar' && dataBar1 && reload" type="bar" [data]="dataBar1" [options]="optionsBar"></chart>
-            <!--<chart class="" id="stackbar" *ngIf="item.show && item.type === 'StackBarHorizontal' && dataStackBarHorizontal && reload" type="bar" [data]="dataStackBarHorizontal" [options]="optionsBarHorizontal"></chart>-->
-
-            <ngx-charts-bar-horizontal-stacked *ngIf="item.show && item.type === 'StackBarHorizontal' && dataStackBarHorizontal && reload"
-              [view]="view"
-              [scheme]="colorScheme"
-              [results]="dataStackBarHorizontal"
-              [gradient]="gradient"
-              [xAxis]="showXAxis"
-              [yAxis]="showYAxis"
-            >
-            </ngx-charts-bar-horizontal-stacked>
 
             <ngx-chartjs-bar *ngIf="item.show && item.type === 'Bar' && dataBar" [data]="dataBar"></ngx-chartjs-bar>
-
             <!--<ngx-chartjs-line *ngIf="item.show && item.type === 'Line'"></ngx-chartjs-line>-->
             <!--<ngx-chartjs-multiple-xaxis *ngIf="item.show && item.type === 'Area'"></ngx-chartjs-multiple-xaxis>-->
             <ngx-echarts-line *ngIf="item.show && item.type === 'Line' && dataLine" [data]="dataLine"></ngx-echarts-line>
@@ -153,7 +141,7 @@
   </nb-card-body>
   <nb-card-footer>
     <div class="select-items-wrap">
-      <div *ngIf="charts.length > 1">
+      <div>
         <div *ngFor="let item of charts">
           <i class="fa fa {{ item.icon }} item-icon" *ngIf="item.show" (click)="change()"></i>
         </div>

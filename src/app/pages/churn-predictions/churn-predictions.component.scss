@@ -204,8 +204,12 @@
   cursor: pointer;
 }
 .active-item{
-    font-weight: bold;
+    font-weight: 400;
+    color: #4aa3df;
 }
+.column-2{
+    width: 50% !important;
+}  
 .small-cell-churn{
     width: 25% !important;
 }
