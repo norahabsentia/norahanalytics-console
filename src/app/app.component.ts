@@ -8,7 +8,8 @@ import { AnalyticsService } from './@core/utils/analytics.service';
 
 @Component({
   selector: 'ngx-app',
-  styles: [`
+  styles: [`   
+
     html {
       font-size: 14px;
     }
