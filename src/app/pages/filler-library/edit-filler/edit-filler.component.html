@@ -46,7 +46,7 @@
 						                <span style="color:#4aa3df">Selected</span>
 						            </nb-card-header>
 						            <nb-card-body class="noti_nb_body2">
-						                <select  multiple class="form-control noti_nb_select"  >
+						                <select  multiple class="form-control noti_nb_select"  *ngIf="this.curfiller['value_segments']">
 						                    <option *ngFor="let value of this.curfiller['value_segments'][editSegmentKey]" [value]="value" (click)="backFiller(value)">{{value}}</option>
 						                </select>
 						            </nb-card-body>
@@ -56,8 +56,13 @@
 						                <span>Presets</span>
 						            </nb-card-header>
 						            <nb-card-body class="noti_nb_body2">
-						                <select  multiple class="form-control noti_nb_select"   *ngIf="this.curfiller['value_segments_presets']">
-						                    <option *ngFor="let value of this.curfiller['value_segments_presets'][editSegmentKey]"  [value]="value">{{value}}</option>
+										<!-- {{ this.curfiller | json }} -->
+						                <!-- <select  multiple class="form-control noti_nb_select" *ngIf="this.curfiller['value_segments_presets']">
+						                    <option *ngFor="let value of this.curfiller['value_segments'][editSegmentKey]"  [value]="value">{{value}}</option>
+										</select> -->
+										
+										<select  multiple class="form-control noti_nb_select" *ngIf="this.curPreset.length">
+						                    <option *ngFor="let value of this.curPreset"  [value]="value">{{value.fillername}}:{{value.valuename}}</option>
 						                </select>
 						            </nb-card-body>
 						        </nb-card>

@@ -1,21 +1,21 @@
 <div class="basic-container md-padding" layout="row">
 	<mat-grid-list cols="4" rowHeight="400px" *ngIf="!this.showFillerLibraryPage" >
-		<mat-grid-tile *ngFor="let notification of notificationList" (click)="showFillerLibPage(notification)">
+		<mat-grid-tile *ngFor="let notification of notificationList">
 			<mat-card class="example-card cursor_pointer" rowHeight="400px">
 			  <img mat-card-image src="../../../assets/images/notification_header.png" alt="Photo of a Shiba Inu">
-			  <mat-card-header>
+			  <mat-card-header (click)="showFillerLibPage(notification)">
 			  	
 			    <!-- <div mat-card-avatar class="example-header-image"></div>
 			    <mat-card-title>Shiba Inu</mat-card-title>
 			    <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
 			  </mat-card-header>	  
-			  <mat-card-content >
-			  	<div class="card-content-height">
+			  <mat-card-content>
+			  	<div class="card-content-height" (click)="showFillerLibPage(notification)">
 				  	<h6>{{notification.title}}</h6>
 				    <p>{{notification.body}}</p>
 			    </div>
 			    <div class="fillerSingleRow" *ngIf="notification && notification.Customer_Segment_ID">
-			    		<span	 *ngFor="let custSegIndex of  Object.keys(notification.Customer_Segment_ID)">
+			    	<span	 *ngFor="let custSegIndex of  Object.keys(notification.Customer_Segment_ID)">
 							<span class="tagbutton" [ngStyle]="{'background-color': getRandomColor(notification,custSegIndex)}">
 								<span>
 									{{notification.Customer_Segment_ID[custSegIndex].name}}
@@ -25,11 +25,11 @@
 			    </div>
 				
 			  </mat-card-content>
-			  <mat-card-actions style="    text-align: right;">
+			  <mat-card-actions style="text-align: right;">
 			  	 <span class="notification_edit_icon">
 			  	 	<i _ngcontent-c10="" class="nb-edit"></i>
 			  	 </span>
-			  	 <span class="notification_edit_icon">
+			  	 <span class="notification_edit_icon" (click)="onDelete(notification.noti_ID)">
 			  	 	<i _ngcontent-c10="" class="nb-trash"></i>
 			  	 </span>
 			  	 <span class="notification_edit_icon">
