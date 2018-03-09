@@ -9,12 +9,14 @@ import {Router} from "@angular/router";
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-
+  forgetPass;
   constructor (private afAuth: AngularFireAuth,
                private router: Router) {
+
   }
 
-  ngOnInit(){}
+  ngOnInit(){
+  }
 
   login(form: NgForm) {
     this.afAuth.auth.signInWithEmailAndPassword(form.value.email, form.value.password)
@@ -24,5 +26,15 @@ export class LoginComponent implements OnInit {
       .catch(
         (err) => alert(err.message)
       );
+  }
+
+  reset(form){
+    this.afAuth.auth.sendPasswordResetEmail(form.value.email)
+      .then( resp => {
+        console.log('sent!');
+        this.forgetPass = false;
+      } )
+      .catch( error => console.log('failed to send', error) );
+
   }
 }
