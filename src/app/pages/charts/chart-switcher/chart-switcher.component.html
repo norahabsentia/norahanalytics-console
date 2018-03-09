@@ -1,6 +1,6 @@
 <nb-card>
     <div *ngFor="let item of charts">
-        <div *ngIf="item.show && (item.type === 'Pie' || item.type === 'Histogram' || item.type === 'StackBar')" class="dropdawn-wrap-outer">
+        <div *ngIf="item.show && (item.type === 'Pie' || item.type === 'Histogram')" class="dropdawn-wrap-outer">
             <div class="right-content-select" style="">
                 <div class="lable">
                   Basic:
@@ -171,15 +171,15 @@
                       </div>
                     </div>
                     <div class="row-table-item " style="width: 40%;">
-                      <div class=" ">{{item.pop_churnedPredicted + item.pop_churnedNotPredicted}}</div>
+                      <div class=" ">{{item.pop_churnedPredicted}} + {{item.pop_churnedNotPredicted}}</div>
                     </div>
-
+                    
                     <div class="row-table-item " style="width: 40%;">
                       <div class="">
-                        <div class=" ">{{item.pop_notchurnedPredicted + item.pop_notchurnedNotpredicted}}</div>
+                        <div class=" ">{{item.pop_notchurnedPredicted}} + {{item.pop_notchurnedNotpredicted}}</div>
                       </div>
                     </div>
-
+                   
                     <!-- <div class="row-table-item ">
                       <div class=" ">{{item.pop_churnedPredicted}}</div>
                     </div>
