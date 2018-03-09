@@ -665,16 +665,16 @@ export class ChartSwitcherComponent implements OnInit {
       datasets.push({
         label: 'Churned users',
         data: objData['pop_churned'],
-        backgroundColor: "#81b7dc",
-        hoverBackgroundColor: "#81b7dc",
+        backgroundColor: "#4aa3df",
+        hoverBackgroundColor: "#4aa3df",
         hoverBorderWidth: 2,
         hoverBorderColor: '#dddde0'
       });
       datasets.push({
         label: 'Not-Churned users',
         data: objData['pop_notChurned'],
-        backgroundColor: "#bcbabe",
-        hoverBackgroundColor: "#bcbabe",
+        backgroundColor: "#dddde0",
+        hoverBackgroundColor: "#dddde0",
         hoverBorderWidth: 2,
         hoverBorderColor: '#dddde0',
         hidden: true
@@ -693,8 +693,8 @@ export class ChartSwitcherComponent implements OnInit {
       datasets.push({
         label: 'False negatives',
         data: objData['pop_churnedNotPredicted'],
-        backgroundColor: "#81b7dc",
-        hoverBackgroundColor: "#81b7dc",
+        backgroundColor: "#4aa3df",
+        hoverBackgroundColor: "#4aa3df",
         hoverBorderWidth: 2,
         hoverBorderColor: '#dddde0'
       });
@@ -729,16 +729,16 @@ export class ChartSwitcherComponent implements OnInit {
       datasets.push({
         label: 'Predicted to churn',
         data: objData['pop_churnedPredicted'],
-        backgroundColor: "#81b7dc",
-        hoverBackgroundColor: "#81b7dc",
+        backgroundColor: "#4aa3df",
+        hoverBackgroundColor: "#4aa3df",
         hoverBorderWidth: 2,
         hoverBorderColor: '#dddde0'
       });
       datasets.push({
         label: 'Not predicted to churn',
         data: objData['pop_churnedNotPredicted'],
-        backgroundColor: "#bcbabe",
-        hoverBackgroundColor: "#bcbabe",
+        backgroundColor: "#dddde0",
+        hoverBackgroundColor: "#dddde0",
         hoverBorderWidth: 2,
         hoverBorderColor: '#dddde0'
       });

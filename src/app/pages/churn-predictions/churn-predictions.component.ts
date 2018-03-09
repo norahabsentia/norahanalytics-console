@@ -277,6 +277,7 @@ export class ChurnPredictionsComponent implements OnInit, OnDestroy {
         //     fontColor: chartjs.textColor,
         //   },
         // },
+
       };
 
       let barOptions = {
