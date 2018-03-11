@@ -16,6 +16,7 @@ import { ToastrService } from 'ngx-toastr';
 export class EditFiller implements OnInit {
   @Input() curfiller = [];
   curfillerKey;
+  curPreset = [];
   editValue = 0;
   editSegmentKey;
   addValueTextbox:string;
@@ -90,10 +91,16 @@ export class EditFiller implements OnInit {
   
   saveAsPreset(){
       if(!this.curfiller['value_segments_presets'])this.curfiller['value_segments_presets'] = {};
-      this.curfiller['value_segments_presets'][this.editSegmentKey]  = this.curfiller['value_segments'][this.editSegmentKey] ;
+      this.curfiller['value_segments_presets'][this.editSegmentKey]  = this.curfiller['value_segments'][this.editSegmentKey];
       console.log('preset values')
       console.log(this.curfiller['value_segments_presets']);
-      this.curfiller['value_segments'][this.editSegmentKey] =[];
+      let valNameArray =  Object.keys(this.curfiller["value_segments"]);
+      this.curPreset.push({
+        fillername: this.curfiller["tag_name"],
+        valuename: valNameArray[valNameArray.length - 1]
+      });
+      console.log(this.curPreset)
+    //   this.curfiller['value_segments'][this.editSegmentKey] =[];
   }
 
   backFiller(event){
@@ -123,6 +130,7 @@ export class EditFiller implements OnInit {
   createFillerValue(val){
       console.log(val)
       console.log(this.addValue);
+      this.editfillerValue(this.addValue)
       
       if(this.curfiller['value_segments']){
           this.curfiller['value_segments'][this.addValue] = [];
