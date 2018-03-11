@@ -39,6 +39,8 @@ import {PerformanceAnalysisOverviewComponent} from "../retention-booster/user-ch
 import {PerformanceAnalysisUserOriginBasisComponent} from "../retention-booster/user-churn/performance-analysis/performance-analysis-user-origin-basis/performance-analysis-user-origin-basis.component";
 import {PerformanceAnalysisUserBehaviorBasisComponent} from "../retention-booster/user-churn/performance-analysis/performance-analysis-user-behavior-basis/performance-analysis-user-behavior-basis.component";
 import {PerformanceAnalysisBoosterComponent} from "../retention-booster/performance-analysis.component";
+import {NotificationsPerformanceComponent} from "../retention-booster/notifications-performance/notifications-performance.component";
+import {RevenueRecommendationsAnalysisComponent} from "../smart-pricing/revenue-recommendations-analysis/revenue-recommendations-analysis.component";
 
 @NgModule({
   imports: [
@@ -62,6 +64,7 @@ import {PerformanceAnalysisBoosterComponent} from "../retention-booster/performa
     PerformanceAnalysisOverviewComponent,
     PerformanceAnalysisUserOriginBasisComponent,
     PerformanceAnalysisUserBehaviorBasisComponent,
+    NotificationsPerformanceComponent,
     GameOverviewComponent,
     OverviewStatusCardComponent,
     ClassificationComponent,

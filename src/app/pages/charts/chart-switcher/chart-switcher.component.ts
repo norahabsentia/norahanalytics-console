@@ -25,7 +25,7 @@ export class ChartSwitcherComponent implements OnInit {
   showYAxisLabel = true;
 
   colorScheme = {
-    domain: ['#4aa3df', '#dddde0']
+    domain: ['#4aa3df', '#ebebee']
   };
 
 
@@ -287,7 +287,7 @@ export class ChartSwitcherComponent implements OnInit {
         })
       }
     }
-
+console.log(datasets, keys, 999999999999999999999999999999)
     this.dataLine = {
       tooltip: {
         trigger: 'axis'
@@ -576,7 +576,7 @@ export class ChartSwitcherComponent implements OnInit {
     }
 
     // this.setChartBarData();
-    // this.setChartLineData();
+    this.setChartLineData();
     // this.setChartEBarData(0);
     // this.setChartEPieData(0);
     this.setData();
@@ -665,16 +665,16 @@ export class ChartSwitcherComponent implements OnInit {
       datasets.push({
         label: 'Churned users',
         data: objData['pop_churned'],
-        backgroundColor: "#81b7dc",
-        hoverBackgroundColor: "#81b7dc",
+        backgroundColor: "#4aa3df",
+        hoverBackgroundColor: "#4aa3df",
         hoverBorderWidth: 2,
         hoverBorderColor: '#dddde0'
       });
       datasets.push({
         label: 'Not-Churned users',
         data: objData['pop_notChurned'],
-        backgroundColor: "#bcbabe",
-        hoverBackgroundColor: "#bcbabe",
+        backgroundColor: "#dddde0",
+        hoverBackgroundColor: "#dddde0",
         hoverBorderWidth: 2,
         hoverBorderColor: '#dddde0',
         hidden: true
@@ -729,16 +729,16 @@ export class ChartSwitcherComponent implements OnInit {
       datasets.push({
         label: 'Predicted to churn',
         data: objData['pop_churnedPredicted'],
-        backgroundColor: "#81b7dc",
-        hoverBackgroundColor: "#81b7dc",
+        backgroundColor: "#4aa3df",
+        hoverBackgroundColor: "#4aa3df",
         hoverBorderWidth: 2,
         hoverBorderColor: '#dddde0'
       });
       datasets.push({
         label: 'Not predicted to churn',
         data: objData['pop_churnedNotPredicted'],
-        backgroundColor: "#bcbabe",
-        hoverBackgroundColor: "#bcbabe",
+        backgroundColor: "#dddde0",
+        hoverBackgroundColor: "#dddde0",
         hoverBorderWidth: 2,
         hoverBorderColor: '#dddde0'
       });

@@ -27,7 +27,7 @@
 
   nb-card {
     nb-card-body {
-      height: 498px;
+      height: 470px;
     }
   }
 }
@@ -97,6 +97,7 @@
   -webkit-box-shadow: 0px 0px 10px -3px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 0px 10px -3px rgba(0,0,0,0.75);
   box-shadow: 0px 0px 10px -3px rgba(0,0,0,0.75);
+  margin-bottom: 40px;
 }
 .box{
   padding: 19px;
@@ -133,9 +134,9 @@
   font-weight: bold;
 }
 .users{
-  font-size: 17px;
-  font-weight: 500;
-  color: rgba(109, 109, 109, 1);
+  font-size: 19px;
+  font-weight: 600;
+  color: #6d6d6d;
 }
 .lable{
   color: rgba(141, 141, 141, 1);
@@ -152,7 +153,47 @@
   color: #595959;
   padding-left: 10px;
   font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 45px;
 }
 .box-wrapper-top{
   width: 100%;
+}
+
+.table-bot{
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #bdbdbd;
+  -webkit-box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.75);
+}
+.row-table-bot{
+  display: flex;
+  justify-content: space-between;
+  height: 45px;
+  font-size: 14px;
+}
+.row-table-bot > div{
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #bdbdbd;
+  border-left: 1px solid #bdbdbd;
+  border-right: none;
+  padding: 5px;
+  position: relative;
+  padding-left: 20px;
+  color: rgba(119, 119, 119, 1);
+  font-weight: 500;
+}
+.header{
+  height: 50px;
+}
+.header > div{
+  border-top: none;
+  color: rgba(102, 102, 102, 1);
+  font-weight: 600;
+}
+div.row-table-bot > div:nth-child(3), div.row-table-bot > div:nth-child(5){
+  padding-left: 40px;
 }
