@@ -3,10 +3,10 @@
 
     <div class="row">
       <div class="col-md-6 col-xs-12 stackbar">
-          <chart-switcher *ngIf="country" [title]="'Country'" [showMap]="true" [data]="country"></chart-switcher>
+          <chart-switcher *ngIf="country" [title]="'Country'" [showMap]="true" [data]="country" [optionsSettings]="horizontalOptions"></chart-switcher>
       </div>
       <div class="col-md-6 col-xs-12 stackbar">
-        <chart-switcher *ngIf="region" [title]="'Region'" [data]="region"></chart-switcher>
+        <chart-switcher *ngIf="region" [title]="'Region'" [data]="region" [optionsSettings]="horizontalOptions2"></chart-switcher>
       </div>
     </div>
 

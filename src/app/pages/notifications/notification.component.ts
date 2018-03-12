@@ -150,25 +150,4 @@ showFillerStatus:boolean = false;;
 
     }
   
-    onDelete(key: string) {
-        if (confirm('Are you sure to delete this notification ?') == true) {
-          this.notificationService.deleteNotification(key);
-          this.notificationService.selectedNotification = {
-            noti_ID: null,
-            title: '',
-            body: '',
-            deeplink: '',
-            Customer_Segment_ID: '',
-          }
-          this.notificationService.temp = {
-            noti_ID: null,
-            title: '',
-            body: '',
-            deeplink: '',
-            Customer_Segment_ID: '',
-          }
-          this.notificationService.rightArray = [];
-          this.tostr.warning("Deleted Successfully", "Success");
-        }
-      }
 }
