@@ -1,5 +1,4 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {Options} from "fullcalendar";
 import {CalendarComponent} from "ng-fullcalendar";
 
 @Component({
@@ -9,7 +8,7 @@ import {CalendarComponent} from "ng-fullcalendar";
 })
 export class DispatchCalendarComponent implements OnInit {
 
-  calendarOptions: Options;
+  calendarOptions;
   @ViewChild(CalendarComponent) ucCalendar: CalendarComponent;
   constructor() {}
   ngOnInit() {
