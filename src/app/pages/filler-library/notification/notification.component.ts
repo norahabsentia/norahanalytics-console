@@ -339,6 +339,7 @@ showFillerStatus:boolean = false;;
                       prefixSuffix+filler.tag_name+prefixSuffix,this.notificationService.selectedNotification.body);
           }
       }else{
+        //   console.log('Else condition', this.currentFiller);
           this.currentFiller = filler;
           this.notificationService.editFillerSection = 1;
       }
