@@ -29,7 +29,6 @@
         "../node_modules/bootstrap/dist/css/bootstrap.css",
         "../node_modules/typeface-exo/index.css",
         "../node_modules/roboto-fontface/css/roboto/roboto-fontface.css",
-        "./assets/fonts/avenir-fontface.css",
         "../node_modules/ionicons/scss/ionicons.scss",
         "../node_modules/font-awesome/scss/font-awesome.scss",
         "../node_modules/nebular-icons/scss/nebular-icons.scss",

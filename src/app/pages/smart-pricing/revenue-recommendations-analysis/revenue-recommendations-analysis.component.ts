@@ -26,6 +26,7 @@ export class RevenueRecommendationsAnalysisComponent implements OnInit, OnDestro
       label: 'Display stacked bar',
     },
   ];
+  showDropdawn;
   dataBar1Options = this.charts[1];
   dataBar2Options = this.charts[1];
   dataBar3Options = this.charts[1];
