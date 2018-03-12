@@ -18,6 +18,9 @@ import { PerformanceAnalysisUserBehaviorBasisComponent } from './retention-boost
 import {ChartSwitcherTableComponent} from "./charts/chart-switcher/chart-switcher-table/chart-switcher-table.component";
 import { LoginComponent } from './login/login.component';
 import { AngularFireAuthModule} from "angularfire2/auth";
+import {RevenueRecommendationsAnalysisComponent} from "./smart-pricing/revenue-recommendations-analysis/revenue-recommendations-analysis.component";
+import { DispatchCalendarComponent } from './retention-booster/dispatch-calendar/dispatch-calendar.component';
+import {FullCalendarModule} from "ng-fullcalendar";
 
 const PAGES_COMPONENTS = [
   PagesComponent,
@@ -33,12 +36,15 @@ const PAGES_COMPONENTS = [
     DashboardModule,
     GameOverviewModule,
     ChartsRoutingModule, NgxEchartsModule, NgxChartsModule, ChartModule,
-    Ng2SmartTableModule
+    Ng2SmartTableModule,
+    FullCalendarModule
   ],
   declarations: [
     ...PAGES_COMPONENTS,
     ChurnPredictionsComponent,
+    RevenueRecommendationsAnalysisComponent,
     LoginComponent,
+    DispatchCalendarComponent,
   ],
 })
 export class PagesModule {

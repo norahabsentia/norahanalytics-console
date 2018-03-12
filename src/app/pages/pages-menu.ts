@@ -29,6 +29,15 @@ export const MENU_ITEMS: NbMenuItem[] = [
         title: 'Churn Predictions',
         link: '/pages/churn-predictions',
       },
+      {
+        title: 'Notifications Performance',
+        link: '/pages/retention-booster/Notifications-Performance',
+      },
+
+      {
+        title: 'Dispatch Calendar',
+        link: '/pages/retention-booste/dispatch-calendar',
+      },
     ]
   },
   {
@@ -39,13 +48,17 @@ export const MENU_ITEMS: NbMenuItem[] = [
         title: 'User Trends',
         link: '/pages/smart-pricing/user-trends',
       },
+      // {
+      //   title: 'Predictions',
+      //   link: '/pages/smart-pricing/predictions',
+      // },
+      // {
+      //   title: 'Performance Analysis',
+      //   link: '/pages/smart-pricing/performance-analysis',
+      // },
       {
-        title: 'Predictions',
-        link: '/pages/smart-pricing/predictions',
-      },
-      {
-        title: 'Performance Analysis',
-        link: '/pages/smart-pricing/performance-analysis',
+        title: 'Revenue recommendations & Analysis',
+        link: '/pages/smart-pricing/Revenue-analysis'
       },
       {
         title: 'Pricing Console',

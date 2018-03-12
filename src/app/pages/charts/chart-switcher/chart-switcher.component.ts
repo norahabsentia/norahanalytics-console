@@ -242,7 +242,7 @@ export class ChartSwitcherComponent implements OnInit {
         })
       }
     }
-
+console.log(datasets, keys, 999999999999999999999999999999)
     this.dataLine = {
       tooltip: {
         trigger: 'axis'
@@ -526,7 +526,7 @@ export class ChartSwitcherComponent implements OnInit {
       this.select(this.charts[this.charts.length - 1]);
     }
     // this.setChartBarData();
-    // this.setChartLineData();
+    this.setChartLineData();
     // this.setChartEBarData(0);
     // this.setChartEPieData(0);
     this.setData();
