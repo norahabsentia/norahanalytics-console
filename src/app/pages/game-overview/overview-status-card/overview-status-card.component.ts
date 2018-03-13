@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'ngx-overview-status-card',
@@ -11,5 +11,5 @@ export class OverviewStatusCardComponent implements OnInit {
 
   ngOnInit() {
   }
-
+@Input() data;
 }

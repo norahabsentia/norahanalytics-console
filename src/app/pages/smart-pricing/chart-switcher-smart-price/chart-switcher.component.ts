@@ -127,6 +127,11 @@ export class ChartSwitcherSmartPriceComponent implements OnInit {
   @Input() title;
   @Input() showMap;
   @Input() chartsValue;
+  @Input() data;
+  pieData;
+  @Input() legend;
+  @Input() chartsInput;
+
 
   constructor(private service: SmartTableService, public dataservice: DataService, private theme: NbThemeService) {
     const data = this.service.getData();
@@ -136,7 +141,16 @@ export class ChartSwitcherSmartPriceComponent implements OnInit {
   }
 
   clickLocation(item){
-    this.selectedLocation = item.name;
+    this.pieData = null;
+    this.selectedLocation = item;
+    setTimeout(() => {
+      this.pieData = this.data[item];
+      setTimeout(() => {
+
+        document.getElementById('echartpick').click();
+      }, 100)
+    }, 100)
+
     this.showLocation = false;
   }
 
@@ -159,7 +173,10 @@ export class ChartSwitcherSmartPriceComponent implements OnInit {
 
       this.select(this.charts[this.charts.length - 1]);
     }
-
+    console.log(this.data, this.chartsInput)
+    this.pieData = this.data[this.chartsInput[0]];
+    this.dataLocation = this.chartsInput;
+    this.selectedLocation = this.chartsInput[0];
     for(let item of this.chartsValue){
       console.log(item)
       if(item === 'Line'){
@@ -227,4 +244,16 @@ export class ChartSwitcherSmartPriceComponent implements OnInit {
   }
   changeonddl(): void {
   }
+
+  // getPieData(){
+  //   console.log(this.data)
+  //
+  //     [
+  //     { value: 335, name: 'Germany' },
+  //       { value: 310, name: 'France' },
+  //       { value: 234, name: 'Canada' },
+  //       { value: 135, name: 'Russia' },
+  //       { value: 1548, name: 'USA' },
+  //     ]
+  // }
 }
