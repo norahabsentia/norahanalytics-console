@@ -1,38 +1,37 @@
-
 <div class="row">
 
-        <div class="col-sm-12">
-            <div class="row">
-                <div class="col-md-12 col-xs-12 col-sm-12 stackbar-curent">
-                    <chart-switcher *ngIf="currentlevel" [title]="'Current Level'" [data]="currentlevel"></chart-switcher>
-                </div>
+    <div class="col-lg-12">
+        <div class="row">
+            <div class="col-md-12 col-xs-12 col-sm-12 stackbar-curent">
+                <chart-switcher *ngIf="currentlevel" [title]="'Current Level'" [data]="currentlevel"></chart-switcher>
             </div>
+        </div>
 
-            <div class="row small-wrap">
-                <div class="col-md-4 col-xs-12 col-sm-12">
-                    <chart-switcher *ngIf="engagement" [title]="'Engagement'" [data]="engagement"></chart-switcher>
-                </div>
-                <div class="col-md-4 col-xs-12 col-sm-12">
-                        <chart-switcher *ngIf="Loyalty_Index" [title]="'Loyalty Index'" [data]="Loyalty_Index"></chart-switcher>
-                </div>
-                <div class="col-md-4 col-xs-12 col-sm-12">
-                  <chart-switcher *ngIf="engagement" [title]="'User Skills'" [data]="engagement"></chart-switcher>
-
-                  <!--<chart-switcher *ngIf="userSkill" [title]="'User Skills'" [data]="userSkill"></chart-switcher>-->
-                </div>
+        <div class="row small-wrap">
+            <div class="col-md-4 col-xs-12 col-sm-12">
+                <chart-switcher *ngIf="engagement" [title]="'Engagement'" [data]="engagement"></chart-switcher>
             </div>
-
-            <div class="row small-wrap">
-                <div class="col-md-8  col-xs-12 col-sm-12">
-                    <chart-switcher *ngIf="totalGame" [title]="'Total time spent in Game'" [data]="totalGame"></chart-switcher>
-                </div>
-                <div class="col-md-4  col-xs-12 col-sm-12">
-                    <!-- <chart-switcher *ngIf="Out_of_Lives" [title]="'Out of Lives'" [data]="Out_of_Lives"></chart-switcher> -->
-                    <chart-switcher *ngIf="LevelStickiness" [title]="'Level Stickiness'" [data]="LevelStickiness"></chart-switcher>
-                </div>
+            <div class="col-md-4 col-xs-12 col-sm-12">
+                <chart-switcher *ngIf="Loyalty_Index" [title]="'Loyalty Index'" [data]="Loyalty_Index"></chart-switcher>
             </div>
+            <div class="col-md-4 col-xs-12 col-sm-12">
+                <chart-switcher *ngIf="engagement" [title]="'User Skills'" [data]="engagement"></chart-switcher>
 
-            <!-- <div class="row small-wrap">
+                <!--<chart-switcher *ngIf="userSkill" [title]="'User Skills'" [data]="userSkill"></chart-switcher>-->
+            </div>
+        </div>
+
+        <div class="row small-wrap">
+            <div class="col-md-8  col-xs-12 col-sm-12">
+                <chart-switcher *ngIf="totalGame" [title]="'Total time spent in Game'" [data]="totalGame"></chart-switcher>
+            </div>
+            <div class="col-md-4  col-xs-12 col-sm-12">
+                <!-- <chart-switcher *ngIf="Out_of_Lives" [title]="'Out of Lives'" [data]="Out_of_Lives"></chart-switcher> -->
+                <chart-switcher *ngIf="LevelStickiness" [title]="'Level Stickiness'" [data]="LevelStickiness"></chart-switcher>
+            </div>
+        </div>
+
+        <!-- <div class="row small-wrap">
                 <div class="col-sm-6">
 
                 </div>
@@ -40,13 +39,13 @@
                     <chart-switcher *ngIf="Out_of_Lives" [title]="'Out of Lives'" [data]="Out_of_Lives"></chart-switcher>
                 </div>
             </div> -->
-            <div class="row">
-                <div class="col-md-12 col-xs-12 col-sm-12 stackbar-curent">
-                    <chart-switcher *ngIf="lastAction" [title]="'Last Action'" [data]="lastAction"></chart-switcher>
-                </div>
+        <div class="row">
+            <div class="col-md-12 col-xs-12 col-sm-12 stackbar-curent">
+                <chart-switcher *ngIf="lastAction" [title]="'Last Action'" [data]="lastAction"></chart-switcher>
             </div>
         </div>
     </div>
+</div>
 
 
 
