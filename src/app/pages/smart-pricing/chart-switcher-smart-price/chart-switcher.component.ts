@@ -173,10 +173,13 @@ export class ChartSwitcherSmartPriceComponent implements OnInit {
 
       this.select(this.charts[this.charts.length - 1]);
     }
+    if(this.chartsInput){
+
     console.log(this.data, this.chartsInput)
     this.pieData = this.data[this.chartsInput[0]];
     this.dataLocation = this.chartsInput;
     this.selectedLocation = this.chartsInput[0];
+    }
     for(let item of this.chartsValue){
       console.log(item)
       if(item === 'Line'){

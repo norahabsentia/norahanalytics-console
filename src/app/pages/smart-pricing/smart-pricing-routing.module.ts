@@ -11,6 +11,7 @@ import {EchartsLineSmartPricingComponent} from "./chart-switcher-smart-price/ech
 import {CountrySmartPricingComponent} from "./chart-switcher-smart-price/country/country.component";
 import {EchartsBarSmartPriceComponent} from "./chart-switcher-smart-price/echarts-bar.component";
 import {EchartsPieSmartPriceComponent} from "./chart-switcher-smart-price/echarts-pie.component";
+import {RevenueRecommendationsAnalysisComponent} from "./revenue-recommendations-analysis/revenue-recommendations-analysis.component";
 
 const routes: Routes = [{
   path: '',
@@ -24,7 +25,13 @@ const routes: Routes = [{
   }, {
     path: 'performance-analysis',
     component: PerformanceAnalysisComponent,
-  }],
+  },
+    {
+      path: 'Revenue-analysis',
+      component: RevenueRecommendationsAnalysisComponent
+    },
+
+  ],
 }];
 
 @NgModule({

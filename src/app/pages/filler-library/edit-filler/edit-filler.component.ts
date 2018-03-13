@@ -16,7 +16,6 @@ import { ToastrService } from 'ngx-toastr';
 export class EditFiller implements OnInit {
   @Input() curfiller = [];
   curfillerKey;
-  curPreset = [];
   editValue = 0;
   editSegmentKey;
   selectedValue;
@@ -90,6 +89,7 @@ export class EditFiller implements OnInit {
     console.log('after reset arra of ' + this.editSegmentKey)
     console.log(this.curfiller['value_segments'][this.editSegmentKey])
   }
+
 
   saveAsPreset() {
     if (!this.curfiller['value_segments_presets']) this.curfiller['value_segments_presets'] = {};

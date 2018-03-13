@@ -12,6 +12,27 @@ import {NbColorHelper, NbThemeService} from "@nebular/theme";
 export class ChartSwitcherComponent implements OnInit {
 
 
+   multi;
+  view;
+
+  // options
+  showXAxis = true;
+  showYAxis = true;
+  gradient = false;
+  showLegend = true;
+  showXAxisLabel = true;
+  xAxisLabel = 'Country';
+  showYAxisLabel = true;
+
+  colorScheme = {
+    domain: ['#4aa3df', '#ebebee']
+  };
+
+
+  onSelect(event) {
+    console.log(event);
+  }
+
   dataT = [
     {
       "ProductID": "12321312",
@@ -119,10 +140,34 @@ export class ChartSwitcherComponent implements OnInit {
   dataLine;
   dataEBar;
   dataEPie;
+  dataStackBarHorizontal = [
+
+  ];
+
+  optionsBarHorizontal = {
+    animation: {
+      duration: 10,
+    },
+    tooltips: {
+      mode: 'label',
+    },
+    scales: {
+      xAxes: [{
+        stacked: true,
+        gridLines: { display: false },
+      }],
+      yAxes: [{
+        stacked: true,
+
+      }],
+    }, // scales
+    legend: {display: true}
+  }
 
   @Input() title;
   @Input() showMap;
   @Input() data;
+  @Input() optionsSettings;
 
   constructor(private service: SmartTableService, public dataservice: DataService, private theme: NbThemeService) {
     const data = this.service.getData();
@@ -242,7 +287,7 @@ export class ChartSwitcherComponent implements OnInit {
         })
       }
     }
-
+console.log(datasets, keys, 999999999999999999999999999999)
     this.dataLine = {
       tooltip: {
         trigger: 'axis'
@@ -515,6 +560,10 @@ export class ChartSwitcherComponent implements OnInit {
     this.dataTCopy = Object.assign([], this.dataT);
 
     this.getDataFromJson();
+
+    if(this.optionsSettings){
+      this.charts = this.optionsSettings;
+    }
     if(this.showMap){
       this.charts.push( {
         type: 'Map',
@@ -525,11 +574,13 @@ export class ChartSwitcherComponent implements OnInit {
 
       this.select(this.charts[this.charts.length - 1]);
     }
+
     // this.setChartBarData();
-    // this.setChartLineData();
+    this.setChartLineData();
     // this.setChartEBarData(0);
     // this.setChartEPieData(0);
     this.setData();
+    this.setDataTohorizontalBar();
   }
   getDataFromJson() {
     this.dataservice.getData().subscribe((data) => {
@@ -538,6 +589,41 @@ export class ChartSwitcherComponent implements OnInit {
 
   }
   changeonddl(): void {
+  }
+  setDataTohorizontalBar(){
+    for(let item of this.data) {
+      let keys = []
+      let series = [];
+      keys = Object.keys(item);
+      keys.splice(keys.indexOf('value'), 1);
+      // for(let key of keys){
+      //   series.push({
+      //     "name": key,
+      //     "value": item[key]
+      //   })
+      // }
+      console.log(9999999999999999, item)
+        series.push({
+          "name": 'pop_churned',
+          "value": item['pop_churned']
+        },{
+          "name": 'pop_notChurned',
+          "value": item['pop_notChurned']
+        })
+      this.dataStackBarHorizontal.push({
+        "name": item.value,
+        "series": series
+      })
+    }
+      // {
+      //   "Platform": [
+      //   {"value": "Andriod", "High_Risk": 823, "Medium_Risk": 6121, "Low_Risk": 9266} ,
+      //   {"value": "IOS", "High_Risk": 813, "Medium_Risk": 6868, "Low_Risk": 9428} ,
+      //   {"value": "Windows", "High_Risk": 952, "Medium_Risk": 7070, "Low_Risk": 9397}
+      // ]
+      // }
+
+    this.view = [400, 450];
   }
   dataBar1
   setData(){
@@ -579,18 +665,19 @@ export class ChartSwitcherComponent implements OnInit {
       datasets.push({
         label: 'Churned users',
         data: objData['pop_churned'],
-        backgroundColor: "#81b7dc",
-        hoverBackgroundColor: "#81b7dc",
+        backgroundColor: "#4aa3df",
+        hoverBackgroundColor: "#4aa3df",
         hoverBorderWidth: 2,
         hoverBorderColor: '#dddde0'
       });
       datasets.push({
         label: 'Not-Churned users',
         data: objData['pop_notChurned'],
-        backgroundColor: "#bcbabe",
-        hoverBackgroundColor: "#bcbabe",
+        backgroundColor: "#dddde0",
+        hoverBackgroundColor: "#dddde0",
         hoverBorderWidth: 2,
-        hoverBorderColor: '#dddde0'
+        hoverBorderColor: '#dddde0',
+        hidden: true
       });
     }
 
@@ -642,16 +729,16 @@ export class ChartSwitcherComponent implements OnInit {
       datasets.push({
         label: 'Predicted to churn',
         data: objData['pop_churnedPredicted'],
-        backgroundColor: "#81b7dc",
-        hoverBackgroundColor: "#81b7dc",
+        backgroundColor: "#4aa3df",
+        hoverBackgroundColor: "#4aa3df",
         hoverBorderWidth: 2,
         hoverBorderColor: '#dddde0'
       });
       datasets.push({
         label: 'Not predicted to churn',
         data: objData['pop_churnedNotPredicted'],
-        backgroundColor: "#bcbabe",
-        hoverBackgroundColor: "#bcbabe",
+        backgroundColor: "#dddde0",
+        hoverBackgroundColor: "#dddde0",
         hoverBorderWidth: 2,
         hoverBorderColor: '#dddde0'
       });
