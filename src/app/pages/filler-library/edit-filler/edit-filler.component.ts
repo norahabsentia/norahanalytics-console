@@ -16,6 +16,7 @@ import { ToastrService } from 'ngx-toastr';
 export class EditFiller implements OnInit {
   @Input() curfiller = [];
   curfillerKey;
+  curPreset = [];
   editValue = 0;
   editSegmentKey;
   selectedValue;
