@@ -3,7 +3,7 @@
 @import '../../@theme/styles/themes';
 
 @include nb-install-component {
-    *{
+    *:not('i'){
         font-family: "Avenir" !important;
     }
     /deep/ nb-card-header {

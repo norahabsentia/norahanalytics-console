@@ -62,7 +62,7 @@
 										</select> -->
 										
 										<select  multiple class="form-control noti_nb_select" *ngIf="this.curPreset.length">
-						                    <option *ngFor="let value of this.curPreset"  [value]="value">{{value.fillername}}:{{value.valuename}}</option>
+						                    <option *ngFor="let value of this.curPreset" (click)="onPresetSelectionClick(value)" [value]="value">{{value.fillername}}:{{value.valuename}}</option>
 						                </select>
 						            </nb-card-body>
 						        </nb-card>

@@ -1,4 +1,4 @@
-import { Component, OnInit , Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import { NgForm } from '@angular/forms';
 
@@ -19,24 +19,25 @@ export class EditFiller implements OnInit {
   curPreset = [];
   editValue = 0;
   editSegmentKey;
-  addValueTextbox:string;
-  addValue:string;
+  selectedValue;
+  addValueTextbox: string;
+  addValue: string;
   constructor(private notificationService: NotificationService, private tostr: ToastrService) { }
-  editFillerItemArray : any = [];
+  editFillerItemArray: any = [];
 
-  ngOnInit() {  
-      console.log('current filler')
-      console.log(this.curfiller);
+  ngOnInit() {
+    console.log('current filler')
+    console.log(this.curfiller);
 
-      this.initFiller();
+    this.initFiller();
 
-      if(this.curfiller['value_segments']){
-          this.getCurrentFillerKeys();
-          //this.curfillerKey = Object.keys(this.curfiller['value_segments']);
-      }
-  } 
+    if (this.curfiller['value_segments']) {
+      this.getCurrentFillerKeys();
+      //this.curfillerKey = Object.keys(this.curfiller['value_segments']);
+    }
+  }
 
-  initFiller(){
+  initFiller() {
     console.log('reset with : ')
     console.log(this.notificationService.itemsInit)
     console.log(this.notificationService.itemsInit.slice(0))
@@ -44,105 +45,124 @@ export class EditFiller implements OnInit {
     let self = this;
     this.editFillerItemArray = [];
     this.notificationService.itemsInit.forEach(element => {
-          if(self.editSegmentKey && (!self.curfiller['value_segments']  || !self.curfiller['value_segments'][self.editSegmentKey] ||  self.curfiller['value_segments'][self.editSegmentKey].indexOf(element.name)<0 )){
-              self.editFillerItemArray.push(element)
-          }
+      if (self.editSegmentKey && (!self.curfiller['value_segments'] || !self.curfiller['value_segments'][self.editSegmentKey] || self.curfiller['value_segments'][self.editSegmentKey].indexOf(element.name) < 0)) {
+        self.editFillerItemArray.push(element)
+      }
     });;
   }
-  
-  getCurrentFillerKeys(){
-      if(this.curfiller['value_segments']){
-          this.curfillerKey = Object.keys(this.curfiller['value_segments']);
-      }else{
-          this.curfillerKey = this.curfiller['value_segments'];
+
+  getCurrentFillerKeys() {
+    if (this.curfiller['value_segments']) {
+      this.curfillerKey = Object.keys(this.curfiller['value_segments']);
+    } else {
+      this.curfillerKey = this.curfiller['value_segments'];
+    }
+    return this.curfillerKey;
+  }
+  editfillerValue(key) {
+    this.editSegmentKey = key;
+    this.editValue = 1;
+    this.initFiller()
+  }
+  addSegmentFiller(event) {
+    console.log('Found it', event)
+    var i = 0;
+    let self = this;
+    this.editFillerItemArray.forEach(element => {
+      if (element.name == event) {
+        self.curfiller['value_segments'][self.editSegmentKey].push(element.name);
+        this.editFillerItemArray.splice(i, 1);
+        return;
       }
-      return this.curfillerKey;
-  }
-  editfillerValue(key){
-      this.editSegmentKey = key;
-      this.editValue = 1;
-      this.initFiller()
-  }
-  addSegmentFiller(event){
-      var i = 0;
-      let self = this;   
-      this.editFillerItemArray.forEach(element => {
-          if(element.name == event){
-              self.curfiller['value_segments'][self.editSegmentKey].push(element.name);
-              this.editFillerItemArray.splice(i, 1);
-              return;
-          }
-          i ++;
-      });
+      i++;
+    });
   }
 
-  reset(){
-    if(!this.curfiller['value_segments_presets'])this.curfiller['value_segments_presets'] = {};
-    if(!this.curfiller['value_segments'])this.curfiller['value_segments'] = {};
+  reset() {
+    if (!this.curfiller['value_segments_presets']) this.curfiller['value_segments_presets'] = {};
+    if (!this.curfiller['value_segments']) this.curfiller['value_segments'] = {};
 
-    
+
     this.curfiller['value_segments'][this.editSegmentKey] = [];
     this.curfiller['value_segments_presets'][this.editSegmentKey] = [];
     this.initFiller();
 
-    console.log('after reset arra of '+this.editSegmentKey)
+    console.log('after reset arra of ' + this.editSegmentKey)
     console.log(this.curfiller['value_segments'][this.editSegmentKey])
   }
-  
-  saveAsPreset(){
-      if(!this.curfiller['value_segments_presets'])this.curfiller['value_segments_presets'] = {};
-      this.curfiller['value_segments_presets'][this.editSegmentKey]  = this.curfiller['value_segments'][this.editSegmentKey];
-      console.log('preset values')
-      console.log(this.curfiller['value_segments_presets']);
-      let valNameArray =  Object.keys(this.curfiller["value_segments"]);
+
+  saveAsPreset() {
+    if (!this.curfiller['value_segments_presets']) this.curfiller['value_segments_presets'] = {};
+    this.curfiller['value_segments_presets'][this.editSegmentKey] = this.curfiller['value_segments'][this.editSegmentKey];
+    console.log('preset values')
+    console.log(this.curfiller['value_segments_presets']);
+
+    let fobj = this.curPreset.find(a => a.valuename == this.selectedValue);
+
+    if (fobj) {
+      let index = this.curPreset.indexOf(fobj);
+      this.curPreset[index].fillername = this.curfiller["tag_name"];
+      console.log('index', index)
+    } else {
       this.curPreset.push({
         fillername: this.curfiller["tag_name"],
-        valuename: valNameArray[valNameArray.length - 1]
+        valuename: this.selectedValue,
+        presetvalues: this.curfiller['value_segments_presets'][this.selectedValue]
       });
-      console.log(this.curPreset)
+    }
+    console.log(this.curPreset)
     //   this.curfiller['value_segments'][this.editSegmentKey] =[];
   }
 
-  backFiller(event){
-      var i=0;
-      var itemFound ;
-      this.notificationService.itemsInit.forEach(element => {
-          if(element.name == event){
-              itemFound=element;
-          }
-          i++;
-      });
-      var currentSegArray = this.curfiller['value_segments'][this.editSegmentKey];
-      var currentValueIndex = currentSegArray?currentSegArray.indexOf(event):-1;
-      
-      currentSegArray.splice(currentValueIndex, 1);
-      
-      this.editFillerItemArray.push(itemFound);
-  }
-  
-  showEditFillerTemplate(value){
-      this.editValue = value;
-  }
-  addValueFiller(){
-      this.notificationService.addFillerTextbox = 1;
+  onPresetSelectionClick(value) {
+    let presetvalues = value.presetvalues;
+
+    for(let i = 0; i < presetvalues.length; i++) {
+      this.addSegmentFiller(presetvalues[i]);
+      console.log('running loop for', presetvalues[i])
+    }    
   }
 
-  createFillerValue(val){
-      console.log(val)
-      console.log(this.addValue);
-      this.editfillerValue(this.addValue)
-      
-      if(this.curfiller['value_segments']){
-          this.curfiller['value_segments'][this.addValue] = [];
-      }else{
-          this.curfiller['value_segments'] = {};
-          this.curfiller['value_segments'][this.addValue] = [];
+  backFiller(event) {
+    var i = 0;
+    var itemFound;
+    this.notificationService.itemsInit.forEach(element => {
+      if (element.name == event) {
+        itemFound = element;
       }
-      this.editSegmentKey = this.addValue;
-      this.notificationService.addFillerTextbox = 0;
-      this.editValue = 1;
-      
-      this.getCurrentFillerKeys();
+      i++;
+    });
+    var currentSegArray = this.curfiller['value_segments'][this.editSegmentKey];
+    var currentValueIndex = currentSegArray ? currentSegArray.indexOf(event) : -1;
+
+    currentSegArray.splice(currentValueIndex, 1);
+
+    this.editFillerItemArray.push(itemFound);
+  }
+
+  showEditFillerTemplate(value) {
+    this.editValue = value;
+  }
+  addValueFiller() {
+    this.notificationService.addFillerTextbox = 1;
+  }
+
+  createFillerValue(val) {
+    this.selectedValue = val;
+    console.log(this.addValue);
+    this.editfillerValue(this.addValue)
+
+    if (this.curfiller['value_segments']) {
+      this.curfiller['value_segments'][this.addValue] = [];
+    } else {
+      this.curfiller['value_segments'] = {};
+      this.curfiller['value_segments'][this.addValue] = [];
+    }
+    this.editSegmentKey = this.addValue;
+    this.notificationService.addFillerTextbox = 0;
+    this.editValue = 1;
+
+    this.getCurrentFillerKeys();
   }
 }
 
