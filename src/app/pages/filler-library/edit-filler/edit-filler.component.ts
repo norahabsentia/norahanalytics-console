@@ -119,7 +119,6 @@ export class EditFiller implements OnInit {
 
     for(let i = 0; i < presetvalues.length; i++) {
       this.addSegmentFiller(presetvalues[i]);
-      console.log('running loop for', presetvalues[i])
     }    
   }
 
