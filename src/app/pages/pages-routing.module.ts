@@ -11,6 +11,9 @@ import {PerformanceAnalysisUserOriginBasisComponent} from "./retention-booster/u
 import {PerformanceAnalysisBoosterComponent} from "./retention-booster/performance-analysis.component";
 import {LoginComponent} from "./login/login.component";
 import {AuthGuard} from "../auth.guard";
+import {NotificationsPerformanceComponent} from "./retention-booster/notifications-performance/notifications-performance.component";
+import {RevenueRecommendationsAnalysisComponent} from "./smart-pricing/revenue-recommendations-analysis/revenue-recommendations-analysis.component";
+import {DispatchCalendarComponent} from "./retention-booster/dispatch-calendar/dispatch-calendar.component";
 
 const routes: Routes = [{
   path: '',
@@ -67,6 +70,14 @@ const routes: Routes = [{
     {
       path: 'retention-booster/churn-predictions',
       component: PerformanceAnalysisBoosterComponent,
+    },
+    {
+      path: 'retention-booster/Notifications-Performance',
+      component: NotificationsPerformanceComponent,
+    },
+    {
+      path: 'retention-booste/dispatch-calendar',
+      component: DispatchCalendarComponent
     },
     {
     path: '',

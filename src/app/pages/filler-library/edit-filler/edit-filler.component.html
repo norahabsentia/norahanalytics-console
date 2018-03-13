@@ -46,7 +46,7 @@
 						                <span style="color:#4aa3df">Selected</span>
 						            </nb-card-header>
 						            <nb-card-body class="noti_nb_body2">
-						                <select  multiple class="form-control noti_nb_select"  *ngIf="this.curfiller['value_segments']">
+						                <select  multiple class="form-control noti_nb_select"  >
 						                    <option *ngFor="let value of this.curfiller['value_segments'][editSegmentKey]" [value]="value" (click)="backFiller(value)">{{value}}</option>
 						                </select>
 						            </nb-card-body>
