@@ -17,6 +17,7 @@ export class EditFiller implements OnInit {
   @Input() curfiller = [];
   curfillerKey;
   curPreset = [];
+  presetToBeAdded = [];
   editValue = 0;
   editSegmentKey;
   selectedValue;
@@ -65,7 +66,6 @@ export class EditFiller implements OnInit {
     this.initFiller()
   }
   addSegmentFiller(event) {
-    console.log('Found it', event)
     var i = 0;
     let self = this;
     this.editFillerItemArray.forEach(element => {
@@ -93,6 +93,7 @@ export class EditFiller implements OnInit {
 
 
   saveAsPreset() {
+    console.log(this.curfiller);
     if (!this.curfiller['value_segments_presets']) this.curfiller['value_segments_presets'] = {};
     this.curfiller['value_segments_presets'][this.editSegmentKey] = this.curfiller['value_segments'][this.editSegmentKey];
     console.log('preset values')
@@ -105,6 +106,14 @@ export class EditFiller implements OnInit {
       this.curPreset[index].fillername = this.curfiller["tag_name"];
       console.log('index', index)
     } else {
+      //check if toBeadded array is empty
+      if (!this.presetToBeAdded.length) {
+        this.presetToBeAdded.forEach(item => {
+          if(this.curfiller['value_segments_presets'][this.selectedValue].indexOf(item) === -1) {
+            this.curfiller['value_segments_presets'][this.selectedValue].push(item);
+          }
+        })
+      }
       this.curPreset.push({
         fillername: this.curfiller["tag_name"],
         valuename: this.selectedValue,
@@ -116,8 +125,10 @@ export class EditFiller implements OnInit {
   }
 
   onPresetSelectionClick(value) {
+    console.log(value.presetvalues);
     let presetvalues = value.presetvalues;
-
+    this.presetToBeAdded = presetvalues;
+    console.log('To be added', presetvalues);
     for(let i = 0; i < presetvalues.length; i++) {
       this.addSegmentFiller(presetvalues[i]);
     }    
@@ -144,6 +155,8 @@ export class EditFiller implements OnInit {
     this.editValue = value;
   }
   addValueFiller() {
+    this.presetToBeAdded = [];
+    console.log('Saved preset clear');
     this.notificationService.addFillerTextbox = 1;
   }
 
@@ -165,4 +178,3 @@ export class EditFiller implements OnInit {
     this.getCurrentFillerKeys();
   }
 }
-
