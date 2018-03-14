@@ -539,7 +539,7 @@ console.log(datasets, keys, 999999999999999999999999999999)
   option = {};
 
   refresh(i){
-    console.log(i, this.dataTCopy[i], this.dataT[i])
+    //console.log(i, this.dataTCopy[i], this.dataT[i])
     this.dataTCopy[i] = Object.assign([], this.dataT[i]);
     this.dataTCopy[i] =  {
       "ProductID": "12321312",
