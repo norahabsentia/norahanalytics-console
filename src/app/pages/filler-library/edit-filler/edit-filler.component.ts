@@ -106,14 +106,6 @@ export class EditFiller implements OnInit {
       this.curPreset[index].fillername = this.curfiller["tag_name"];
       console.log('index', index)
     } else {
-      //check if toBeadded array is empty
-      if (!this.presetToBeAdded.length) {
-        this.presetToBeAdded.forEach(item => {
-          if(this.curfiller['value_segments_presets'][this.selectedValue].indexOf(item) === -1) {
-            this.curfiller['value_segments_presets'][this.selectedValue].push(item);
-          }
-        })
-      }
       this.curPreset.push({
         fillername: this.curfiller["tag_name"],
         valuename: this.selectedValue,
@@ -125,13 +117,23 @@ export class EditFiller implements OnInit {
   }
 
   onPresetSelectionClick(value) {
-    console.log(value.presetvalues);
+    
     let presetvalues = value.presetvalues;
     this.presetToBeAdded = presetvalues;
-    console.log('To be added', presetvalues);
-    for(let i = 0; i < presetvalues.length; i++) {
-      this.addSegmentFiller(presetvalues[i]);
-    }    
+    console.log('clicked values', presetvalues);
+
+    this.curfiller['value_segments'][this.editSegmentKey] = presetvalues;
+    this.editFillerItemArray = [];
+    console.log('All values', this.notificationService.itemsInit);
+    this.notificationService.itemsInit.forEach(el => {
+      let i = presetvalues.indexOf(el.name);
+      console.log('present values', presetvalues);
+      console.log('index', i)
+      if(i == -1) {
+        this.editFillerItemArray.push(el)
+      }
+    })
+    
   }
 
   backFiller(event) {
