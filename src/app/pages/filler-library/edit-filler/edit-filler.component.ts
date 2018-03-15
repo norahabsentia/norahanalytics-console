@@ -17,6 +17,7 @@ export class EditFiller implements OnInit {
   @Input() curfiller = [];
   curfillerKey;
   curPreset = [];
+  presetToBeAdded = [];
   editValue = 0;
   editSegmentKey;
   selectedValue;
@@ -65,7 +66,6 @@ export class EditFiller implements OnInit {
     this.initFiller()
   }
   addSegmentFiller(event) {
-    console.log('Found it', event)
     var i = 0;
     let self = this;
     this.editFillerItemArray.forEach(element => {
@@ -93,6 +93,7 @@ export class EditFiller implements OnInit {
 
 
   saveAsPreset() {
+    console.log(this.curfiller);
     if (!this.curfiller['value_segments_presets']) this.curfiller['value_segments_presets'] = {};
     this.curfiller['value_segments_presets'][this.editSegmentKey] = this.curfiller['value_segments'][this.editSegmentKey];
     console.log('preset values')
@@ -116,11 +117,23 @@ export class EditFiller implements OnInit {
   }
 
   onPresetSelectionClick(value) {
+    
     let presetvalues = value.presetvalues;
+    this.presetToBeAdded = presetvalues;
+    console.log('clicked values', presetvalues);
 
-    for(let i = 0; i < presetvalues.length; i++) {
-      this.addSegmentFiller(presetvalues[i]);
-    }    
+    this.curfiller['value_segments'][this.editSegmentKey] = presetvalues;
+    this.editFillerItemArray = [];
+    console.log('All values', this.notificationService.itemsInit);
+    this.notificationService.itemsInit.forEach(el => {
+      let i = presetvalues.indexOf(el.name);
+      console.log('present values', presetvalues);
+      console.log('index', i)
+      if(i == -1) {
+        this.editFillerItemArray.push(el)
+      }
+    })
+    
   }
 
   backFiller(event) {
@@ -144,6 +157,8 @@ export class EditFiller implements OnInit {
     this.editValue = value;
   }
   addValueFiller() {
+    this.presetToBeAdded = [];
+    console.log('Saved preset clear');
     this.notificationService.addFillerTextbox = 1;
   }
 
@@ -165,4 +180,3 @@ export class EditFiller implements OnInit {
     this.getCurrentFillerKeys();
   }
 }
-
