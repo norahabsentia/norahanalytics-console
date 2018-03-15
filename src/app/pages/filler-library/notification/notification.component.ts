@@ -317,6 +317,12 @@ showFillerStatus:boolean = false;;
       this.showFillerStatus = false;
       this.resetFillerVar();
   }
+  countNotification(obj) {
+      if(obj) 
+        return Object.keys(obj).length;
+      else
+        return 0;
+  }
   
   addThisFiller(filler){
       console.log("current");
