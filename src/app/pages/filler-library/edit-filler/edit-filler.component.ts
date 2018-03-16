@@ -99,36 +99,38 @@ export class EditFiller implements OnInit {
     console.log('preset values')
     console.log(this.curfiller['value_segments_presets']);
 
-    let fobj = this.curPreset.find(a => a.valuename == this.selectedValue);
-
+    let fobj = this.notificationService.curPreset.find(a => a.valuename == this.editSegmentKey);
+    console.log('perhaps this one', fobj);
     if (fobj) {
-      let index = this.curPreset.indexOf(fobj);
-      this.curPreset[index].fillername = this.curfiller["tag_name"];
-      console.log('index', index)
+      let index = this.notificationService.curPreset.indexOf(fobj);
+      // this.curPreset[index].fillername = this.curfiller["tag_name"];
+      this.notificationService.curPreset[index].presetvalues = this.curfiller['value_segments_presets'][this.editSegmentKey];
     } else {
-      this.curPreset.push({
+      this.notificationService.curPreset.push({
         fillername: this.curfiller["tag_name"],
-        valuename: this.selectedValue,
-        presetvalues: this.curfiller['value_segments_presets'][this.selectedValue]
+        valuename: this.editSegmentKey,
+        presetvalues: this.curfiller['value_segments_presets'][this.editSegmentKey]
       });
     }
-    console.log(this.curPreset)
+    console.log(this.curfiller['value_segments_presets'][this.editSegmentKey])
     //   this.curfiller['value_segments'][this.editSegmentKey] =[];
   }
 
-  onPresetSelectionClick(value) {
-    
+  onPresetSelectionClick(value) {    
     let presetvalues = value.presetvalues;
     this.presetToBeAdded = presetvalues;
     console.log('clicked values', presetvalues);
 
-    this.curfiller['value_segments'][this.editSegmentKey] = presetvalues;
+    this.curfiller['value_segments'][this.editSegmentKey] = [];
+
+    presetvalues.forEach(el => {
+      this.curfiller['value_segments'][this.editSegmentKey].push(el);
+    })
     this.editFillerItemArray = [];
+    console.log('present values', this.curfiller['value_segments'][this.editSegmentKey]);
     console.log('All values', this.notificationService.itemsInit);
     this.notificationService.itemsInit.forEach(el => {
       let i = presetvalues.indexOf(el.name);
-      console.log('present values', presetvalues);
-      console.log('index', i)
       if(i == -1) {
         this.editFillerItemArray.push(el)
       }
@@ -137,18 +139,20 @@ export class EditFiller implements OnInit {
   }
 
   backFiller(event) {
-    var i = 0;
+    // var i = 0;
     var itemFound;
     this.notificationService.itemsInit.forEach(element => {
       if (element.name == event) {
         itemFound = element;
       }
-      i++;
+      // i++;
     });
     var currentSegArray = this.curfiller['value_segments'][this.editSegmentKey];
     var currentValueIndex = currentSegArray ? currentSegArray.indexOf(event) : -1;
 
     currentSegArray.splice(currentValueIndex, 1);
+    console.log('after',  this.curfiller['value_segments'][this.editSegmentKey]);
+    console.log('Object',  this.curfiller['value_segments']);
 
     this.editFillerItemArray.push(itemFound);
   }
@@ -163,7 +167,6 @@ export class EditFiller implements OnInit {
   }
 
   createFillerValue(val) {
-    this.selectedValue = val;
     console.log(this.addValue);
     this.editfillerValue(this.addValue)
 
