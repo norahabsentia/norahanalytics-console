@@ -15,6 +15,7 @@ export class NotificationService {
   tempItemArray: any = [];
   tempRightArray: any = [];
   showHide = 0;
+  curPreset = [];
   editFillerSection = 0;
   addFillerTextbox = 0;
   itemsInit = [
