@@ -8,11 +8,11 @@
         <thead>
           <tr class="table_header">
             <th class="rightborder" width=100> values </th>
-            <th *ngIf="editValue == 0"> Customer tags </th>
-            <th *ngIf="editValue == 1">Segments</th>
+            <th *ngIf="this.notificationService.editValue == 0"> Customer tags </th>
+            <th *ngIf="this.notificationService.editValue == 1">Segments</th>
           </tr>
         </thead>
-        <tbody *ngIf="editValue == 0">
+        <tbody *ngIf="this.notificationService.editValue == 0">
           <tr class="table_row" *ngFor="let key of getCurrentFillerKeys()">
             <td width=100 class="rightborder key_val">
               <span>{{key}}</span>
@@ -35,7 +35,7 @@
             <td></td>
           </tr>
         </tbody>
-        <tbody *ngIf="editValue == 1">
+        <tbody *ngIf="this.notificationService.editValue == 1">
           <tr class="table_row">
             <td class="rightborder key_val" width="100" style="vertical-align: text-top;">
               <div class="bottomborder" (click)="editfillerValue(key)" *ngFor="let key of curfillerKey" [ngStyle]="editSegmentKey==key ?{'background-color':'#4aa3df'}:{} ">

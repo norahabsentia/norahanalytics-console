@@ -63,6 +63,7 @@ export class EditFiller implements OnInit {
   editfillerValue(key) {
     this.editSegmentKey = key;
     this.editValue = 1;
+    this.notificationService.editValue = 1;
     this.initFiller()
   }
   addSegmentFiller(event) {
@@ -159,6 +160,7 @@ export class EditFiller implements OnInit {
 
   showEditFillerTemplate(value) {
     this.editValue = value;
+    this.notificationService.editValue = value;
   }
   addValueFiller() {
     this.presetToBeAdded = [];
@@ -179,6 +181,7 @@ export class EditFiller implements OnInit {
     this.editSegmentKey = this.addValue;
     this.notificationService.addFillerTextbox = 0;
     this.editValue = 1;
+    this.notificationService.editValue = 1;
 
     this.getCurrentFillerKeys();
   }
