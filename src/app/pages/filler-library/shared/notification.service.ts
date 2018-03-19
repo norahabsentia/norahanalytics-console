@@ -69,6 +69,18 @@ export class NotificationService {
     { templateId: '2', title: 'test `Country` . Today is `test1`', body: '`Time`. Today is `Day`' },
     { templateId: '3', title: 'test `brave` . Today is `test1`', body: '`Time`. Today is `Day`' }
   ];
+  colorArray = [
+    "#0f6277",
+    "#106d8c",
+    "#128b9d",
+    "#2bafc2",
+    "#3cd1e5",
+    "#c6c7c7",
+    "#989797",
+    "#6c6c6c",
+    "#525252",
+    "#3f3f3f"
+  ];
   constructor(private firebase: AngularFireDatabase) { }
 
   getData() {
@@ -175,6 +187,7 @@ export class NotificationService {
   }
 
   getRandomColor() {
+    // return this.colorArray[index % 9];
     var letters = '0123456789ABCDEF'.split('');
     let color = '#';
     for (var i = 0; i < 6; i++) {

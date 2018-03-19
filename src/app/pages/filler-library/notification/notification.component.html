@@ -19,7 +19,7 @@
   </div>
 </div>
 
-<div class="fillerTooltip2 ">
+<div class="fillerTooltip2">
   <div class="filletTooltip-container">
     <div (click)="showFiller()" class="filletTooltip-def filletTooltip-cont clickable filletTooltip-fullwidth filletTooltip-border-bottom">
       <i *ngIf="!isCurrentSelectionFiller" class="control-icon nb-plus float-left"></i>
@@ -63,7 +63,7 @@
   <nb-card-body class="noti_nb_body1">
     <div class="tag_list">
       <div *ngIf="fillArr">
-        <span class="tagbutton clickable" (click)="addThisFiller(filler)" [ngStyle]="{'background-color': filler.color}" *ngFor="let filler of fillArr">
+        <span class="tagbutton clickable" (click)="addThisFiller(filler)" [ngStyle]="{'background-color': getColor(i)}" *ngFor="let filler of fillArr; let i = index">
 
           <span>{{filler.tag_name}}</span>
           <span>{{countNotification(filler.value_segments)}}</span>

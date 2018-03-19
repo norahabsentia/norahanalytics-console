@@ -29,6 +29,18 @@ currentFillerEndIndex : number = -1;
 newFillerVal : string;
 fillArr = [];
 colors:string;
+colorArray = [
+    "#0f6277",
+    "#106d8c",
+    "#128b9d",
+    "#2bafc2",
+    "#3cd1e5",
+    "#c6c7c7",
+    "#989797",
+    "#6c6c6c",
+    "#525252",
+    "#3f3f3f"
+];
 showAddNewFiller:boolean = true;
 
 showFillerStatus:boolean = false;;
@@ -71,15 +83,16 @@ showFillerStatus:boolean = false;;
   }
   
   getRandomColor(notification,index){
-      if(notification){
-          let color = notification.Customer_Segment_ID[index].color
-          if(color){
-              return color;
-          }else{
-              notification.Customer_Segment_ID[index].color =this.notificationService.getRandomColor();
-              return notification.Customer_Segment_ID[index].color
-          }
-      }
+      return this.colorArray[index%9];
+    //   if(notification){
+    //       let color = notification.Customer_Segment_ID[index].color
+    //       if(color){
+    //           return color;
+    //       }else{
+    //           notification.Customer_Segment_ID[index].color =this.notificationService.getRandomColor();
+    //           return notification.Customer_Segment_ID[index].color
+    //       }
+    //   }
       
   }
   
@@ -149,5 +162,35 @@ showFillerStatus:boolean = false;;
       this.notificationService.tempRightArray = this.notificationService.rightArray.slice(0);
 
     }
-  
+    
+    onDelete(key: string) {
+        if (confirm('Are you sure to delete this notification ?') == true) {
+            this.notificationService.deleteNotification(key);
+            this.notificationService.selectedNotification = {
+                noti_ID: null,
+                title: '',
+                body: '',
+                deeplink: '',
+                Customer_Segment_ID: '',
+            }
+            this.notificationService.temp = {
+                noti_ID: null,
+                title: '',
+                body: '',
+                deeplink: '',
+                Customer_Segment_ID: '',
+            }
+            this.notificationService.rightArray = [];
+            this.tostr.warning("Deleted Successfully", "Success");
+        }
+    }
+
+    // getTagName(noti, i) {
+    //     // console.log('notification', noti);
+    //     console.log('index', i)
+    //     let tag = noti.Customer_Segment_ID[i];
+    //     console.log('tag name', tag.name)
+    //     return tag.name;
+    // }
+
 }

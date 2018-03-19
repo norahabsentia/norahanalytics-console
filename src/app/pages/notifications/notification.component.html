@@ -1,36 +1,37 @@
 <div class="basic-container md-padding" layout="row">
 	<mat-grid-list cols="4" rowHeight="400px" *ngIf="!this.showFillerLibraryPage" >
-		<mat-grid-tile *ngFor="let notification of notificationList" (click)="showFillerLibPage(notification)">
-			<mat-card class="example-card cursor_pointer" rowHeight="400px">
+		<mat-grid-tile *ngFor="let notification of notificationList">
+			<mat-card class="example-card cursor_pointer noti-card" rowHeight="400px">
 			  <img mat-card-image src="../../../assets/images/notification_header.png" alt="Photo of a Shiba Inu">
-			  <mat-card-header>
+			  <mat-card-header  (click)="showFillerLibPage(notification)">
 			  	
 			    <!-- <div mat-card-avatar class="example-header-image"></div>
 			    <mat-card-title>Shiba Inu</mat-card-title>
 			    <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
 			  </mat-card-header>	  
-			  <mat-card-content >
+			  <mat-card-content  (click)="showFillerLibPage(notification)">
 			  	<div class="card-content-height">
 				  	<h3>{{notification.title}}</h3>
-				    <p>{{notification.body}}</p>
+						<p>{{notification.body}}</p>
 			    </div>
 			    <div class="fillerSingleRow" *ngIf="notification && notification.Customer_Segment_ID">
-			    		<span	 *ngFor="let custSegIndex of  Object.keys(notification.Customer_Segment_ID)">
-							<span class="tagbutton" [ngStyle]="{'background-color': getRandomColor(notification,custSegIndex)}">
-								<span>
+			    		<ng-container	 *ngFor="let custSegIndex of Object.keys(notification.Customer_Segment_ID)">
+							<span class="tagbutton smaller" [ngStyle]="{'background-color': getRandomColor(notification,custSegIndex)}">
+								<!-- <span > -->
 									{{notification.Customer_Segment_ID[custSegIndex].name}}
-								</span>
+									<!-- {{ this.getTagName(notification, custSegIndex) }} -->
+								<!-- </span> -->
 							</span>					
-						</span>
+						</ng-container>
 			    </div>
 				
 			  </mat-card-content>
-			  <mat-card-actions style="    text-align: right;">
+			  <mat-card-actions style="text-align: right;">
 			  	 <span class="notification_edit_icon">
 			  	 	<i _ngcontent-c10="" class="nb-edit"></i>
 			  	 </span>
 			  	 <span class="notification_edit_icon">
-			  	 	<i _ngcontent-c10="" class="nb-trash"></i>
+			  	 	<i _ngcontent-c10="" class="nb-trash" (click)="onDelete(notification.noti_ID)"></i>
 			  	 </span>
 			  	 <span class="notification_edit_icon">
 			  	 	<i class="nb-paper-plane"></i>
@@ -38,7 +39,6 @@
 			  </mat-card-actions>
 			</mat-card>
 		</mat-grid-tile> 
-		
 		
 		<mat-grid-tile (click)="showFillerLibPage({})">
 			<mat-card class="example-card cursor_pointer" rowHeight="200px" style="width:50%">
