@@ -23,5 +23,18 @@
     /deep/ .btn {
         font-family: "Avenir" !important;
     }
-    
+    /deep/ .mat-card-actions {
+        position: absolute;
+        bottom: 15px;
+        right: 25px;
+    }
+    .tagbutton.smaller {
+        padding: 3px 6px;
+        font-size: 7px;
+        margin: 1px;
+    }
+        
+}
+.noti-card {
+    height: 250px;
 }

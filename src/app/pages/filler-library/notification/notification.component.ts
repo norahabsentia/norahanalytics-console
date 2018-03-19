@@ -27,6 +27,18 @@ export class NotificationComponent implements OnInit {
   fillArr = [];
   colors: string;
   currentFiller = [];
+  colorArray = [
+    "#0f6277",
+    "#106d8c",
+    "#128b9d",
+    "#2bafc2",
+    "#3cd1e5",
+    "#c6c7c7",
+    "#989797",
+    "#6c6c6c",
+    "#525252",
+    "#3f3f3f"
+  ];
   showAddNewFiller: boolean = false;
 
   showFillerStatus: boolean = false;;
@@ -446,6 +458,9 @@ export class NotificationComponent implements OnInit {
   }
   showEditFillerTemplate(value) {
     this.notificationService.editFillerSection = value;
+  }
+  getColor(i) {
+    return this.colorArray[i%9];
   }
 
 }
