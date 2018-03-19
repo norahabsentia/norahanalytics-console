@@ -3,6 +3,15 @@
     text-align: center;
     justify-content: center;
 }
+:host /deep/ ng2-smart-table tbody > tr:nth-child(2n) { 
+        background-color:#ffffff;  
+}
+:host /deep/ ng2-smart-table nav.ng2-smart-pagination-nav .pagination li.active > span { 
+        background-color: #81b7dc;
+}
+:host /deep/ ng2-smart-table nav.ng2-smart-pagination-nav .pagination li.active > span:hover {
+        background-color: #81b7dc;
+}
 .box{
     padding: 5px;
     border: 1px solid rgb(189, 189, 189);
@@ -217,7 +226,7 @@
     width: calc(100% / 3) !important;
 }
 nb-card {
-    max-height: 640px !important;
+//    max-height: 640px !important;
 }
 .small-chart-height{
     height: 300px;

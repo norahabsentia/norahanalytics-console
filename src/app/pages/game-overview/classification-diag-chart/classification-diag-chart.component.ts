@@ -99,9 +99,9 @@ export class ClassificationDiagChartComponent implements OnDestroy, AfterViewIni
   ngAfterViewInit(){
     // setTimeout(() => {
 // define sets and set set intersections
-      var sets = [ {label: 'Predicted Churn',sets: ['A'], size: this.data.confusion_matrix.predicted_churn + this.data.confusion_matrix.predicted_notChurn, style: 'color: #4aa3df', },
-        {label: 'Observed Churn',sets: ['B'], size: this.data.confusion_matrix.predicted_churn + this.data.confusion_matrix.notPredicted_churn, color: '#dddde0', style: 'color: #dddde0'},
-        {sets: ['A','B'], size: this.data.confusion_matrix.predicted_churn}];
+      var sets = [ {label: 'Predicted Churn',sets: ['A'], size: this.data.predicted_churned + this.data.predicted_not_churned, style: 'color: #4aa3df', },
+        {label: 'Observed Churn',sets: ['B'], size: this.data.predicted_churned + this.data.predicted_not_churned, color: '#dddde0', style: 'color: #dddde0'},
+        {sets: ['A','B'], size: this.data.predicted_churned}];
 
       var chart = venn.VennDiagram().styled(false).width(500).height(300);;
       d3.select("#venn").datum(sets).call(chart);

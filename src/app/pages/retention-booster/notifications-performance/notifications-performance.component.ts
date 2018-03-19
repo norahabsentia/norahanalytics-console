@@ -29,6 +29,11 @@ export class NotificationsPerformanceComponent implements OnInit {
     },
   ]
 
+  relativeChartPath = '../../../json/nazara/retention_booster/notifications_performance/charts/';
+  relativeStatsPath = '../../../json/nazara/retention_booster/notifications_performance/overview/';
+  relativeTablePath = '../../../json/nazara/retention_booster/notifications_performance/tables/';
+
+
   colors: any;
   chartjs: any;
 
@@ -50,16 +55,76 @@ export class NotificationsPerformanceComponent implements OnInit {
   DISTRIBUTIONShow;
   OVERVIEWShow;
   ENGAGEMENTShow;
+
+  notChurn;
+  notResponse;
+  notSegment;
+  notficationDaily;
+  segResponse;
+  notChurnTable;
+  notResponseTable;
+  notSegmentTable;
+  notficationDailyTable;
+  segResponseTable;
+
+  stats;
+
+
   engagement
   constructor(private theme: NbThemeService, private http: HttpClient) {
     theme.getJsTheme().subscribe(config => {
       this.colors = config.variables;
       this.chartjs = config.variables.chartjs;
     });
-    this.http.get('../../json/new/editednew_engagement-aggr-format.json').subscribe((data: any) => {
-      this.engagement = data.Engagement;
-      console.log(data.Engagement)
+
+    this.http.get(this.relativeStatsPath + 'stats.json').subscribe((data: any) => {
+      this.stats = data;
+      console.log("11111111",this.notChurn);
     });
+
+
+    this.http.get(this.relativeChartPath + 'not_churn.json').subscribe((data: any) => {
+      this.notChurn = data.notification_churned;
+      console.log("11111111",this.notChurn);
+    });
+    this.http.get(this.relativeChartPath + 'not_response.json').subscribe((data: any) => {
+      this.notResponse = data.notification_response;
+      //console.log(data.Engagement)
+    });
+    this.http.get(this.relativeChartPath + 'not_segment.json').subscribe((data: any) => {
+      this.notSegment = data.segment_type;
+      //console.log(data.Engagement)
+    });
+    this.http.get(this.relativeChartPath + 'notification_daily_reponse.json').subscribe((data: any) => {
+      this.notficationDaily = data.daily_response;
+      //console.log(data.Engagement)
+    });
+    this.http.get(this.relativeChartPath + 'seg_response.json').subscribe((data: any) => {
+      this.segResponse = data.segment_type;
+      //console.log(data.Engagement)
+    });
+    this.http.get(this.relativeTablePath + 'not_churn.json').subscribe((data: any) => {
+      this.notChurnTable = data.notification_churned;
+      console.log("SAGAR1111111",this.notChurnTable);
+    });
+    this.http.get(this.relativeTablePath + 'not_response.json').subscribe((data: any) => {
+      this.notResponseTable = data.notification_response;
+      //console.log(data.Engagement)
+    });
+    this.http.get(this.relativeTablePath + 'not_segment.json').subscribe((data: any) => {
+      this.notSegmentTable = data.segment_type;
+      //console.log(data.Engagement)
+    });
+    this.http.get(this.relativeTablePath + 'notification_daily_reponse.json').subscribe((data: any) => {
+      this.notficationDailyTable = data.daily_response;
+      //console.log(data.Engagement)
+    });
+    this.http.get(this.relativeTablePath + 'seg_response.json').subscribe((data: any) => {
+      this.segResponseTable = data.segment_type;
+      //console.log(data.Engagement)
+    });
+
+
   }
 
   ngOnInit() {

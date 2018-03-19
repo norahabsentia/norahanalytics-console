@@ -1,9 +1,14 @@
+
+
 <div class="container">
   <div class="row" style="margin: 0; padding-left: 15px; padding-right: 15px;">
     <div class="main-caption">
       NOTIFICATIONS PEFORMACE
     </div>
+
     <div class="box-wrapper-top">
+
+
       <!-- <div class="user-active">
         <span>
           Revenue Overview
@@ -17,7 +22,8 @@
           <span class="users" style="">
             <!-- <i class="fas fa-rupee-sign"></i> -->
             <!-- ₹  -->
-            49,17,6050
+            <!--49,17,6050-->
+            {{stats.total_notifications_sent}}
           </span>
         </div>
         <div class="box" style="border-right: none;">
@@ -25,7 +31,7 @@
             Total Notifications Opened
           </div>
           <span class="users">
-            46,719
+            {{stats.total_notifications_open}}
           </span>
         </div>
         <div class="box" style="border-right: none;">
@@ -33,7 +39,7 @@
             Total Number of Users Notifications were sent to:
           </div>
           <span class="users">
-            69,147
+            {{stats.total_users}}
           </span>
       </div>
       <div class="box" style="border-radius: 0 10px 10px 0;">
@@ -41,7 +47,7 @@
           Total Number of Users who opened Notifications:
         </div>
         <span class="users">
-          69,147
+            {{stats.users_opened}}
         </span>
       </div>
     </div>
@@ -57,7 +63,7 @@
             Avg number of notifications opened per user 
           </div>
           <span class="users">
-              22.918
+            {{stats.average_notifications_open_per_user}}
             </span>
         </div>
         <div class="box" style="border-right: none;">
@@ -65,6 +71,7 @@
             Avg number of notifications sent per user 
           </div>
           <span class="users">
+            {{stats.average_notifications_sent_per_user}}
               262
             </span>
         </div>
@@ -73,16 +80,16 @@
             Avg number of notifications opened per churner 
           </div>
           <span class="users">
-              314
+            {{stats.average_notifications_open_per_churner}}
             </span>
         </div>
         <div class="box" style="border-radius:0 10px 10px 0;">
           <div class="caption-risk" style="text-align: center;">
-            Avg number of notifications opened per churner 
+            Avg number of notifications sent per churner 
           </div>
           <span class="users">
               <!-- ₹  -->
-              51,761
+            {{stats.average_notifications_sent_per_churner}}
           </span>
         </div>
       </div>
@@ -93,26 +100,26 @@
 
     <div class="row">
       <div class="col-sm-6">
-        <chart-switcher *ngIf="engagement" [title]="'Notifications Sent per Churn vs Not Churn'" [data]="engagement"></chart-switcher>
+        <chart-switcher *ngIf="notChurn && notChurnTable" [title]="'Notifications Sent per Churn vs Not Churn'" [data]="notChurn" [dataTable]="notChurnTable"></chart-switcher>
       </div>
       <div class="col-sm-6">
-        <chart-switcher *ngIf="engagement" [title]="'Open and Sent Comparision Per Category'" [data]="engagement"></chart-switcher>
+      <chart-switcher *ngIf="notResponse && notResponseTable" [title]="'Distribution of Notifications Sent per user category'" [data]="notResponse" [dataTable]="notResponseTable"></chart-switcher>
       </div>
     </div>
 
   <div class="row">
     <div class="col-sm-12">
-      <chart-switcher *ngIf="engagement" [title]="'User Response to notifications over churn period'" [optionsSettings]="lineOption" [data]="engagement"></chart-switcher>
+    <chart-switcher *ngIf="notficationDaily && notficationDailyTable" [title]="'User Response to notifications over churn period'" [optionsSettings]="lineOption" [data]="notficationDaily" [dataTable]="notficationDailyTable"></chart-switcher>
     </div>
   </div>
   <div class="row">
     <div class="col-sm-12">
-      <chart-switcher *ngIf="engagement" [title]="'Distribution of Notifications Sent per user category'" [data]="engagement"></chart-switcher>
+        <chart-switcher *ngIf="notSegment && notSegmentTable" [title]="'Open and Sent Comparision Per Category'" [data]="notSegment" [dataTable]="notSegmentTable"></chart-switcher>
     </div>
   </div>
   <div class="row">
     <div class="col-sm-12">
-      <chart-switcher *ngIf="engagement" [title]="'Open vs Not Opened per segment'" [data]="engagement"></chart-switcher>
+      <chart-switcher *ngIf="segResponse && segResponseTable" [title]="'Distribution of Notifications sent per Notification Type'" [data]="segResponse" [dataTable]="segResponseTable"></chart-switcher>
     </div>
   </div>
 <!--User Response to notifications over churn period-->
@@ -187,6 +194,9 @@
         <div>
           Good Morning
         </div>
+
+                            <!--i (click)="showModal = true" class="ion-stats-bars icon-position"></i-->
+
         <i _ngcontent-c13="" class="ion-stats-bars icon-position"></i>
       </div>
       <div style="width: 24%;">
