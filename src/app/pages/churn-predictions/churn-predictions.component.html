@@ -27,7 +27,7 @@
                         Active Users:
                       </span>
                       <span>
-                        {{churn.high_risk + churn.med_risk + churn.low_risk}}
+                        {{churn.High_Risk + churn.Medium_Risk + churn.Low_Risk}}
                       </span>
                     </div>
                     <div class="container-risk">
@@ -36,7 +36,7 @@
                           High Risk
                         </div>
                         <span class="users">
-                          {{churn.high_risk}}
+                          {{churn.High_Risk}}
                         </span>
                       </div>
                       <div class="box">
@@ -44,7 +44,7 @@
                           Medium Risk
                         </div>
                         <span class="users">
-                          {{churn.med_risk}}
+                          {{churn.Medium_Risk}}
                         </span>
                       </div>
                       <div class="box" style="border-radius:0 10px 10px 0;">
@@ -52,7 +52,7 @@
                           Low Risk
                         </div>
                         <span class="users">
-                          {{churn.low_risk}}
+                          {{churn.Low_Risk}}
                         </span>
                       </div>
                     </div>
@@ -68,11 +68,11 @@
       <nb-card>
         <nb-layout-header>
           <div class="header-table">
-            <div [ngClass]="{'active-item': barSwitch1 === 'platform'}" (click)="clickLocation('platform', 'dataBar1', 'dataTable1', 'barSwitch1')" style="border-right: 1px solid #f3f3f3;">
+            <div [ngClass]="{'active-item': barSwitch1 === 'platform'}" (click)="clickLocation('platform', 'dataBar1', 'dataTable1','dataTable1keys', 'barSwitch1')" style="border-right: 1px solid #f3f3f3;">
               Platform
             </div>
-            <div [ngClass]="{'active-item': barSwitch1 === 'app version'}" (click)="clickLocation('app version', 'dataBar1', 'dataTable1', 'barSwitch1')">
-              App versoin
+            <div [ngClass]="{'active-item': barSwitch1 === 'app version'}" (click)="clickLocation('app version', 'dataBar1', 'dataTable1','dataTable1keys', 'barSwitch1')">
+              App version
             </div>
           </div>
         </nb-layout-header>
@@ -83,7 +83,13 @@
                 <!--<ng2-smart-table *ngIf="dataBar1Options.type === 'Table'" [settings]="settings" [source]="source" reset></ng2-smart-table>-->
               <div  *ngIf="dataBar1Options.type === 'Table' && dataTable1" class="tbody-smart">
                 <div class="row-table-smart">
-                  <div class="row-table-item column-4" style="border-left: 0;">
+                  <div *ngFor="let item of dataTable1keys; let i = index" class="row-table-item column-4">
+                    <div><b>
+                      {{item}}</b>
+                    </div>
+                  </div>
+
+                  <!--div class="row-table-item column-4" style="border-left: 0;">
                     <div>
                       {{barSwitch1}}
                     </div>
@@ -102,10 +108,16 @@
                     <div>
                       Low risk
                     </div>
-                  </div>
+                  </div-->
                 </div>
                 <div *ngFor="let item of dataTable1" class="row-table-smart">
-                  <div class="row-table-item column-4" style="border-left: 0;">
+                  <div *ngFor="let key of dataTable1keys" class="row-table-item column-4">
+                    <div>
+                      {{item[key]}}
+                    </div>
+                  </div>
+
+                  <!--div class="row-table-item column-4" style="border-left: 0;">
                     <div>
                       {{item.value}}
                     </div>
@@ -124,14 +136,14 @@
                     <div>
                       {{item.Low_Risk}}
                     </div>
-                  </div>
+                  </div-->
                 </div>
               </div>
             </div>
           </div>
         </nb-card-body>
         <div class="switcher-wrap-small-tb">
-          <switcher [charts]="charts" (changeEvent)="changeUserDistribution($event)"></switcher>
+          <switcher [charts]="charts1" (changeEvent)="changeUserDistribution($event)"></switcher>
         </div>
       </nb-card>
     </div>
@@ -143,16 +155,16 @@
     <nb-card style="position: relative;">
         <nb-layout-header>
               <div class="header-table">
-                <div [ngClass]="{'active-item': barSwitch2 === 'country'}" (click)="clickLocation('country', 'dataBar2', 'dataTable2', 'barSwitch2')" class=" small-cell-churn" style="border-right: 1px solid #f3f3f3;">
+                <div [ngClass]="{'active-item': barSwitch2 === 'country'}" (click)="clickLocation('country', 'dataBar2', 'dataTable2','dataTable2keys', 'barSwitch2')" class=" small-cell-churn" style="border-right: 1px solid #f3f3f3;">
                   Country
                 </div>
-                <div [ngClass]="{'active-item': barSwitch2 === 'region'}" (click)="clickLocation('region', 'dataBar2', 'dataTable2', 'barSwitch2')" class="small-cell-churn" style="border-right: 1px solid #f3f3f3;">
+                <div [ngClass]="{'active-item': barSwitch2 === 'region'}" (click)="clickLocation('region', 'dataBar2', 'dataTable2','dataTable2keys', 'barSwitch2')" class="small-cell-churn" style="border-right: 1px solid #f3f3f3;">
                   Region
                 </div>
-                <div [ngClass]="{'active-item': barSwitch2 === 'affluence'}" (click)="clickLocation('affluence', 'dataBar2', 'dataTable2', 'barSwitch2')" class="small-cell-churn" style="border-right: 1px solid #f3f3f3;">
+                <div [ngClass]="{'active-item': barSwitch2 === 'affluence'}" (click)="clickLocation('affluence', 'dataBar2', 'dataTable2','dataTable2keys', 'barSwitch2')" class="small-cell-churn" style="border-right: 1px solid #f3f3f3;">
                   Affluence
                 </div>
-                <div [ngClass]="{'active-item': barSwitch2 === 'mobile brand'}" (click)="clickLocation('mobile brand', 'dataBar2', 'dataTable2', 'barSwitch2')" class="small-cell-churn">
+                <div [ngClass]="{'active-item': barSwitch2 === 'mobile brand'}" (click)="clickLocation('mobile brand', 'dataBar2', 'dataTable2','dataTable2keys', 'barSwitch2')" class="small-cell-churn">
                   Mobile brand
                 </div>
               </div>
@@ -170,7 +182,13 @@
                       <!--<ng2-smart-table *ngIf="dataBar1Options.type === 'Table'" [settings]="settings" [source]="source" reset></ng2-smart-table>-->
                     <div  *ngIf="dataBar2Options.type === 'Table' && dataTable2" class="tbody-smart">
                       <div class="row-table-smart">
-                        <div class="row-table-item column-4" style="border-left: 0;">
+                         <div *ngFor="let item of dataTable2keys; let i = index" class="row-table-item column-4">
+                          <div><b>
+                           {{item}}</b>
+                          </div>
+                         </div>
+
+                        <!--div class="row-table-item column-4" style="border-left: 0;">
                           <div>
                             {{barSwitch2}}
                           </div>
@@ -189,10 +207,16 @@
                           <div>
                             Low risk
                           </div>
-                        </div>
+                        </div-->
                       </div>
                       <div *ngFor="let item of dataTable2" class="row-table-smart">
-                        <div class="row-table-item column-4" style="border-left: 0;">
+                        <div *ngFor="let key of dataTable2keys" class="row-table-item column-4">
+                         <div>
+                          {{item[key]}}
+                         </div>
+                        </div>
+
+                        <!--div class="row-table-item column-4" style="border-left: 0;">
                           <div>
                             {{item.value}}
                           </div>
@@ -211,7 +235,7 @@
                           <div>
                             {{item.Low_Risk}}
                           </div>
-                        </div>
+                        </div-->
                       </div>
                     </div>
                   </div>
@@ -242,7 +266,7 @@
           </div>
         </nb-card-body>
         <div class="switcher-wrap-small-tb" style="bottom: 10px;">
-          <switcher [charts]="charts" (changeEvent)="dataBar2Options = $event"></switcher>
+          <switcher [charts]="charts2" (changeEvent)="dataBar2Options = $event"></switcher>
         </div>
       </nb-card>
 </div>
@@ -254,13 +278,13 @@
           <nb-card style="position:relative;">
               <nb-layout-header>
                   <div class="header-table">
-                    <div [ngClass]="{'active-item': barSwitch3 === 'engagement'}" (click)="clickLocation('engagement', 'dataBar3', 'dataTable3', 'barSwitch3')" class=" small-cell-churn-3" style="border-right: 1px solid #f3f3f3;">
+                    <div [ngClass]="{'active-item': barSwitch3 === 'engagement'}" (click)="clickLocation('engagement', 'dataBar3', 'dataTable3','dataTable3keys', 'barSwitch3')" class=" small-cell-churn-3" style="border-right: 1px solid #f3f3f3;">
                       Engagement
                     </div>
-                    <div  [ngClass]="{'active-item': barSwitch3 === 'loyalty'}" (click)="clickLocation('loyalty', 'dataBar3', 'dataTable3', 'barSwitch3')" class="small-cell-churn-3" style="border-right: 1px solid #f3f3f3;">
+                    <div  [ngClass]="{'active-item': barSwitch3 === 'loyalty'}" (click)="clickLocation('loyalty', 'dataBar3', 'dataTable3','dataTable3keys', 'barSwitch3')" class="small-cell-churn-3" style="border-right: 1px solid #f3f3f3;">
                       Loyality
                     </div>
-                    <div [ngClass]="{'active-item': barSwitch3 === 'skill'}" (click)="clickLocation('skill', 'dataBar3', 'dataTable3', 'barSwitch3')" class="small-cell-churn-3">
+                    <div [ngClass]="{'active-item': barSwitch3 === 'skill'}" (click)="clickLocation('skill', 'dataBar3', 'dataTable3','dataTable3keys', 'barSwitch3')" class="small-cell-churn-3">
                       Skill
                     </div>
                   </div>
@@ -274,10 +298,16 @@
                       </div> -->
                       <div>
                         <chart *ngIf="dataBar3Options.type === 'Histogram'" type="bar" [data]="dataBar3" [options]="optionsBar"></chart>
-                        <div class="table-wrap-scroll" *ngIf="dataBar2Options.type === 'Table'">
+                        <div class="table-wrap-scroll" *ngIf="dataBar3Options.type === 'Table'">
                           <div  *ngIf="dataBar3Options.type === 'Table' && dataTable3" class="tbody-smart">
                             <div class="row-table-smart">
-                              <div class="row-table-item column-4" style="border-left: 0;">
+                              <div *ngFor="let item of dataTable3keys; let i = index" class="row-table-item column-4">
+                                <div><b>
+                                  {{item}}</b>
+                                </div>
+                              </div>
+
+                              <!--div class="row-table-item column-4" style="border-left: 0;">
                                 <div>
                                   {{barSwitch3}}
                                 </div>
@@ -296,10 +326,16 @@
                                 <div>
                                   Low risk
                                 </div>
-                              </div>
+                              </div-->
                             </div>
                             <div *ngFor="let item of dataTable3" class="row-table-smart">
-                              <div class="row-table-item column-4" style="border-left: 0;">
+                              <div *ngFor="let key of dataTable3keys" class="row-table-item column-4">
+                                <div>
+                                  {{item[key]}}
+                                </div>
+                              </div>
+
+                              <!--div class="row-table-item column-4" style="border-left: 0;">
                                 <div>
                                   {{item.value}}
                                 </div>
@@ -318,7 +354,7 @@
                                 <div>
                                   {{item.Low_Risk}}
                                 </div>
-                              </div>
+                              </div-->
                             </div>
                           </div>
                         </div>
@@ -350,7 +386,7 @@
                 </div>
               </nb-card-body>
               <div class="switcher-wrap-small-tb" style="bottom: 10px;">
-                <switcher [charts]="charts" (changeEvent)="dataBar3Options = $event"></switcher>
+                <switcher [charts]="charts3" (changeEvent)="dataBar3Options = $event"></switcher>
               </div>
             </nb-card>
       </div>
@@ -360,13 +396,13 @@
             <nb-card style="position:relative;">
                 <nb-layout-header>
                     <div class="header-table">
-                      <div [ngClass]="{'active-item': barSwitch4 === 'total time in game'}" (click)="clickLocation('total time in game', 'dataBar4', 'dataTable4', 'barSwitch4')" class=" small-cell-churn-3" style="border-right: 1px solid #f3f3f3;">
+                      <div [ngClass]="{'active-item': barSwitch4 === 'total time in game'}" (click)="clickLocation('total time in game', 'dataBar4', 'dataTable4','dataTable4keys', 'barSwitch4')" class=" small-cell-churn-3" style="border-right: 1px solid #f3f3f3;">
                         Total time
                       </div>
-                      <div [ngClass]="{'active-item': barSwitch4 === 'out of lives'}" (click)="clickLocation('out of lives', 'dataBar4', 'dataTable4', 'barSwitch4')" class="small-cell-churn-3" style="border-right: 1px solid #f3f3f3;">
+                      <div [ngClass]="{'active-item': barSwitch4 === 'out of lives'}" (click)="clickLocation('out of lives', 'dataBar4', 'dataTable4','dataTable4keys', 'barSwitch4')" class="small-cell-churn-3" style="border-right: 1px solid #f3f3f3;">
                         Out of lives
                       </div>
-                      <div [ngClass]="{'active-item': barSwitch4 === 'level stickiness'}" (click)="clickLocation('level stickiness', 'dataBar4', 'dataTable4', 'barSwitch4')" class="small-cell-churn-3">
+                      <div [ngClass]="{'active-item': barSwitch4 === 'level stickiness'}" (click)="clickLocation('level stickiness', 'dataBar4', 'dataTable4','dataTable4keys', 'barSwitch4')" class="small-cell-churn-3">
                         Stuck at level
                       </div>
                     </div>
@@ -383,7 +419,13 @@
                           <div class="table-wrap-scroll" *ngIf="dataBar4Options.type === 'Table'">
                             <div  *ngIf="dataBar4Options.type === 'Table' && dataTable4" class="tbody-smart">
                               <div class="row-table-smart">
-                                <div class="row-table-item column-4" style="border-left: 0;">
+                              <div *ngFor="let item of dataTable4keys; let i = index" class="row-table-item column-4">
+                                <div><b>
+                                  {{item}}</b>
+                                </div>
+                              </div>
+
+                                <!--div class="row-table-item column-4" style="border-left: 0;">
                                   <div>
                                     {{barSwitch4}}
                                   </div>
@@ -402,10 +444,16 @@
                                   <div>
                                     Low risk
                                   </div>
-                                </div>
+                                </div-->
                               </div>
                               <div *ngFor="let item of dataTable4" class="row-table-smart">
-                                <div class="row-table-item column-4" style="border-left: 0;">
+                              <div *ngFor="let key of dataTable4keys" class="row-table-item column-4">
+                                <div>
+                                  {{item[key]}}
+                                </div>
+                              </div>
+
+                                <!--div class="row-table-item column-4" style="border-left: 0;">
                                   <div>
                                     {{item.value}}
                                   </div>
@@ -424,7 +472,7 @@
                                   <div>
                                     {{item.Low_Risk}}
                                   </div>
-                                </div>
+                                </div-->
                               </div>
                             </div>
                           </div>
@@ -435,7 +483,7 @@
                   </div>
                 </nb-card-body>
                 <div class="switcher-wrap-small-tb" style="bottom: 10px;">
-                  <switcher [charts]="charts" (changeEvent)="dataBar4Options = $event"></switcher>
+                  <switcher [charts]="charts4" (changeEvent)="dataBar4Options = $event"></switcher>
                 </div>
               </nb-card>
         </div>
@@ -466,7 +514,13 @@
                         <!--<ng2-smart-table *ngIf="dataBar1Options.type === 'Table'" [settings]="settings" [source]="source" reset></ng2-smart-table>-->
                         <div  *ngIf="dataBar5Options.type === 'Table' && dataTable5" class="tbody-smart">
                           <div class="row-table-smart">
-                            <div class="row-table-item column-4" style="border-left: 0;">
+                              <div *ngFor="let item of dataTable5keys; let i = index" class="row-table-item column-4">
+                                <div><b>
+                                  {{item}}</b>
+                                </div>
+                              </div>
+
+                            <!--div class="row-table-item column-4" style="border-left: 0;">
                               <div>
                                 Level
                               </div>
@@ -485,10 +539,16 @@
                               <div>
                                 Low risk
                               </div>
-                            </div>
+                            </div-->
                           </div>
                           <div *ngFor="let item of dataTable5" class="row-table-smart">
-                            <div class="row-table-item column-4" style="border-left: 0;">
+                              <div *ngFor="let key of dataTable5keys" class="row-table-item column-4">
+                                <div>
+                                  {{item[key]}}
+                                </div>
+                              </div>
+
+                            <!--div class="row-table-item column-4" style="border-left: 0;">
                               <div>
                                 {{item.value}}
                               </div>
@@ -507,7 +567,7 @@
                               <div>
                                 {{item.Low_Risk}}
                               </div>
-                            </div>
+                            </div-->
                           </div>
                         </div>
                       </div>
@@ -519,7 +579,7 @@
               </div>
             </nb-card-body>
             <div class="switcher-wrap-small-tb" style="left: 15px;">
-              <switcher [charts]="charts" (changeEvent)="dataBar5Options = $event"></switcher>
+              <switcher [charts]="charts5" (changeEvent)="dataBar5Options = $event"></switcher>
             </div>
           </nb-card>
         </div>
@@ -542,7 +602,15 @@
                     </div>
                   </div>
             </nb-layout-header>
-          <nb-card-body class="big-cart">
+            <nb-card-body>
+
+              <ng2-smart-table [settings]="settings" [source]="source" style="text-align:center">
+              </ng2-smart-table>
+
+
+            </nb-card-body>
+
+          <!--nb-card-body class="big-cart">
             <div class="container">
               <div class="row">
                 <div class="col-md-12 col-xs-12">
@@ -581,7 +649,7 @@
 
               </div>
             </div>
-          </nb-card-body>
+          </nb-card-body-->
         </nb-card>
       </div>
     </div>
@@ -629,9 +697,10 @@
           </button>
           <div *ngIf="showDownload" class="dropdawn dropdawn-download">
             <ul class="list-location list-download">
-              <li><a class="download-button"  (click)="showDownload = !showDownload">Download .csv</a></li>
-              <li><a class="download-button"  (click)="showDownload = !showDownload">Download .json</a></li>
+              <li><a class="download-button" href="/json/nazara/retention_booster/churn_predictions/tables/user_churn_probability.csv" download="UserChurn.csv" (click) = "toggleDownload()">Download .csv</a></li>
+              <li><a class="download-button" href="/json/nazara/retention_booster/churn_predictions/tables/user_churn_probability.json" download="UserChurn.json"   (click) = "toggleDownload()">Download .json</a></li>
             </ul>
           </div>
+
         </div>
   </div>

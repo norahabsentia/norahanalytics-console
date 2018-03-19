@@ -1,4 +1,4 @@
-import { Component, OnDestroy } from '@angular/core';
+import { Component,Input, OnDestroy, OnInit } from '@angular/core';
 import { NbThemeService } from '@nebular/theme';
 
 declare var google: any;
@@ -13,6 +13,7 @@ export class CountryComponent implements OnDestroy {
 
   latlong: any = {};
   mapData: any[];
+  countryName: {};
   max = -Infinity;
   min = Infinity;
   options: any;
@@ -20,6 +21,10 @@ export class CountryComponent implements OnDestroy {
   //bubbleTheme: any;
   geoColors: any[];
   themeSubscription: any;
+
+  
+
+  @Input() countryMapData;
 
   constructor(private theme: NbThemeService) {
 
@@ -29,6 +34,12 @@ export class CountryComponent implements OnDestroy {
         //this.bubbleTheme = config.variables.bubbleMap;
         this.geoColors = ['#4aa3df', '#81b7dc' , '#bcbabe', '#dddde0'];
 
+   });
+  }
+ 
+
+   ngOnInit() {
+        console.log("SAGAR MAP",this.countryMapData);
         this.latlong = {
           'AD': { 'latitude': 42.5, 'longitude': 1.5 },
           'AE': { 'latitude': 24, 'longitude': 54 },
@@ -443,22 +454,193 @@ export class CountryComponent implements OnDestroy {
           { 'code': 'ZM', 'name': 'Zambia', 'value': 13474959 },
           { 'code': 'ZW', 'name': 'Zimbabwe', 'value': 12754378 }];
 
-        this.mapData.forEach((itemOpt) => {
-          if (itemOpt.value > this.max) {
-            this.max = itemOpt.value;
+this.countryName = {
+          'AF': { 'name': 'Afghanistan'},
+          'AL': { 'name': 'Albania'},
+          'DZ': { 'name': 'Algeria'},
+          'AO': { 'name': 'Angola'},
+          'AR': { 'name': 'Argentina'},
+          'AM': { 'name': 'Armenia'},
+          'AU': { 'name': 'Australia'},
+          'AT': { 'name': 'Austria'},
+          'AZ': { 'name': 'Azerbaijan'},
+          'BH': { 'name': 'Bahrain'},
+          'BD': { 'name': 'Bangladesh'},
+          'BY': { 'name': 'Belarus'},
+          'BE': { 'name': 'Belgium'},
+          'BJ': { 'name': 'Benin'},
+          'BT': { 'name': 'Bhutan'},
+          'BO': { 'name': 'Bolivia'},
+          'BA': { 'name': 'Bosnia and Herzegovina'},
+          'BW': { 'name': 'Botswana'},
+          'BR': { 'name': 'Brazil'},
+          'BN': { 'name': 'Brunei'},
+          'BG': { 'name': 'Bulgaria'},
+          'BF': { 'name': 'Burkina Faso'},
+          'BI': { 'name': 'Burundi'},
+          'KH': { 'name': 'Cambodia'},
+          'CM': { 'name': 'Cameroon'},
+          'CA': { 'name': 'Canada'},
+          'CV': { 'name': 'Cape Verde'},
+          'CF': { 'name': 'Central African Rep.'},
+          'TD': { 'name': 'Chad'},
+          'CL': { 'name': 'Chile'},
+          'CN': { 'name': 'China'},
+          'CO': { 'name': 'Colombia'},
+          'KM': { 'name': 'Comoros'},
+          'CD': { 'name': 'Congo, Dem. Rep.'},
+          'CG': { 'name': 'Congo, Rep.'},
+          'CR': { 'name': 'Costa Rica'},
+          'CI': { 'name': 'Cote d\'Ivoire'},
+          'HR': { 'name': 'Croatia'},
+          'CU': { 'name': 'Cuba'},
+          'CY': { 'name': 'Cyprus'},
+          'CZ': { 'name': 'Czech Rep.'},
+          'DK': { 'name': 'Denmark'},
+          'DJ': { 'name': 'Djibouti'},
+          'DO': { 'name': 'Dominican Rep.'},
+          'EC': { 'name': 'Ecuador'},
+          'EG': { 'name': 'Egypt'},
+          'SV': { 'name': 'El Salvador'},
+          'GQ': { 'name': 'Equatorial Guinea'},
+          'ER': { 'name': 'Eritrea'},
+          'EE': { 'name': 'Estonia'},
+          'ET': { 'name': 'Ethiopia'},
+          'FJ': { 'name': 'Fiji'},
+          'FI': { 'name': 'Finland'},
+          'FR': { 'name': 'France'},
+          'GA': { 'name': 'Gabon'},
+          'GM': { 'name': 'Gambia'},
+          'GE': { 'name': 'Georgia'},
+          'DE': { 'name': 'Germany'},
+          'GH': { 'name': 'Ghana'},
+          'GR': { 'name': 'Greece'},
+          'GT': { 'name': 'Guatemala'},
+          'GN': { 'name': 'Guinea'},
+          'GW': { 'name': 'Guinea-Bissau'},
+          'GY': { 'name': 'Guyana'},
+          'HT': { 'name': 'Haiti'},
+          'HN': { 'name': 'Honduras'},
+          'HK': { 'name': 'Hong Kong, China'},
+          'HU': { 'name': 'Hungary'},
+          'IS': { 'name': 'Iceland'},
+          'IN': { 'name': 'India'},
+          'ID': { 'name': 'Indonesia'},
+          'IR': { 'name': 'Iran'},
+          'IQ': { 'name': 'Iraq'},
+          'IE': { 'name': 'Ireland'},
+          'IL': { 'name': 'Israel'},
+          'IT': { 'name': 'Italy'},
+          'JM': { 'name': 'Jamaica'},
+          'JP': { 'name': 'Japan'},
+          'JO': { 'name': 'Jordan'},
+          'KZ': { 'name': 'Kazakhstan'},
+          'KE': { 'name': 'Kenya'},
+          'KP': { 'name': 'Korea, Dem. Rep.'},
+          'KR': { 'name': 'Korea, Rep.'},
+          'KW': { 'name': 'Kuwait'},
+          'KG': { 'name': 'Kyrgyzstan'},
+          'LA': { 'name': 'Laos'},
+          'LV': { 'name': 'Latvia'},
+          'LB': { 'name': 'Lebanon'},
+          'LS': { 'name': 'Lesotho'},
+          'LR': { 'name': 'Liberia'},
+          'LY': { 'name': 'Libya'},
+          'LT': { 'name': 'Lithuania'},
+          'LU': { 'name': 'Luxembourg'},
+          'MK': { 'name': 'Macedonia, FYR'},
+          'MG': { 'name': 'Madagascar'},
+          'MW': { 'name': 'Malawi'},
+          'MY': { 'name': 'Malaysia'},
+          'ML': { 'name': 'Mali'},
+          'MR': { 'name': 'Mauritania'},
+          'MU': { 'name': 'Mauritius'},
+          'MX': { 'name': 'Mexico'},
+          'MD': { 'name': 'Moldova'},
+          'MN': { 'name': 'Mongolia'},
+          'ME': { 'name': 'Montenegro'},
+          'MA': { 'name': 'Morocco'},
+          'MZ': { 'name': 'Mozambique'},
+          'MM': { 'name': 'Myanmar'},
+          'NA': { 'name': 'Namibia'},
+          'NP': { 'name': 'Nepal'},
+          'NL': { 'name': 'Netherlands'},
+          'NZ': { 'name': 'New Zealand'},
+ 'NI': { 'name': 'Nicaragua'},
+          'NE': { 'name': 'Niger'},
+          'NG': { 'name': 'Nigeria'},
+          'NO': { 'name': 'Norway'},
+          'OM': { 'name': 'Oman'},
+          'PK': { 'name': 'Pakistan'},
+          'PA': { 'name': 'Panama'},
+          'PG': { 'name': 'Papua New Guinea'},
+          'PY': { 'name': 'Paraguay'},
+          'PE': { 'name': 'Peru'},
+          'PH': { 'name': 'Philippines'},
+          'PL': { 'name': 'Poland'},
+          'PT': { 'name': 'Portugal'},
+          'PR': { 'name': 'Puerto Rico'},
+          'QA': { 'name': 'Qatar'},
+          'RO': { 'name': 'Romania'},
+          'RU': { 'name': 'Russia'},
+          'RW': { 'name': 'Rwanda'},
+          'SA': { 'name': 'Saudi Arabia'},
+          'SN': { 'name': 'Senegal'},
+          'RS': { 'name': 'Serbia'},
+          'SL': { 'name': 'Sierra Leone'},
+          'SG': { 'name': 'Singapore'},
+          'SK': { 'name': 'Slovak Republic'},
+          'SI': { 'name': 'Slovenia'},
+          'SB': { 'name': 'Solomon Islands'},
+          'SO': { 'name': 'Somalia'},
+          'ZA': { 'name': 'South Africa'},
+          'ES': { 'name': 'Spain'},
+          'LK': { 'name': 'Sri Lanka'},
+          'SD': { 'name': 'Sudan'},
+          'SR': { 'name': 'Suriname'},
+          'SZ': { 'name': 'Swaziland'},
+          'SE': { 'name': 'Sweden'},
+          'CH': { 'name': 'Switzerland'},
+          'SY': { 'name': 'Syria'},
+          'TW': { 'name': 'Taiwan'},
+          'TJ': { 'name': 'Tajikistan'},
+          'TZ': { 'name': 'Tanzania'},
+          'TH': { 'name': 'Thailand'},
+          'TG': { 'name': 'Togo'},
+          'TT': { 'name': 'Trinidad and Tobago'},
+          'TN': { 'name': 'Tunisia'},
+          'TR': { 'name': 'Turkey'},
+          'TM': { 'name': 'Turkmenistan'},
+          'UG': { 'name': 'Uganda'},
+          'UA': { 'name': 'Ukraine'},
+          'AE': { 'name': 'United Arab Emirates'},
+          'GB': { 'name': 'United Kingdom'},
+          'US': { 'name': 'United States'},
+          'UY': { 'name': 'Uruguay'},
+          'UZ': { 'name': 'Uzbekistan'},
+          'VE': { 'name': 'Venezuela'},
+          'PS': { 'name': 'West Bank and Gaza'},
+          'VN': { 'name': 'Vietnam'},
+          'YE': { 'name': 'Yemen, Rep.'},
+          'ZM': { 'name': 'Zambia'},
+          'ZW': { 'name': 'Zimbabwe'}};
+
+        this.countryMapData.forEach((itemOpt) => {
+          if (itemOpt.churned > this.max) {
+            this.max = itemOpt.churned;
           }
-          if (itemOpt.value < this.min) {
-            this.min = itemOpt.value;
+          if (itemOpt.churned < this.min) {
+            this.min = itemOpt.churned;
           }
         });
 
         this.options = {
 	    title : {
-        	text: 'World Population (2010)',
-	        subtext: 'from United Nations, Total population, both sexes combined, as of 1 July (thousands)',
-        	sublink : 'http://esa.un.org/wpp/Excel-Data/population.htm',
-	        x:'center',
-        	y:'top'
+        	//text: 'World Population (2010)',
+	        //subtext: 'from United Nations, Total population, both sexes combined, as of 1 July (thousands)',
+        	//sublink : 'http://esa.un.org/wpp/Excel-Data/population.htm',
+	        //x:'center',
+        	//y:'top'
 	    },
 	    tooltip : {
         	trigger: 'item',
@@ -512,18 +694,19 @@ export class CountryComponent implements OnDestroy {
 	            itemStyle:{
                 	emphasis:{label:{show:true}}
 	            },
-	            data: this.mapData.map(itemOpt => {
+	            data: this.countryMapData.map(itemOpt => {
         	        return {
-                	  name: itemOpt.name,
+                	  //name: itemOpt.name,
+        	          name: this.countryName[itemOpt.value].name,
 	                  value:
         	            //this.latlong[itemOpt.code].longitude,
                 	    //this.latlong[itemOpt.code].latitude,
-	                    itemOpt.value,
+	                    itemOpt.churned,
 
         	          itemStyle: {
                 	    normal: {
 	                      //color: itemOpt.color,
-        	              color: this.getCalculateGeoColor(itemOpt.value),
+        	              color: this.getCalculateGeoColor(itemOpt.churned),
                 	    },
 	                  },
                		 };
@@ -532,7 +715,7 @@ export class CountryComponent implements OnDestroy {
         	}
 	    ]
 	};
-      });
+      //});
 
     // setTimeout(() => {
     //   let data = google.visualization.arrayToDataTable([
@@ -558,9 +741,9 @@ export class CountryComponent implements OnDestroy {
   }
 
   private getCalculateGeoColor(value) {
-    var perc = ((value - this.min)/(this.max-this.min))*100;
+    var perc = ((value - this.min)/(this.max-this.min));
 
-    return this.getColorForPercentage(value);
+    return this.getColorForPercentage(perc);
 
 
   }
@@ -574,7 +757,7 @@ export class CountryComponent implements OnDestroy {
 
    private getColorForPercentage (pct){
     console.log(pct, 111)
-     if(pct < 2324004){
+     /*if(pct < 2324004){
       return '#dddde0'
      }
      if(pct > 5324004 && pct < 10324004){
@@ -586,10 +769,10 @@ export class CountryComponent implements OnDestroy {
      }
      if(pct < 20324004){
        return '#4aa3df'
-     }
+     }*/
       var percentColors = [
         { pct: 0.0, color: { r: 0xc8, g: 0xbf, b: 0xe7 } },
-        { pct: 1.0, color: { r: 0x00, g: 0x00, b: 0xff } } ];
+        { pct: 1.0, color: { r: 0xe4, g: 0xf0, b: 0x23 } } ];
      // '#4aa3df', '#81b7dc' , '#bcbabe', '#dddde0'
       /*for (var i = 1; i < percentColors.length - 1; i++) {
         if (pct < percentColors[i].pct) {
@@ -614,7 +797,8 @@ export class CountryComponent implements OnDestroy {
         g: Math.floor(lower.color.g * pctLower + upper.color.g * pctUpper),
         b: Math.floor(lower.color.b * pctLower + upper.color.b * pctUpper)
       };
-      // return 'rgb(' + [color.r, color.g, color.b].join(',') + ')';
+      
+       return 'rgb(' + [color.r, color.g, color.b].join(',') + ')';
     // or output as hex if preferred
 }
 

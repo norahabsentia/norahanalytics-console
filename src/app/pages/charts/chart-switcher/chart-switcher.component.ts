@@ -24,6 +24,8 @@ export class ChartSwitcherComponent implements OnInit {
   xAxisLabel = 'Country';
   showYAxisLabel = true;
 
+  dataTablekeys = [];
+
   colorScheme = {
     domain: ['#4aa3df', '#ebebee']
   };
@@ -167,11 +169,17 @@ export class ChartSwitcherComponent implements OnInit {
   @Input() title;
   @Input() showMap;
   @Input() data;
+  @Input() dataTable;
+  @Input() optionClass;
   @Input() optionsSettings;
+  @Input() countryMapData;
 
   constructor(private service: SmartTableService, public dataservice: DataService, private theme: NbThemeService) {
     const data = this.service.getData();
     this.source.load(data);
+
+    console.log("SAGR class",this.optionClass);
+
     this.themeSubscription = this.theme.getJsTheme().subscribe(config => {
 
       const colors: any = config.variables;
@@ -280,7 +288,8 @@ export class ChartSwitcherComponent implements OnInit {
         }
         datasets.push({
           data: arr,
-          backgroundColor: NbColorHelper.hexToRgbA(this.getRandomColor(), 0.8),
+          //backgroundColor: NbColorHelper.hexToRgbA(this.getRandomColor(), 0.8),
+          backgroundColor: ['#0f6277','#3f3f3f'],
           name: key,
           type:'line',
           stack: '总量',
@@ -561,6 +570,7 @@ console.log(datasets, keys, 999999999999999999999999999999)
 
     this.getDataFromJson();
 
+    console.log("SAGR class",this.optionClass);
     if(this.optionsSettings){
       this.charts = this.optionsSettings;
     }
@@ -580,6 +590,7 @@ console.log(datasets, keys, 999999999999999999999999999999)
     // this.setChartEBarData(0);
     // this.setChartEPieData(0);
     this.setData();
+    this.setDataForTable();
     this.setDataTohorizontalBar();
   }
   getDataFromJson() {
@@ -590,6 +601,7 @@ console.log(datasets, keys, 999999999999999999999999999999)
   }
   changeonddl(): void {
   }
+
   setDataTohorizontalBar(){
     for(let item of this.data) {
       let keys = []
@@ -602,18 +614,36 @@ console.log(datasets, keys, 999999999999999999999999999999)
       //     "value": item[key]
       //   })
       // }
+      var index = 0;
+      for (let key of keys){
+         var color = this.getRandomColor();
+         index = index + 1;
       console.log(9999999999999999, item)
         series.push({
-          "name": 'pop_churned',
-          "value": item['pop_churned']
-        },{
+          //"name": 'pop_churned',
+          "name": key,
+          //"value": item['pop_churned']
+          "value": item[key],
+          //backgroundColor: "#4aa3df",
+          backgroundColor: color,
+          //hoverBackgroundColor: "#4aa3df",
+          hoverBackgroundColor: color,
+          hoverBorderWidth: 2,
+          hoverBorderColor: '#dddde0',
+          hidden: index>4?true:false
+        }
+/*,{
           "name": 'pop_notChurned',
           "value": item['pop_notChurned']
-        })
+        }
+*/
+)
+      }
       this.dataStackBarHorizontal.push({
         "name": item.value,
         "series": series
       })
+
     }
       // {
       //   "Platform": [
@@ -624,6 +654,25 @@ console.log(datasets, keys, 999999999999999999999999999999)
       // }
 
     this.view = [400, 450];
+  }
+  setDataForTable(){
+     let keys = [];
+     let series = [];
+     for(let item of this.dataTable) {
+      console.log("key item",item);
+      keys = Object.keys(item);
+        console.log("key 11",keys);
+        for (let keyi in keys) {
+         let key = keys[keyi];
+         console.log("key",key);
+         if(this.dataTablekeys.includes(key)){
+
+         } else {
+           this.dataTablekeys.push(key)
+         }
+        }
+
+     }
   }
   dataBar1
   setData(){
@@ -661,7 +710,7 @@ console.log(datasets, keys, 999999999999999999999999999999)
       }
     }
 
-    if (this.selectedLocation === 'Overview') {
+    /*if (this.selectedLocation === 'Overview') {
       datasets.push({
         label: 'Churned users',
         data: objData['pop_churned'],
@@ -742,7 +791,27 @@ console.log(datasets, keys, 999999999999999999999999999999)
         hoverBorderWidth: 2,
         hoverBorderColor: '#dddde0'
       });
+    }*/
+
+    var index = 0;
+    for (var k in objData){
+      var color = this.getChartColor(index);
+      index = index + 1;
+      datasets.push({
+        //label: 'Churned users',
+        label: k,
+        data: objData[k],
+        //backgroundColor: "#4aa3df",
+        backgroundColor: color,
+        //hoverBackgroundColor: "#4aa3df",
+        hoverBackgroundColor: color,
+        hoverBorderWidth: 2,
+        hoverBorderColor: '#dddde0',
+        width:'20%',
+        hidden: index>4?true:false
+      });
     }
+
 
     console.log(this.data, labels, datasets, objData)
     this.dataBar1 = {
@@ -776,5 +845,36 @@ console.log(datasets, keys, 999999999999999999999999999999)
         // }
       // ],
     };
+  }
+ 
+  getChartColor(index) {
+      /*var letters = '0123456789ABCDEF';
+      var color = '#';
+      for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }*/
+    
+      var colors = ['#4aa3df','#dddde0']
+
+      let keys = [];
+      let length = 0;
+      let max = 3;
+      for(let item of this.dataTable) {
+        console.log("key item",item);
+        keys = Object.keys(item);       
+        if(keys.length  > max){
+          max = keys.length;
+        }
+      }
+
+      length = max;
+      console.log("SAGAR LENGTH",length);
+      if(length ==5){
+
+        colors = ['#4aa3df', '#81b7dc', '#bcbabe', '#dddde0']
+      }
+
+
+      return colors[index%colors.length];
   }
 }

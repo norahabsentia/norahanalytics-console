@@ -31,7 +31,7 @@
           </span>
     </div>
   </nb-card-header>
-  <nb-card-body>
+  <nb-card-body class="{{optionClass}}">
     <div id="class" class="wrapper">
 
           <div *ngFor="let item of charts">
@@ -58,7 +58,7 @@
             <!--<ngx-chartjs-multiple-xaxis *ngIf="item.show && item.type === 'Area'"></ngx-chartjs-multiple-xaxis>-->
             <ngx-echarts-line *ngIf="item.show && item.type === 'Line' && dataLine" [data]="dataLine"></ngx-echarts-line>
             <!--<div *ngIf="item.show && item.type === 'Map'" echarts [options]="options" class="echarts"></div>-->
-            <ngx-country-chart *ngIf="item.show && item.type === 'Map'"></ngx-country-chart>
+            <ngx-country-chart *ngIf="item.show && item.type === 'Map'" [countryMapData]="countryMapData"></ngx-country-chart>
             <div *ngIf="item.show && item.type === 'Table'">
               <!--<ngx-chart-switcher-table></ngx-chart-switcher-table>-->
 
@@ -146,8 +146,15 @@
                 </div>
               </div> -->
               <div class="table-smart">
-                <div class="header-table-smart">
-                  <div class="column column-data center-alingh" style="border-left: 0;">
+                <div class="header-table-smart" >
+                  <div *ngFor="let item of dataTablekeys; let i = index" class="column column-data center-alingh" style="width: 40%">
+                    <div><b>
+                      {{item}}</b>
+                    </div>
+                  </div>
+
+
+                  <!--div class="column column-data center-alingh" style="border-left: 0;">
                     <div>
                       {{title}}
                     </div>
@@ -161,11 +168,15 @@
                     <div>
                       Not churned users
                     </div>
-                  </div>
+                  </div-->
                 </div>
                 <div class="tbody-smart">
-                  <div *ngFor="let item of data; let i = index" class="row-table-smart row-height">
-                    <div class="row-table-item" style="border-left: 0;">
+                  <div *ngFor="let item of dataTable; let i = index" class="row-table-smart row-height">
+                    <div *ngFor="let key of dataTablekeys" class="row-table-item " style="width: 40%;">
+                      <div class=" ">{{item[key]}}</div>
+                    </div>
+
+                    <!--div class="row-table-item" style="border-left: 0;">
                       <div>
                         {{item.value}}
                       </div>
@@ -178,7 +189,7 @@
                       <div class="">
                         <div class=" ">{{item.pop_notchurnedPredicted + item.pop_notchurnedNotpredicted}}</div>
                       </div>
-                    </div>
+                    </div-->
 
                     <!-- <div class="row-table-item ">
                       <div class=" ">{{item.pop_churnedPredicted}}</div>
