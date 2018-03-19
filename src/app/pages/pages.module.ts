@@ -1,3 +1,4 @@
+import { NorahSchedulerModule } from './norah-scheduler/norah-scheduler.module';
 import {NgModule} from '@angular/core';
 
 import {PagesComponent} from './pages.component';
@@ -21,6 +22,8 @@ import { AngularFireAuthModule} from "angularfire2/auth";
 import {RevenueRecommendationsAnalysisComponent} from "./smart-pricing/revenue-recommendations-analysis/revenue-recommendations-analysis.component";
 import { DispatchCalendarComponent } from './retention-booster/dispatch-calendar/dispatch-calendar.component';
 import {FullCalendarModule} from "ng-fullcalendar";
+import { NotificationManagerComponent } from '../pages/notification-manager/notification-manager.component';
+import { NotificationlistModule } from './notifications/notificationlist.module';
 
 const PAGES_COMPONENTS = [
   PagesComponent,
@@ -37,7 +40,9 @@ const PAGES_COMPONENTS = [
     GameOverviewModule,
     ChartsRoutingModule, NgxEchartsModule, NgxChartsModule, ChartModule,
     Ng2SmartTableModule,
-    FullCalendarModule
+    FullCalendarModule, 
+    NorahSchedulerModule,
+    NotificationlistModule
   ],
   declarations: [
     ...PAGES_COMPONENTS,
@@ -45,6 +50,7 @@ const PAGES_COMPONENTS = [
     RevenueRecommendationsAnalysisComponent,
     LoginComponent,
     DispatchCalendarComponent,
+    NotificationManagerComponent
   ],
 })
 export class PagesModule {
