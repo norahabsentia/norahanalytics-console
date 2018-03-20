@@ -20,23 +20,19 @@ export class NotificationService {
   editFillerSection = 0;
   addFillerTextbox = 0;
   itemsInit = [
-    { id: 1, name: 'Normacjk' },
-    { id: 2, name: 'Inspiring' },
-    { id: 3, name: 'Extraordinary' },
-    { id: 4, name: 'Successfully accomplished' },
-    { id: 5, name: 'Unsuccessfull' },
-    { id: 6, name: 'Trending' },
-    { id: 7, name: 'Over Anticipated' },
-    { id: 8, name: 'Normally Existed.' },
-    { id: 9, name: 'item1' },
-    { id: 10, name: 'item2' },
-    { id: 11, name: 'item3' },
-    { id: 12, name: 'item4' },
-    { id: 13, name: 'item5' },
+    { id: 1, name: 'Bored' },
+    { id: 2, name: 'Tenacious' },
+    { id: 3, name: 'Fighter' },
+    { id: 4, name: 'Disinterested' },
+    { id: 5, name: 'Ordinary' },
+    { id: 6, name: 'Trooper' },
+    { id: 7, name: 'Needs a challenge' },
+    { id: 8, name: 'Successful' },
+    { id: 9, name: 'Achiever' }
   ];
   fillerArray = [
     {
-      filler_id: '1', tag_name: 'Country', count: 4, "value_segments":
+      filler_id: '1', tag_name: 'Discount', count: 4, "value_segments":
         {
           "10": ["High loyalty", "Low skill", "High loyalty", "Low skill", "High loyalty", "Low skill"],
           "20": ["Low Loyalty", "High Skill"],
@@ -51,18 +47,11 @@ export class NotificationService {
         }
     },
     {
-      filler_id: '2', tag_name: 'Time', count: 1, "value_segments":
+      filler_id: '2', tag_name: 'Promotion game', count: 1, "value_segments":
         { "10": ["High loyalty", "Low skill"], "20": ["Low Loyalty", "High Skill"] }
     },
-    { filler_id: '3', tag_name: 'Month', count: 2 },
-    { filler_id: '4', tag_name: 'brave', count: 5 },
-    { filler_id: '5', tag_name: 'Day', count: 6 },
-    { filler_id: '6', tag_name: 'Username', count: 4 },
-    { filler_id: '7', tag_name: 'test1', count: 5 },
-    { filler_id: '8', tag_name: 'test3', count: 5 },
-    { filler_id: '9', tag_name: 'test2', count: 0 },
-    { filler_id: '10', tag_name: 'test4', count: 6 },
-    { filler_id: '11', tag_name: 'test5', count: 11 },
+    { filler_id: '3', tag_name: 'Coin pack', count: 2 },
+ 
   ];
   notificationTemplate = [
     { templateId: '1', title: 'Hello `Username`. Today is `Month`', body: 'Hello `brave`. Today is `test4`' },
