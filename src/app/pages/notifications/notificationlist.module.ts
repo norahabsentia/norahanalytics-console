@@ -16,8 +16,8 @@ import { ToastrModule } from 'ngx-toastr';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material';
-import {FillerLibraryModule} from '../filler-library/filler-library.module'
-import {FillerLibraryComponent} from '../filler-library/filler-library.component'
+import {FillerLibraryModule} from '../filler-library/filler-library.module';
+import {FillerLibraryComponent} from '../filler-library/filler-library.component';
 @NgModule({
   imports: [
     RouterModule.forChild([
@@ -28,20 +28,20 @@ import {FillerLibraryComponent} from '../filler-library/filler-library.component
       {
           path: '',
           component: NotificationListComponent,
-      }
+      },
+
     ]),
     ThemeModule,
     TextInputHighlightModule,
     Ng2OrderModule,
     FormsModule,
     FillerLibraryModule,MatGridListModule,MatCardModule,MatButtonModule,
-    
     ToastrModule.forRoot()
   ],
   entryComponents: [
     ModalComponent
   ],
-  exports: [],
+  exports: [NotificationListComponent],
   declarations: [NotificationListComponent],
   providers: [],
 })

@@ -14,7 +14,7 @@ import {AuthGuard} from "../auth.guard";
 import {NotificationsPerformanceComponent} from "./retention-booster/notifications-performance/notifications-performance.component";
 import {RevenueRecommendationsAnalysisComponent} from "./smart-pricing/revenue-recommendations-analysis/revenue-recommendations-analysis.component";
 import {DispatchCalendarComponent} from "./retention-booster/dispatch-calendar/dispatch-calendar.component";
-
+import { NotificationManagerComponent } from '../pages/notification-manager/notification-manager.component';
 const routes: Routes = [{
   path: '',
   component: PagesComponent,
@@ -74,6 +74,10 @@ const routes: Routes = [{
     {
       path: 'retention-booster/Notifications-Performance',
       component: NotificationsPerformanceComponent,
+    },
+    {
+      path: 'notification-manager',
+      component: NotificationManagerComponent,
     },
     {
       path: 'retention-booste/dispatch-calendar',

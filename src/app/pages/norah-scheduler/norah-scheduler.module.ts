@@ -22,7 +22,7 @@ import { DialogService } from './shared/dialog.service';
     ThemeModule,
     TextInputHighlightModule,
   ],
-  exports: [],
+  exports: [NorahSchedulerComponent],
   declarations: [NorahSchedulerComponent],
   providers: [NorahService,CanDeactivateGurad,DialogService],
 })

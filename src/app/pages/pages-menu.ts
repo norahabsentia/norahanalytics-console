@@ -23,7 +23,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
       },
       {
         title: 'Notification Manager',
-        link: '/pages/notificationslist',
+        link: '/pages/notification-manager',
       },
       {
         title: 'Churn Predictions',
