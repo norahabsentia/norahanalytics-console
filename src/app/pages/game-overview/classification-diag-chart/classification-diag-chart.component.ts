@@ -9,9 +9,9 @@ declare var venn;
   styleUrls: ['./classification-diag-chart.component.scss'],
   template: `
     <nb-card>
-      <div class="col-sm-12">
+      <div class="col-sm-12 br-1">
         <div class="row p-3 bb-1">
-          <div class="title">classification diag chart</div>
+          <div class="title">Classification Diagram</div>
         </div>
         <div class="row">
         <div id="venn"></div>
@@ -100,7 +100,7 @@ export class ClassificationDiagChartComponent implements OnDestroy, AfterViewIni
     // setTimeout(() => {
 // define sets and set set intersections
       var sets = [ {label: 'Predicted Churn',sets: ['A'], size: this.data.predicted_churned + this.data.predicted_not_churned, style: 'color: #4aa3df', },
-        {label: 'Observed Churn',sets: ['B'], size: this.data.predicted_churned + this.data.predicted_not_churned, color: '#dddde0', style: 'color: #dddde0'},
+        {label: 'Observed Churn',sets: ['B'], size: this.data.predicted_churned + this.data.predicted_not_churned, color: '#a2a2a5', style: 'color: #dddde0'},
         {sets: ['A','B'], size: this.data.predicted_churned}];
 
       var chart = venn.VennDiagram().styled(false).width(500).height(300);;

@@ -67,6 +67,12 @@ nb-card-footer {
     justify-content: center;
 }
 
+.container-period {
+    display: flex;
+    text-align: left;
+    justify-content: left;
+}
+
 .box {
     padding: 35px;
     border: 1px solid rgb(189, 189, 189);
@@ -211,14 +217,14 @@ span {}
     border-radius: 0;
     border-top: 0;
 }
-.small-chart-height{
+
+.small-chart-height {
     height: 300px;
 }
-.big-chart{
+
+.big-chart {
     height: 521px;
 }
-
-
 
 li {}
 

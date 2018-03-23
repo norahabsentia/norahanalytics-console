@@ -18,7 +18,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
     icon: 'nb-compose',
     children: [
       {
-        title: 'Predictions Analysis',
+        title: 'Overview',
         link: '/pages/retention-booster/churn-predictions'
       },
       {

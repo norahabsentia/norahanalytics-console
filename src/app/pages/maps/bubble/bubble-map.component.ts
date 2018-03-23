@@ -459,7 +459,7 @@ export class BubbleMapComponent implements OnDestroy {
 
         this.options = {
           title: {
-            text: 'World Population (2011)',
+            text: 'Churn Distribution',
             left: 'center',
             top: 'top',
             textStyle: {
@@ -481,7 +481,7 @@ export class BubbleMapComponent implements OnDestroy {
             },
           },
           geo: {
-            name: 'World Population (2010)',
+            name: 'Churn Distribution',
             type: 'map',
             map: 'world',
             roam: true,

@@ -684,7 +684,7 @@ this.countryName = {
 	    series : [
         	{
             scaleLimit: {max: 1, min: 1},
-	            name: 'World Population (2010)',
+	            name: 'Churn Distribution',
         	    type: 'map',
 	            mapType: 'world',
         	    roam: true,
