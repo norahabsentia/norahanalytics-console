@@ -357,7 +357,11 @@ export class ChurnPredictionsComponent implements OnInit, OnDestroy {
   churn = {
     "High_Risk":0,
     "Medium_Risk":0,
-    "Low_Risk":0
+    "Low_Risk":0,
+    "Observation_Period_Start": "",
+    "Observation_Period_End": "",
+    "Churn_Period_Start": "",
+    "Churn_Period_End": ""
   }
   constructor(private theme: NbThemeService, private service: SmartTableService, public dataservice: DataService, private http: HttpClient) {
 
