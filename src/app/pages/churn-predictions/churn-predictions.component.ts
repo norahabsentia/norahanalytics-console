@@ -341,7 +341,7 @@ export class ChurnPredictionsComponent implements OnInit, OnDestroy {
         filter: false,
         width: '50%'
       },
-      proability: {
+      probability: {
         title: 'Churn Probability',
         type: 'string',
         editable: false,
