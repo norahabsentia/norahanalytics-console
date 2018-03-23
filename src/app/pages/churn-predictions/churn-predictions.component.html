@@ -19,17 +19,19 @@
                                 <div>
                                     <chart *ngIf="data" type="doughnut" [data]="data" [options]="options"></chart>
                                 </div>
+                                <br>
+                                <div class="user-active">
+                                    <span>
+                        Active Users:
+                      </span>
+                                    <span>
+                        {{churn.High_Risk + churn.Medium_Risk + churn.Low_Risk}}
+                      </span>
+                                </div>
                             </div>
                             <div class="col-md-7 col-xs-12 col-sm-12">
                                 <div>
-                                    <div class="user-active">
-                                        <span>
-                        Active Users:
-                      </span>
-                                        <span>
-                        {{churn.High_Risk + churn.Medium_Risk + churn.Low_Risk}}
-                      </span>
-                                    </div>
+
                                     <div class="container-risk">
                                         <div class="box" style="border-radius: 10px 0 0 10px;">
                                             <div class="caption-risk" style="color: #4aa3df;">
