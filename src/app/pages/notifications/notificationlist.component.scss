@@ -1,9 +1,9 @@
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 @import '../../@theme/styles/themes';
 @include nb-install-component {
-    // *:not('i'){
-    //     font-family: "Avenir" !important;
-    // }
+    *:not('i') {
+        font-family: "Avenir" !important;
+    }
     /deep/ nb-card-header {
         font-family: "Avenir" !important;
     }
