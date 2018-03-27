@@ -80,7 +80,7 @@ const routes: Routes = [{
       component: NotificationManagerComponent,
     },
     {
-      path: 'retention-booste/dispatch-calendar',
+      path: 'retention-booster/dispatch-calendar',
       component: DispatchCalendarComponent
     },
     {
