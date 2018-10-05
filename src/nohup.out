@@ -503,3 +503,9 @@ webpack: Compiling...
 [0m18 unchanged chunks[0m
 
 webpack: Compiled successfully.
+webpack: Compiling...
+[0mDate: [1m[37m2018-10-05T20:29:15.806Z[39m[22m - Hash: [1m[37m00593f2215a6c1ea7a03[39m[22m - Time: [1m[37m40485[39m[22mms[0m
+[0m17 unchanged chunks[0m
+[0mchunk {[1m[33mpages.module[39m[22m} [1m[32mpages.module.chunk.js[39m[22m () 4.3 MB [1m[32m [rendered][39m[22m[0m
+
+webpack: Compiled successfully.
