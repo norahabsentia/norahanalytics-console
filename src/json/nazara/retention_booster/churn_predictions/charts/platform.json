@@ -1,16 +1,8 @@
 {
-    "platform": [
-        {
-            "value": "Android",
-            "Low_Risk": 1055.0,
-            "Medium_Risk": 1582.0,
-            "High_Risk": 3956.0
-        },
-        {
-            "value": "iOS",
-            "Low_Risk": 1457.0,
-            "Medium_Risk": 2027.0,
-            "High_Risk": 2851.0
-        }
-    ]
+	"platform": [{
+		"value": "android",
+		"Low_Risk": 4492,
+		"Medium_Risk": 6939,
+		"High_Risk": 11441
+	}]
 }

@@ -1,44 +1,54 @@
 {
-    "mobile_brand_name": [
-        {
-            "value": "iPhone",
-            "churned": 1900.0,
-            "retained": 1979.0
-        },
-        {
-            "value": "Samsung",
-            "churned": 1547.0,
-            "retained": 1168.0
-        },
-        {
-            "value": "Xiaomi",
-            "churned": 941.0,
-            "retained": 869.0
-        },
-        {
-            "value": "Vivo",
-            "churned": 682.0,
-            "retained": 740.0
-        },
-        {
-            "value": "Oppo",
-            "churned": 589.0,
-            "retained": 445.0
-        },
-        {
-            "value": "Lenovo",
-            "churned": 224.0,
-            "retained": 163.0
-        },
-        {
-            "value": "Micromax",
-            "churned": 201.0,
-            "retained": 186.0
-        },
-        {
-            "value": "One Plus",
-            "churned": 749.0,
-            "retained": 544.0
-        }
-    ]
+  "mobile_brand_name": [
+    {
+      "value": "Samsung",
+      "churned": 3469,
+      "retained": 3195
+    },
+    {
+      "value": "Xiaomi",
+      "churned": 2041,
+      "retained": 2303
+    },
+    {
+      "value": "Vivo",
+      "churned": 1234,
+      "retained": 1424
+    },
+    {
+      "value": "OPPO",
+      "churned": 1166,
+      "retained": 1228
+    },
+    {
+      "value": "Lenovo",
+      "churned": 652,
+      "retained": 631
+    },
+    {
+      "value": "Motorola",
+      "churned": 425,
+      "retained": 413
+    },
+    {
+      "value": "Micromax",
+      "churned": 350,
+      "retained": 260
+    },
+    {
+      "value": "LYF",
+      "churned": 302,
+      "retained": 229
+    },
+    {
+      "value": "Gionee",
+      "churned": 239,
+      "retained": 256
+    },
+    {
+      "value": "OnePlus",
+      "churned": 146,
+      "retained": 158
+    }
+  ]
 }

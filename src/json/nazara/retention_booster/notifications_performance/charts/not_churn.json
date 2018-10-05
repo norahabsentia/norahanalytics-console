@@ -1,24 +1,9 @@
 {
-    "notification_churned": [
-        {
-            "value": "Incentive",
-            "churned": 4058.0,
-            "retained": 5414.0
-        },
-        {
-            "value": "Promotion",
-            "churned": 4058.0,
-            "retained": 4512.0
-        },
-        {
-            "value": "Reminder",
-            "churned": 2597.0,
-            "retained": 4737.0
-        },
-        {
-            "value": "Interactive",
-            "churned": 5520.0,
-            "retained": 7897.0
-        }
-    ]
+	"notification_churned":
+		[ 
+		{"value":"Incentive","churned":6781, "retained":2923},
+		{"value":"Promotion","churned":8115, "retained":5049},
+		{"value":"Reminder","churned":8461, "retained":2678},
+		{"value":"Interactive","churned":10104, "retained":9310}
+	]
 }

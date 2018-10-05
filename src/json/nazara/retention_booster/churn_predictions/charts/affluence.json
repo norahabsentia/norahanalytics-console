@@ -1,46 +1,47 @@
 {
-    "affluence": [
-        {
-            "value": 1.0,
-            "Low_Risk": 225.0,
-            "Medium_Risk": 198.0,
-            "High_Risk": 901.0
-        },
-        {
-            "value": 2.0,
-            "Low_Risk": 318.0,
-            "Medium_Risk": 371.0,
-            "High_Risk": 636.0
-        },
-        {
-            "value": 3.0,
-            "Low_Risk": 857.0,
-            "Medium_Risk": 958.0,
-            "High_Risk": 3227.0
-        },
-        {
-            "value": 4.0,
-            "Low_Risk": 349.0,
-            "Medium_Risk": 523.0,
-            "High_Risk": 1066.0
-        },
-        {
-            "value": 5.0,
-            "Low_Risk": 135.0,
-            "Medium_Risk": 142.0,
-            "High_Risk": 368.0
-        },
-        {
-            "value": 6.0,
-            "Low_Risk": 240.0,
-            "Medium_Risk": 529.0,
-            "High_Risk": 835.0
-        },
-        {
-            "value": 7.0,
-            "Low_Risk": 177.0,
-            "Medium_Risk": 281.0,
-            "High_Risk": 584.0
-        }
-    ]
+	"affluence": [{
+			"value": 1,
+			"Low_Risk": 10,
+			"Medium_Risk": 21,
+			"High_Risk": 34
+		},
+		{
+			"value": 2,
+			"Low_Risk": 456,
+			"Medium_Risk": 730,
+			"High_Risk": 1159
+		},
+		{
+			"value": 3,
+			"Low_Risk": 1752,
+			"Medium_Risk": 2749,
+			"High_Risk": 4369
+		},
+		{
+			"value": 4,
+			"Low_Risk": 1272,
+			"Medium_Risk": 1908,
+			"High_Risk": 3316
+		},
+		{
+			"value": 5,
+			"Low_Risk": 815,
+			"Medium_Risk": 1226,
+			"High_Risk": 2064
+		},
+
+		{
+			"value": 6,
+			"Low_Risk": 137,
+			"Medium_Risk": 194,
+			"High_Risk": 338
+		},
+		{
+			"value": 7,
+			"Low_Risk": 50,
+			"Medium_Risk": 111,
+			"High_Risk": 161
+		}
+
+	]
 }

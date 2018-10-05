@@ -40,7 +40,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
       },*/
     ]
   },
-  {
+  /*{
     title: 'Smart Pricing',
     icon: 'nb-location',
     children: [
@@ -65,7 +65,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
         link: '/pages/tables/smart-table',
       },
     ],
-  },
+  },*/
   /*{
     title: 'Dashboard',
     icon: 'nb-home',

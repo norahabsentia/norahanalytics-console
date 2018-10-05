@@ -1,29 +1,32 @@
 {
-    "app_version": [
-        {
-            "value": "1.5.23",
-            "churned": 4563.0,
-            "retained": 4618.0
-        },
-        {
-            "value": "1.5.22",
-            "churned": 543.0,
-            "retained": 498.0
-        },
-        {
-            "value": "1.5.21",
-            "churned": 498.0,
-            "retained": 543.0
-        },
-        {
-            "value": "1.5.20",
-            "churned": 416.0,
-            "retained": 521.0
-        },
-        {
-            "value": "1.5.19",
-            "churned": 314.0,
-            "retained": 415.0
-        }
-    ]
+  "app_version": [
+  	    {
+      "value": "0.9.3",
+      "churned": 184,
+      "retained": 270
+    },
+  
+   {
+      "value": "1.0.2",
+      "churned": 336,
+      "retained": 449
+    },
+    {
+      "value": "1.0.3",
+      "churned": 2121,
+      "retained": 2901
+    },
+      {
+      "value": "1.0.4",
+      "churned": 8775,
+      "retained": 7835
+  },
+   
+
+    {
+      "value": "1.0.5",
+      "churned": 1,
+      "retained": 0
+    }
+  ]
 }

@@ -1,10 +1,10 @@
 {
-    "total_notifications_sent": 38793.0,
-    "total_notifications_open": 9201.0,
-    "total_users": 12931.0,
-    "users_opened": 3231.0,
-    "average_notifications_sent_per_user": 2.8,
-    "average_notifications_open_per_user": 0.16,
-    "average_notifications_sent_per_churner": "2.93",
-    "average_notifications_open_per_churner": 0.06
+	"total_notifications_sent": 53461,
+	"total_notifications_open": 2949,
+	"total_users": 22872,
+	"users_opened": 1248,
+	"average_notifications_sent_per_user": 2.34,
+	"average_notifications_open_per_user": 0.13,
+	"average_notifications_sent_per_churner": 2.93,
+	"average_notifications_open_per_churner": 0.08
 }

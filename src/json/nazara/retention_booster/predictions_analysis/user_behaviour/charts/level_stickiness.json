@@ -1,19 +1,22 @@
 {
-    "stuck_at_a_level": [
-        {
-            "value": "high",
-            "churned": 1422.0,
-            "retained": 2198.0
-        },
-        {
-            "value": "low",
-            "churned": 1065.0,
-            "retained": 1650.0
-        },
-        {
-            "value": "medium",
-            "churned": 3143.0,
-            "retained": 3451.0
-        }
-    ]
+  "stuck_at_a_level": [
+    {
+      "value": "high",
+      "churned": 9798,
+      "retained": 9057
+      
+    },
+    {
+      "value": "low",
+      "churned": 1610,
+      "retained": 2342
+     
+    },
+    {
+      "value": "medium",
+      "churned": 9,
+      "retained": 56
+   
+    }
+  ]
 }
