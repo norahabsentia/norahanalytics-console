@@ -18,6 +18,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
     icon: 'nb-compose',
     children: [
       {
+        title: 'Churn Predictions',
+        link: '/pages/churn-predictions',
+      },
+      {
         title: 'Predictions Analysis',
         link: '/pages/retention-booster/churn-predictions'
       },
@@ -26,28 +30,24 @@ export const MENU_ITEMS: NbMenuItem[] = [
         link: '/pages/notificationslist',
       },
       {
-        title: 'Churn Predictions',
-        link: '/pages/churn-predictions',
-      },
-      {
         title: 'Notifications Performance',
         link: '/pages/retention-booster/Notifications-Performance',
       },
 
-      {
+      /*{
         title: 'Dispatch Calendar',
         link: '/pages/retention-booste/dispatch-calendar',
-      },
+      },*/
     ]
   },
   {
     title: 'Smart Pricing',
     icon: 'nb-location',
     children: [
-      {
-        title: 'User Trends',
-        link: '/pages/smart-pricing/user-trends',
-      },
+//      {
+//        title: 'User Trends',
+//        link: '/pages/smart-pricing/user-trends',
+//      },
       // {
       //   title: 'Predictions',
       //   link: '/pages/smart-pricing/predictions',
@@ -56,17 +56,17 @@ export const MENU_ITEMS: NbMenuItem[] = [
       //   title: 'Performance Analysis',
       //   link: '/pages/smart-pricing/performance-analysis',
       // },
-      {
-        title: 'Revenue recommendations & Analysis',
-        link: '/pages/smart-pricing/Revenue-analysis'
-      },
+//      {
+//        title: 'Revenue recommendations & Analysis',
+//        link: '/pages/smart-pricing/Revenue-analysis'
+//      },
       {
         title: 'Pricing Console',
         link: '/pages/tables/smart-table',
       },
-],
+    ],
   },
-  {
+  /*{
     title: 'Dashboard',
     icon: 'nb-home',
     link: '/pages/dashboard',
@@ -231,5 +231,5 @@ export const MENU_ITEMS: NbMenuItem[] = [
   //       link: '/auth/reset-password',
   //     },
   //   ],
-  // },
+  // },*/
 ];

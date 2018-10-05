@@ -20,54 +20,59 @@ export class NotificationService {
   editFillerSection = 0;
   addFillerTextbox = 0;
   itemsInit = [
-    { id: 1, name: 'Normacjk' },
-    { id: 2, name: 'Inspiring' },
-    { id: 3, name: 'Extraordinary' },
-    { id: 4, name: 'Successfully accomplished' },
-    { id: 5, name: 'Unsuccessfull' },
-    { id: 6, name: 'Trending' },
-    { id: 7, name: 'Over Anticipated' },
-    { id: 8, name: 'Normally Existed.' },
-    { id: 9, name: 'item1' },
-    { id: 10, name: 'item2' },
-    { id: 11, name: 'item3' },
-    { id: 12, name: 'item4' },
-    { id: 13, name: 'item5' },
+    { id: 1, name: 'HSkill LEng' },
+    { id: 1, name: 'MSkill LEng' },
+    { id: 1, name: 'LSkill LEng' },
+    { id: 1, name: 'HSkill MEng' },
+    { id: 1, name: 'MSkill MEng' },
+    { id: 1, name: 'LSkill MEng' },
+    { id: 1, name: 'HSkill HEng' },
+    { id: 1, name: 'MSkill HEng' },
+    { id: 1, name: 'LSkill HEng' },
+//    { id: 1, name: 'Tenacious' },
+//    { id: 2, name: 'Fighter' },
+//    { id: 3, name: 'Ordinary' },
+//    { id: 4, name: 'Trooper' },
+//    { id: 5, name: 'Achiever' },
+//    { id: 6, name: 'Bored' },
+//    { id: 7, name: 'Disinterested' },
+//    { id: 8, name: 'Needs_a_challenge' },
+//    { id: 9, name: 'Achiever' },
+//    { id: 9, name: 'item1' },
+//    { id: 10, name: 'item2' },
+//    { id: 11, name: 'item3' },
+//    { id: 12, name: 'item4' },
+//    { id: 13, name: 'item5' },
   ];
   fillerArray = [
-    {
-      filler_id: '1', tag_name: 'Country', count: 4, "value_segments":
+   /*{
+      filler_id: '1', tag_name: 'Discount', count: 4, "value_segments":
         {
-          "10": ["High loyalty", "Low skill", "High loyalty", "Low skill", "High loyalty", "Low skill"],
-          "20": ["Low Loyalty", "High Skill"],
-          "30": ["High loyalty", "Low skill", "High loyalty", "Low skill", "High loyalty", "Low skill"],
-          "40": ["Low Loyalty", "High Skill"],
-          "50": ["Low Loyalty", "High Skill"],
-          "60": ["Low Loyalty", "High Skill"],
-          "70": ["Low Loyalty", "High Skill"],
-          "80": ["Low Loyalty", "High Skill"],
-          "90": ["Low Loyalty", "High Skill"],
-          "100": ["Low Loyalty", "High Skill"]
+
+          "10": ["Ordinary", "Fighter"],
+          "20": ["Tenacius"],
+          "30": ["Bored"]
         }
     },
     {
-      filler_id: '2', tag_name: 'Time', count: 1, "value_segments":
-        { "10": ["High loyalty", "Low skill"], "20": ["Low Loyalty", "High Skill"] }
+      filler_id: '2', tag_name: 'Promotion_Game', count: 1, "value_segments":
+        { 
+          "Game_1": ["Successful"], 
+          "Game_2": ["Achiever"],
+          "Game_3": ["Needs a challenge"]
+        }
     },
-    { filler_id: '3', tag_name: 'Month', count: 2 },
-    { filler_id: '4', tag_name: 'brave', count: 5 },
-    { filler_id: '5', tag_name: 'Day', count: 6 },
-    { filler_id: '6', tag_name: 'Username', count: 4 },
-    { filler_id: '7', tag_name: 'test1', count: 5 },
-    { filler_id: '8', tag_name: 'test3', count: 5 },
-    { filler_id: '9', tag_name: 'test2', count: 0 },
-    { filler_id: '10', tag_name: 'test4', count: 6 },
-    { filler_id: '11', tag_name: 'test5', count: 11 },
+    { filler_id: '3', tag_name: 'Coin Pack', count: 2 }*/
   ];
   notificationTemplate = [
-    { templateId: '1', title: 'Hello `Username`. Today is `Month`', body: 'Hello `brave`. Today is `test4`' },
-    { templateId: '2', title: 'test `Country` . Today is `test1`', body: '`Time`. Today is `Day`' },
-    { templateId: '3', title: 'test `brave` . Today is `test1`', body: '`Time`. Today is `Day`' }
+    { templateId: '1', title: 'Help Virat', body: 'Help! Virat’s Team seems to be losing nd it is up to you to him to save them. Are you up for the challenge?' },
+    { templateId: '2', title: 'World Cup', body: 'Oh no! India is on edge in the cricket world cup. It’s your job to carry Virat through.' },
+    { templateId: '3', title: 'Make Virat Proud', body: 'The fate of Virat Kohli lies in your hands. Make him the pride of Indian Cricket Team.' },
+    { templateId: '4', title: 'Tip for improving game', body: 'Try to tap the screen on the left or right to align the bat with the ball!' },
+    { templateId: '5', title: 'Virat Fun Fact 1', body: 'In a league of their own: Virat Kohli is the third batsman to score two ODI hundreds before his 22nd birthday – the other two being Sachin Tendulkar and Suresh Raina!' },
+    { templateId: '6', title: 'Virat Fun Fact 2', body: 'Catchy Chikku! Virat’s teammates call him Chikku affectionately.' },
+    { templateId: '7', title: 'Incentive Energy Gift.', body: 'INDIA is in desperate need of your expertise , Take this gift and boost your energy and chances of beating Sri Lanka.' },
+    { templateId: '8', title: 'Game Promotion 1', body: 'You just beat Sri Lanka, Are you up for another challenge. Here is another game for achievers like you.' }
   ];
   colorArray = [
     "#0f6277",
@@ -157,8 +162,10 @@ export class NotificationService {
     let fillers = []
     let str = this.getConcateString(notificationObj.title, notificationObj.body);
     let splittext = str.match(/`(.*?)`/g);
-    for (var j = 0; j < splittext.length; j++) {
-      fillers.push(this.getFillerByName(splittext[j].slice(1, -1)));
+    if(splittext){
+      for (var j = 0; j < splittext.length; j++) {
+        fillers.push(this.getFillerByName(splittext[j].slice(1, -1)));
+      }
     }
 
     return fillers;

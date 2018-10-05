@@ -1,22 +1,19 @@
 {
-	"user_skill": [
-
-		{
-			"value": "low",
-			"churned": 1606,
-			"retained": 2397
-
-		},
-		{
-			"value": "medium",
-			"churned": 14,
-			"retained": 21
-
-		}, {
-			"value": "high",
-			"churned": 9797,
-			"retained": 9037
-
-		}
-	]
+    "user_skill": [
+        {
+            "value": "low",
+            "churned": 3105.0,
+            "retained": 2584.0
+        },
+        {
+            "value": "medium",
+            "churned": 2160.0,
+            "retained": 2107.0
+        },
+        {
+            "value": "high",
+            "churned": 1543.0,
+            "retained": 1431.0
+        }
+    ]
 }

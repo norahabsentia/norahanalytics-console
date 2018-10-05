@@ -65,7 +65,7 @@ export class SmartTableComponent implements OnInit {
 
   dataT = [
     {
-      "ProductID": "12321312",
+      "ProductID": "123213124",
       "BasePrice": "10000",
       "RPRMax": 50,
       "RPRMin": 10,

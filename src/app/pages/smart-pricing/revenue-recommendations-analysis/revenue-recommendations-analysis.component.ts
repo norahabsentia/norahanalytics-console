@@ -26,6 +26,9 @@ export class RevenueRecommendationsAnalysisComponent implements OnInit, OnDestro
       label: 'Display stacked bar',
     },
   ];
+
+  relativePath = '../../../json/nazara/smart_pricing/revenue_analysis/';
+
   showDropdawn;
   dataBar1Options = this.charts[1];
   dataBar2Options = this.charts[1];
@@ -169,6 +172,7 @@ export class RevenueRecommendationsAnalysisComponent implements OnInit, OnDestro
     this[table] = null;
 
     this.http.get('../../../json/churn-predictions/' + this.objLocation[item].url +'.json').subscribe((res: any) => {
+    //this.http.get(this.relativePath + this.objLocation[item].url +'.json').subscribe((res: any) => {
       this.setData(bar, res[this.objLocation[item].lab]);
       this[table] = res[this.objLocation[item].lab];
     });
@@ -248,6 +252,7 @@ export class RevenueRecommendationsAnalysisComponent implements OnInit, OnDestro
       const colors: any = config.variables;
       const chartjs: any = config.variables.chartjs;
       this.http.get('../../../../json/churn-predictions/sample_churn_predictions.json').subscribe((res: any) => {
+      //this.http.get(this.relativePath+'/sample_churn_predictions.json').subscribe((res: any) => {
         this.churn = res.churn;
         this.data = {
           labels: ['buy', 'not buy'],
@@ -336,24 +341,29 @@ export class RevenueRecommendationsAnalysisComponent implements OnInit, OnDestro
         legend: {display: true}
       }
       this.http.get('../../../../json/churn-predictions/basis of origin/new2_platform-aggr-format.json').subscribe((res: any) => {
+      //this.http.get(this.relativePath+'new2_platform-aggr-format.json').subscribe((res: any) => {
         this.setData('dataBar1', res.Platform);
         this.setChartBarData(res.Platform);
         this.dataTable1 = res.Platform;
       });
       this.http.get('../../../../json/churn-predictions/basis of origin/new2_country-aggr-format.json').subscribe((res: any) => {
+      //this.http.get(this.relativePath+'new2_country-aggr-format.json').subscribe((res: any) => {
         this.setData('dataBar2', res.country);
         this.dataTable2 = res.country;
       });
 
       this.http.get('../../../../json/churn-predictions/basis of behavior/new2_engagement-aggr-format.json').subscribe((res: any) => {
+      //this.http.get(this.relativePath+'new2_engagement-aggr-format.json').subscribe((res: any) => {
         this.setData('dataBar3', res.Engagement);
         this.dataTable3 = res.Engagement;
       });
       this.http.get('../../../../json/churn-predictions/basis of behavior/new2_Total time in game-aggr-format.json').subscribe((res: any) => {
+      //this.http.get(this.relativePath+'new2_Total time in game-aggr-format.json').subscribe((res: any) => {
         this.setData('dataBar4', res['Total time in game']);
         this.dataTable4 = res['Total time in game'];
       });
       this.http.get('../../../../json/churn-predictions/basis of behavior/new2_currentlevel-aggr-format.json').subscribe((res: any) => {
+      //this.http.get(this.relativePath+'new2_currentlevel-aggr-format.json').subscribe((res: any) => {
         this.setData('dataBar5', res['currentlevel']);
         this.dataTable5 = res['currentlevel'];
       });

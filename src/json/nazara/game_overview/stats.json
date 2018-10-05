@@ -1,9 +1,7 @@
 {
-	"game": [{
-		"active_users": 22872,
-		"avg_daily_active_users": 3267.4285714285716,
-		"games_played": 101105,
-		"avg_daily_games_played": 14443.57142857143
-	}
-	]
+    "game": "game",
+    "active_users": 12931.0,
+    "avg_daily_active_users": 1847.0,
+    "games_played": 77586.0,
+    "avg_daily_games_played": 11082.0
 }

@@ -1,8 +1,24 @@
 {
-	"notification_response":[
-		{"value":"Incentive","open":1949,"not_opened":7755},
-		{"value":"Promotion","open":300,"not_opened":12864},
-		{"value":"Reminder","open":700,"not_opened":10439},
-		{"value":"Interactive","open":1000,"not_opened":18414}
-	]
+    "notification_response": [
+        {
+            "value": "Incentive",
+            "open": 1840.0,
+            "not_opened": 6806.0
+        },
+        {
+            "value": "Promotion",
+            "open": 2300.0,
+            "not_opened": 8285.0
+        },
+        {
+            "value": "Reminder",
+            "open": 1932.0,
+            "not_opened": 5918.0
+        },
+        {
+            "value": "Interactive",
+            "open": 3129.0,
+            "not_opened": 8583.0
+        }
+    ]
 }

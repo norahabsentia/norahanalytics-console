@@ -1,51 +1,164 @@
 {
-	"sink": [{
-		"value": 1,
-		"product": ["lives6", "tile1"]
-	}, {
-		"value": 8,
-		"product": ["shuffle"]
-	}, {
-		"value": 13,
-		"product": ["shuffle", "lives3", "joker", "swoosh"]
-	}, {
-		"value": 14,
-		"product": ["shuffle", "joker", "swoosh"]
-	}, {
-		"value": 15,
-		"product": ["joker", "time", "shuffle", "swoosh"]
-	}, {
-		"value": 16,
-		"product": ["joker", "time", "swoosh"]
-	}, {
-		"value": 17,
-		"product": ["time", "lives2", "shuffle"]
-	}, {
-		"value": 18,
-		"product": ["hint"]
-	}, {
-		"value": 19,
-		"product": ["time", "shuffle", "lives2", "hint", "lives3"]
-	}, {
-		"value": 20,
-		"product": ["hint", "shuffle", "half_hint", "time"]
-	}, {
-		"value": 21,
-		"product": ["tile3", "tile2"]
-	}, {
-		"value": 22,
-		"product": ["time"]
-	}, {
-		"value": 23,
-		"product": ["time"]
-	}, {
-		"value": 23,
-		"product": ["swoosh"]
-	}, {
-		"value": 24,
-		"product": ["shuffle", "joker", "hint", "half_hint", "swoosh", "lives2", "time"]
-	}, {
-		"value": 25,
-		"product": ["lives2", "time", "swoosh"]
-	}]
+    "sink": [
+        {
+            "value": "1",
+            "product/0": "lives6",
+            "product/1": "tile1",
+            "product/2": "",
+            "product/3": "",
+            "product/4": "",
+            "product/5": "",
+            "product/6": ""
+        },
+        {
+            "value": "8",
+            "product/0": "shuffle",
+            "product/1": "",
+            "product/2": "",
+            "product/3": "",
+            "product/4": "",
+            "product/5": "",
+            "product/6": ""
+        },
+        {
+            "value": "13",
+            "product/0": "shuffle",
+            "product/1": "lives3",
+            "product/2": "joker",
+            "product/3": "swoosh",
+            "product/4": "",
+            "product/5": "",
+            "product/6": ""
+        },
+        {
+            "value": "14",
+            "product/0": "shuffle",
+            "product/1": "joker",
+            "product/2": "swoosh",
+            "product/3": "",
+            "product/4": "",
+            "product/5": "",
+            "product/6": ""
+        },
+        {
+            "value": "15",
+            "product/0": "joker",
+            "product/1": "time",
+            "product/2": "shuffle",
+            "product/3": "swoosh",
+            "product/4": "",
+            "product/5": "",
+            "product/6": ""
+        },
+        {
+            "value": "16",
+            "product/0": "joker",
+            "product/1": "time",
+            "product/2": "swoosh",
+            "product/3": "",
+            "product/4": "",
+            "product/5": "",
+            "product/6": ""
+        },
+        {
+            "value": "17",
+            "product/0": "time",
+            "product/1": "lives2",
+            "product/2": "shuffle",
+            "product/3": "",
+            "product/4": "",
+            "product/5": "",
+            "product/6": ""
+        },
+        {
+            "value": "18",
+            "product/0": "hint",
+            "product/1": "",
+            "product/2": "",
+            "product/3": "",
+            "product/4": "",
+            "product/5": "",
+            "product/6": ""
+        },
+        {
+            "value": "19",
+            "product/0": "time",
+            "product/1": "shuffle",
+            "product/2": "lives2",
+            "product/3": "hint",
+            "product/4": "lives3",
+            "product/5": "",
+            "product/6": ""
+        },
+        {
+            "value": "20",
+            "product/0": "hint",
+            "product/1": "shuffle",
+            "product/2": "half_hint",
+            "product/3": "time",
+            "product/4": "",
+            "product/5": "",
+            "product/6": ""
+        },
+        {
+            "value": "21",
+            "product/0": "tile3",
+            "product/1": "tile2",
+            "product/2": "",
+            "product/3": "",
+            "product/4": "",
+            "product/5": "",
+            "product/6": ""
+        },
+        {
+            "value": "22",
+            "product/0": "time",
+            "product/1": "",
+            "product/2": "",
+            "product/3": "",
+            "product/4": "",
+            "product/5": "",
+            "product/6": ""
+        },
+        {
+            "value": "23",
+            "product/0": "time",
+            "product/1": "",
+            "product/2": "",
+            "product/3": "",
+            "product/4": "",
+            "product/5": "",
+            "product/6": ""
+        },
+        {
+            "value": "23",
+            "product/0": "swoosh",
+            "product/1": "",
+            "product/2": "",
+            "product/3": "",
+            "product/4": "",
+            "product/5": "",
+            "product/6": ""
+        },
+        {
+            "value": "24",
+            "product/0": "shuffle",
+            "product/1": "joker",
+            "product/2": "hint",
+            "product/3": "half_hint",
+            "product/4": "swoosh",
+            "product/5": "lives2",
+            "product/6": "time"
+        },
+        {
+            "value": "25",
+            "product/0": "lives2",
+            "product/1": "time",
+            "product/2": "swoosh",
+            "product/3": "",
+            "product/4": "",
+            "product/5": "",
+            "product/6": ""
+        }
+    ]
 }

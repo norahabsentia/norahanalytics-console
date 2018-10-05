@@ -1,15 +1,67 @@
 {
-	"segment_type":
-	[
-		{"value":"Bored","incentive":451,"promotional":600,"reminder":1000,"interactive":1400},
-		{"value":"Tenacious","incentive":645,"promotional":1000,"reminder":2000,"interactive":4000},
-		{"value":"Fighter","incentive":432,"promotional":800,"reminder":1000,"interactive":4200},
-		{"value":"Disinterested","incentive":657,"promotional":1000,"reminder":2000,"interactive":4000},
-		{"value":"Ordinary","incentive":879,"promotional":2000,"reminder":3000,"interactive":4000},
-		{"value":"Trooper","incentive":542,"promotional":1200,"reminder":2800,"interactive":2000},
-		{"value":"Needs_a_challenge","incentive":341,"promotional":200,"reminder":800,"interactive":1000},
-		{"value":"Successful","incentive":458,"promotional":200,"reminder":300,"interactive":500},
-		{"value":"Achiever","incentive":256,"promotional":800,"reminder":2000,"interactive":6000}
-	]
+    "segment_type": [
+        {
+            "value": "HSkill LEng",
+            "incentive": 1745.0,
+            "promotional": 1745.0,
+            "reminder": 1163.0,
+            "interactive": 1165.0
+        },
+        {
+            "value": "MSkill LEng",
+            "incentive": 1978.0,
+            "promotional": 1846.0,
+            "reminder": 1978.0,
+            "interactive": 792.0
+        },
+        {
+            "value": "LSkill LEng",
+            "incentive": 1512.0,
+            "promotional": 1462.0,
+            "reminder": 1412.0,
+            "interactive": 657.0
+        },
+        {
+            "value": "HSkill MEng",
+            "incentive": 872.0,
+            "promotional": 733.0,
+            "reminder": 1012.0,
+            "interactive": 874.0
+        },
+        {
+            "value": "MSkill MEng",
+            "incentive": 930.0,
+            "promotional": 1047.0,
+            "reminder": 969.0,
+            "interactive": 933.0
+        },
+        {
+            "value": "LSkill MEng",
+            "incentive": 775.0,
+            "promotional": 775.0,
+            "reminder": 775.0,
+            "interactive": 1554.0
+        },
+        {
+            "value": "HSkill HEng",
+            "incentive": 523.0,
+            "promotional": 504.0,
+            "reminder": 465.0,
+            "interactive": 447.0
+        },
+        {
+            "value": "MSkill HEng",
+            "incentive": 570.0,
+            "promotional": 705.0,
+            "reminder": 787.0,
+            "interactive": 653.0
+        },
+        {
+            "value": "LSkill HEng",
+            "incentive": 628.0,
+            "promotional": 511.0,
+            "reminder": 698.0,
+            "interactive": 490.0
+        }
+    ]
 }
-

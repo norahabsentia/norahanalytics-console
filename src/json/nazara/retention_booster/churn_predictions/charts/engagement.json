@@ -1,21 +1,22 @@
 {
-	"engagement": [{
-			"value": "low",
-			"Low_Risk": 2469,
-			"Medium_Risk": 3748,
-			"High_Risk": 6053
-		},
-		{
-			"value": "medium",
-			"Low_Risk": 867,
-			"Medium_Risk": 1301,
-			"High_Risk": 2265
-		},
-		{
-			"value": "high",
-			"Low_Risk": 596,
-			"Medium_Risk": 947,
-			"High_Risk": 1620
-		}
-	]
+    "engagement": [
+        {
+            "value": "low",
+            "Low_Risk": 810.0,
+            "Medium_Risk": 1493.0,
+            "High_Risk": 1962.0
+        },
+        {
+            "value": "medium",
+            "Low_Risk": 597.0,
+            "Medium_Risk": 739.0,
+            "High_Risk": 1507.0
+        },
+        {
+            "value": "high",
+            "Low_Risk": 1163.0,
+            "Medium_Risk": 930.0,
+            "High_Risk": 3723.0
+        }
+    ]
 }

@@ -1,58 +1,39 @@
 {
-  "last_action": [
-    {
-      "value": "nazara_ads_funnel",
-      "churned": 5662,
-      "retained": 5146
-      
-    },
-    {
-      "value": "Game_Save_Me_Screen",
-      "churned": 1374,
-      "retained": 1762
-     
-    },
-    {
-      "value": "Game_End_Session",
-      "churned": 1069,
-      "retained": 1182
-      
-    },
-    {
-      "value": "Game_Over",
-      "churned": 799,
-      "retained": 766
-     
-    },
-    {
-      "value": "ObjectivesScreenOpened",
-      "churned": 742,
-      "retained": 807
-      
-    },
-    {
-      "value": "Game_Start_Session",
-      "churned": 772,
-      "retained": 454
-      
-    },
-    {
-      "value": "Game_Start",
-      "churned": 381,
-      "retained": 530
-      
-    },
-    {
-      "value": "Game_Pause",
-      "churned": 362,
-      "retained": 445
-     
-    },
-    {
-      "value": "OutOfResource",
-      "churned": 256,
-      "retained": 363
-
-    }
-  ]
+    "last_action": [
+        {
+            "value": "Ads_View",
+            "churned": 901.0,
+            "retained": 1000.0
+        },
+        {
+            "value": "Store_Page",
+            "churned": 765.0,
+            "retained": 747.0
+        },
+        {
+            "value": "Select_Page",
+            "churned": 1205.0,
+            "retained": 987.0
+        },
+        {
+            "value": "Video_Ad",
+            "churned": 1006.0,
+            "retained": 1006.0
+        },
+        {
+            "value": "Rewards_Page",
+            "churned": 911.0,
+            "retained": 1001.0
+        },
+        {
+            "value": "Game_Pause",
+            "churned": "772",
+            "retained": 824.0
+        },
+        {
+            "value": "Leaderboards_page",
+            "churned": 231.0,
+            "retained": 292.0
+        }
+    ]
 }

@@ -4,7 +4,7 @@
                 <div class="modal-wrap-second">
                   <div class="modal-wrap-iside">
                         <div class="heared-modal">
-                                Product ID Prise Tiers
+                                Product ID Price Tiers
                                 <button (click)="showModal = !true" class="close-icon-wrap">
                                 <!-- <i class="material-icons icon-close">close</i> -->
                                         <i class="ion-close-round"></i>
@@ -40,7 +40,7 @@
             </button>
         </div>
         <div class="dropdown dropdown-smart-table" ngbDropdown>
-            Currency &nbsp;
+            Currency &nbsp; USD
             <!-- <button class="btn btn-primary setwidth" type="button" ngbDropdownToggle>
         Dropdown
       </button>
@@ -48,10 +48,10 @@
         <li *ngFor="let item of tabledata" class="dropdown-item">{{item.currency}}</li>
 
       </ul> -->
-            <select>
+            <!--select>
         <option (change)="changeonddl()"  *ngFor="let item of tabledata" value="{{item.currency}}">{{item.currency}}</option>
 
-      </select>
+      </select-->
 
         <!-- <button (click)="showModal = true">ClicK</button> -->
         </div>
@@ -74,7 +74,7 @@
                     </div>
                 <div class="column column-range big-cell-range">
                     <div class="range-header ">
-                        Recommended Prise Range
+                        Recommended Price Range
                     </div>
                     <div class="prise-range">
                         <div class="min-range">
@@ -87,7 +87,7 @@
                 </div>
                 <div class="column column-range big-cell-range">
                     <div class="range-header">
-                        Custom Prise Range
+                        Custom Price Range
                     </div>
                     <div class="prise-range">
                         <div class="min-range">
@@ -120,7 +120,7 @@
                         </div>
                         <div class="row-table-item" style="width: calc(50% + 1px);">
                             <div class="row-table-item-iside text-hiden">{{item.RPRMax}}</div>
-                            <i (click)="showModal = true" class="ion-stats-bars icon-position"></i>
+                            <!--i (click)="showModal = true" class="ion-stats-bars icon-position"></i-->
                         </div>
                     </div>
                     <div class="row-table-item big-cell-range" style="border:0;">
@@ -131,7 +131,7 @@
                         <div class="row-table-item" style="width: calc(50%);">
                             <div *ngIf="!option[i]" class="row-table-item-iside text-hiden">{{item.CPRMax}}</div>
                             <input *ngIf="option[i]" class="input-smart-table" type="text" [(ngModel)]="item.CPRMax" placeholder="">
-                            <i (click)="showModal = true" class="ion-stats-bars icon-position"></i>
+                            <!--i (click)="showModal = true" class="ion-stats-bars icon-position"></i-->
                         </div>
                     </div>
                     <div class="row-table-item small-cell-icon">

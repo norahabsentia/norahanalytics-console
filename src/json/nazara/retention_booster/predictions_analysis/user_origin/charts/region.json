@@ -1,54 +1,106 @@
 {
-  "region": [
-    {
-      "value": "Maharashtra",
-      "churned": 1824,
-      "retained": 1926
-    },
-    {
-      "value": "Delhi",
-      "churned": 1154,
-      "retained": 1124
-    },
-    {
-      "value": "Uttar Pradesh",
-      "churned": 1115,
-      "retained": 1050
-    },
-    {
-      "value": "Gujarat",
-      "churned": 1021,
-      "retained": 1132
-    },
-    {
-      "value": "Karnataka",
-      "churned": 827,
-      "retained": 927
-    },
-    {
-      "value": "Telangana",
-      "churned": 801,
-      "retained": 811
-    },
-    {
-      "value": "Tamil Nadu",
-      "churned": 755,
-      "retained": 820
-    },
-    {
-      "value": "Madhya Pradesh",
-      "churned": 717,
-      "retained": 676
-    },
-    {
-      "value": "Bihar",
-      "churned": 700,
-      "retained": 566
-    },
-    {
-      "value": "Rajasthan",
-      "churned": 654,
-      "retained": 567
-    }
-  ]
+    "region": [
+        {
+            "value": "Delhi",
+            "churned": 225.0,
+            "retained": 225.0
+        },
+        {
+            "value": "Pune",
+            "churned": 186.0,
+            "retained": 186.0
+        },
+        {
+            "value": "Mumbai",
+            "churned": 179.0,
+            "retained": 167.0
+        },
+        {
+            "value": "Bangalore",
+            "churned": 144.0,
+            "retained": 176.0
+        },
+        {
+            "value": "Hyderabad",
+            "churned": 139.0,
+            "retained": 178.0
+        },
+        {
+            "value": "Chennai",
+            "churned": 140.0,
+            "retained": 166.0
+        },
+        {
+            "value": "Indore",
+            "churned": 170.0,
+            "retained": 135.0
+        },
+        {
+            "value": "Ahmedabad",
+            "churned": 106.0,
+            "retained": 159.0
+        },
+        {
+            "value": "Jaipur",
+            "churned": 113.0,
+            "retained": 140.0
+        },
+        {
+            "value": "Lucknow",
+            "churned": 131.0,
+            "retained": 96.0
+        }
+    ],
+    "": [
+        {
+            "value": "Lahore",
+            "churned": 109.0,
+            "retained": 90.0
+        },
+        {
+            "value": "Patna",
+            "churned": 87.0,
+            "retained": 108.0
+        },
+        {
+            "value": "Surat",
+            "churned": 111.0,
+            "retained": 75.0
+        },
+        {
+            "value": "Nagpur",
+            "churned": 73.0,
+            "retained": 98.0
+        },
+        {
+            "value": "Agra",
+            "churned": 84.0,
+            "retained": 79.0
+        },
+        {
+            "value": "Coimbatore",
+            "churned": 85.0,
+            "retained": 76.0
+        },
+        {
+            "value": "Kolkata",
+            "churned": 73.0,
+            "retained": 74.0
+        },
+        {
+            "value": "Ludhiana",
+            "churned": 58.0,
+            "retained": 85.0
+        },
+        {
+            "value": "Visakhapatnam",
+            "churned": 83.0,
+            "retained": 56.0
+        },
+        {
+            "value": "Karachi",
+            "churned": 74.0,
+            "retained": 64.0
+        }
+    ]
 }

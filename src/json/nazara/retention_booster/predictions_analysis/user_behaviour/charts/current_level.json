@@ -1,61 +1,39 @@
 {
-  "current_level": [
-    {
-      "value": "42",
-      "churned": 125,
-      "retained": 347
-    },
-    {
-      "value": "45",
-      "churned": 158,
-      "retained": 226
-      
-    },
-    {
-      "value": "41",
-      "churned": 108,
-      "retained": 217
-      
-    },
-    {
-      "value": "2",
-      "churned": 236,
-      "retained": 39
-      
-    },
-    {
-      "value": "31",
-      "churned": 94,
-      "retained": 161      
-    },
-    {
-      "value": "32",
-      "churned": 68,
-      "retained": 127
-      
-    },
-    {
-      "value": "39",
-      "churned": 61,
-      "retained": 132
-      
-    },
-    {
-      "value": "6",
-      "churned": 144,
-      "retained": 46
-      
-    },
-    {
-      "value": "35",
-      "churned": 52,
-      "retained": 122
-      
-    },
-    {
-      "value": "3",
-      "churned": 141,
-      "retained": 30
-    }
-  ]
+    "current_level": [
+        {
+            "value": 7.0,
+            "churned": 500.0,
+            "retained": 725.0
+        },
+        {
+            "value": 1.0,
+            "churned": 620.0,
+            "retained": 1025.0
+        },
+        {
+            "value": 4.0,
+            "churned": 2150.0,
+            "retained": 2505.0
+        },
+        {
+            "value": 3.0,
+            "churned": 492.0,
+            "retained": 801.0
+        },
+        {
+            "value": 2.0,
+            "churned": 747.0,
+            "retained": 804.0
+        },
+        {
+            "value": 6.0,
+            "churned": 557.0,
+            "retained": 700.0
+        },
+        {
+            "value": 5.0,
+            "churned": 462.0,
+            "retained": 740.0
+        }
+    ]
 }
