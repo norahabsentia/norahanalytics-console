@@ -1,0 +1,19 @@
+{
+    "stuck_at_a_level": [
+        {
+            "value": "high",
+            "churned": 1422.0,
+            "retained": 2198.0
+        },
+        {
+            "value": "low",
+            "churned": 1065.0,
+            "retained": 1650.0
+        },
+        {
+            "value": "medium",
+            "churned": 3143.0,
+            "retained": 3451.0
+        }
+    ]
+}

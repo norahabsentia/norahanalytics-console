@@ -1,0 +1,22 @@
+{
+    "engagement": [
+        {
+            "value": "low",
+            "Low_Risk": 810.0,
+            "Medium_Risk": 1493.0,
+            "High_Risk": 1962.0
+        },
+        {
+            "value": "medium",
+            "Low_Risk": 597.0,
+            "Medium_Risk": 739.0,
+            "High_Risk": 1507.0
+        },
+        {
+            "value": "high",
+            "Low_Risk": 1163.0,
+            "Medium_Risk": 930.0,
+            "High_Risk": 3723.0
+        }
+    ]
+}

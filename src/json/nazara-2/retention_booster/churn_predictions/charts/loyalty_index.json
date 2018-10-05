@@ -1,0 +1,22 @@
+{
+    "loyalty_index": [
+        {
+            "value": "low",
+            "Low_Risk": 786.0,
+            "Medium_Risk": 1365.0,
+            "High_Risk": 1985.0
+        },
+        {
+            "value": "medium",
+            "Low_Risk": 808.0,
+            "Medium_Risk": 840.0,
+            "High_Risk": 1583.0
+        },
+        {
+            "value": "high",
+            "Low_Risk": 1390.0,
+            "Medium_Risk": 834.0,
+            "High_Risk": 3336.0
+        }
+    ]
+}

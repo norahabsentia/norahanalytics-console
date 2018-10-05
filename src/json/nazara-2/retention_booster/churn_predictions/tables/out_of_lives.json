@@ -1,0 +1,22 @@
+{
+    "out_of_lives": [
+        {
+            "value": "low",
+            "Low_Risk": 248.0,
+            "Medium_Risk": 206.0,
+            "High_Risk": 579.0
+        },
+        {
+            "value": "medium",
+            "Low_Risk": 1055.0,
+            "Medium_Risk": 1274.0,
+            "High_Risk": 2066.0
+        },
+        {
+            "value": "high",
+            "Low_Risk": 1574.0,
+            "Medium_Risk": 1874.0,
+            "High_Risk": 4049.0
+        }
+    ]
+}

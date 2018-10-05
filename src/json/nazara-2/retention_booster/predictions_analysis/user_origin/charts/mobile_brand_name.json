@@ -1,0 +1,44 @@
+{
+    "mobile_brand_name": [
+        {
+            "value": "iPhone",
+            "churned": 1900.0,
+            "retained": 1979.0
+        },
+        {
+            "value": "Samsung",
+            "churned": 749.0,
+            "retained": 544.0
+        },
+        {
+            "value": "Xiaomi",
+            "churned": 941.0,
+            "retained": 869.0
+        },
+        {
+            "value": "Vivo",
+            "churned": 682.0,
+            "retained": 740.0
+        },
+        {
+            "value": "Oppo",
+            "churned": 589.0,
+            "retained": 445.0
+        },
+        {
+            "value": "Lenovo",
+            "churned": 224.0,
+            "retained": 163.0
+        },
+        {
+            "value": "Micromax",
+            "churned": 201.0,
+            "retained": 186.0
+        },
+        {
+            "value": "One Plus",
+            "churned": 1547.0,
+            "retained": 1168.0
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "affluence": [
+        {
+            "value": "1",
+            "churned": 904.0,
+            "retained": 914.0
+        },
+        {
+            "value": "2",
+            "churned": 800.0,
+            "retained": 862.0
+        },
+        {
+            "value": "3",
+            "churned": 2400.0,
+            "retained": 2384.0
+        },
+        {
+            "value": "4",
+            "churned": 765.0,
+            "retained": 786.0
+        },
+        {
+            "value": "5",
+            "churned": 311.0,
+            "retained": 464.0
+        },
+        {
+            "value": "6",
+            "churned": 876.0,
+            "retained": 696.0
+        },
+        {
+            "value": "7",
+            "churned": 454.0,
+            "retained": 311.0
+        }
+    ]
+}

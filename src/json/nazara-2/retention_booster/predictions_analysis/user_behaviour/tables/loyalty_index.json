@@ -1,0 +1,19 @@
+{
+    "loyalty_index": [
+        {
+            "value": "low",
+            "churned": 2107.0,
+            "retained": 1642.0
+        },
+        {
+            "value": "medium",
+            "churned": 2476.0,
+            "retained": 2696.0
+        },
+        {
+            "value": "high",
+            "churned": 2000.0,
+            "retained": 2008.0
+        }
+    ]
+}

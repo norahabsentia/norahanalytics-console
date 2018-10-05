@@ -1,0 +1,29 @@
+{
+    "app_version": [
+        {
+            "value": "1.5.23",
+            "churned": 4563.0,
+            "retained": 4618.0
+        },
+        {
+            "value": "1.5.22",
+            "churned": 543.0,
+            "retained": 498.0
+        },
+        {
+            "value": "1.5.21",
+            "churned": 498.0,
+            "retained": 543.0
+        },
+        {
+            "value": "1.5.20",
+            "churned": 416.0,
+            "retained": 521.0
+        },
+        {
+            "value": "1.5.19",
+            "churned": 314.0,
+            "retained": 415.0
+        }
+    ]
+}

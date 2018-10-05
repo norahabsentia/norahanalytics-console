@@ -1,0 +1,22 @@
+{
+    "level_stickiness": [
+        {
+            "value": "low",
+            "Low_Risk": 744.0,
+            "Medium_Risk": 961.0,
+            "High_Risk": 1396.0
+        },
+        {
+            "value": "medium",
+            "Low_Risk": 814.0,
+            "Medium_Risk": 995.0,
+            "High_Risk": 2715.0
+        },
+        {
+            "value": "high",
+            "Low_Risk": 1007.0,
+            "Medium_Risk": 1802.0,
+            "High_Risk": 2491.0
+        }
+    ]
+}

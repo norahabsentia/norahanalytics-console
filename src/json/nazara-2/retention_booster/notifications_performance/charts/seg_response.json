@@ -1,0 +1,49 @@
+{
+    "segment_type": [
+        {
+            "value": "HSkill LEng",
+            "open": 1105.0,
+            "not_opened": 4713.0
+        },
+        {
+            "value": "MSkill LEng",
+            "open": 989.0,
+            "not_opened": 5605.0
+        },
+        {
+            "value": "LSkill LEng",
+            "open": 504.0,
+            "not_opened": 4539.0
+        },
+        {
+            "value": "HSkill MEng",
+            "open": 593.0,
+            "not_opened": 2898.0
+        },
+        {
+            "value": "MSkill MEng",
+            "open": 543.0,
+            "not_opened": 3336.0
+        },
+        {
+            "value": "LSkill MEng",
+            "open": 543.0,
+            "not_opened": 3336.0
+        },
+        {
+            "value": "HSkill HEng",
+            "open": 387.0,
+            "not_opened": 1552.0
+        },
+        {
+            "value": "MSkill HEng",
+            "open": 380.0,
+            "not_opened": 2335.0
+        },
+        {
+            "value": "LSkill HEng",
+            "open": 302.0,
+            "not_opened": 2025.0
+        }
+    ]
+}

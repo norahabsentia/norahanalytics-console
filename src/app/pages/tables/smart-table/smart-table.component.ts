@@ -63,7 +63,41 @@ import { DataService } from '../../../@core/data/getcountrydata.service';
 })
 export class SmartTableComponent implements OnInit {
 
-  dataT = [
+  dataT = 
+[
+    {
+      "ProductID": "com.dumadugames.pocketbowling.100coins",
+      "BasePrice": "0.99",
+      "RPRMax": 1.99,
+      "RPRMin": 0.99,
+      "CPRMax": 1.99,
+      "CPRMin": 0.99
+    },
+    {
+      "ProductID": "com.dumadugames.pocketbowling.250coins",
+      "BasePrice": "1.99",
+      "RPRMax": 2.99,
+      "RPRMin": 1.09,
+      "CPRMax": 2.99,
+      "CPRMin": 1.09
+    },{
+      "ProductID": "com.dumadugames.pocketbowling.750coins",
+      "BasePrice": "5.99",
+      "RPRMax": 8.99,
+      "RPRMin": 3.49,
+      "CPRMax": 8.99,
+      "CPRMin": 4.49
+    },
+    {
+      "ProductID": "com.dumadugames.pocketbowling.1500coins",
+      "BasePrice": "9.99",
+      "RPRMax": 15.99,
+      "RPRMin": 6.49,
+      "CPRMax": 15.99,
+      "CPRMin": 6.99
+    }
+]
+  /*[
     {
       "ProductID": "123213124",
       "BasePrice": "10000",
@@ -80,7 +114,7 @@ export class SmartTableComponent implements OnInit {
       "CPRMax": 50,
       "CPRMin": 10,
     },
-  ]
+  ]*/
 
 
   settings = {

@@ -1,0 +1,39 @@
+{
+    "last_action": [
+        {
+            "value": "Ads_View",
+            "churned": 901.0,
+            "retained": 1000.0
+        },
+        {
+            "value": "Store_Page",
+            "churned": 765.0,
+            "retained": 747.0
+        },
+        {
+            "value": "Select_Page",
+            "churned": 1205.0,
+            "retained": 987.0
+        },
+        {
+            "value": "Video_Ad",
+            "churned": 1006.0,
+            "retained": 1006.0
+        },
+        {
+            "value": "Rewards_Page",
+            "churned": 911.0,
+            "retained": 1001.0
+        },
+        {
+            "value": "Game_Pause",
+            "churned": "772",
+            "retained": 824.0
+        },
+        {
+            "value": "Leaderboards_page",
+            "churned": 231.0,
+            "retained": 292.0
+        }
+    ]
+}

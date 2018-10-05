@@ -1,0 +1,139 @@
+{
+    "country": [
+        {
+            "value": "India",
+            "churned": 6069.0,
+            "retained": 4047.0
+        },
+        {
+            "value": "Pakistan",
+            "churned": 471.0,
+            "retained": 342.0
+        },
+        {
+            "value": "Bangladesh",
+            "churned": 129.0,
+            "retained": 90.0
+        },
+        {
+            "value": "Indonesia",
+            "churned": 85.0,
+            "retained": 89.0
+        },
+        {
+            "value": "Egypt",
+            "churned": 85.0,
+            "retained": 70.0
+        },
+        {
+            "value": "Algeria",
+            "churned": 35.0,
+            "retained": 36.0
+        },
+        {
+            "value": "Morocco",
+            "churned": 42.0,
+            "retained": 28.0
+        },
+        {
+            "value": "Nepal",
+            "churned": 36.0,
+            "retained": 33.0
+        },
+        {
+            "value": "Saudi Arabia",
+            "churned": 39.0,
+            "retained": 29.0
+        },
+        {
+            "value": "Thailand",
+            "churned": 37.0,
+            "retained": 27.0
+        },
+        {
+            "value": "Cambodia",
+            "churned": 22.0,
+            "retained": 35.0
+        },
+        {
+            "value": "Sri Lanka",
+            "churned": 24.0,
+            "retained": 29.0
+        },
+        {
+            "value": "United Arab Emirates",
+            "churned": 12.0,
+            "retained": 18.0
+        },
+        {
+            "value": "Philippines",
+            "churned": 17.0,
+            "retained": 12.0
+        },
+        {
+            "value": "Kenya",
+            "churned": 12.0,
+            "retained": 13.0
+        },
+        {
+            "value": "Kazakhstan",
+            "churned": 10.0,
+            "retained": 14.0
+        },
+        {
+            "value": "Tunisia",
+            "churned": 12.0,
+            "retained": 11.0
+        },
+        {
+            "value": "South Africa",
+            "churned": 12.0,
+            "retained": 10.0
+        },
+        {
+            "value": "Lebanon",
+            "churned": 9.0,
+            "retained": 10.0
+        },
+        {
+            "value": "Jordan",
+            "churned": 10.0,
+            "retained": 9.0
+        },
+        {
+            "value": "Nigeria",
+            "churned": 6.0,
+            "retained": 10.0
+        },
+        {
+            "value": "United States of America",
+            "churned": 9.0,
+            "retained": 7.0
+        },
+        {
+            "value": "Guatemala",
+            "churned": 7.0,
+            "retained": 8.0
+        },
+        {
+            "value": "Romania",
+            "churned": 6.0,
+            "retained": 8.0
+        },
+        {
+            "value": "Kyrgyzstan",
+            "churned": 7.0,
+            "retained": 7.0
+        },
+        {
+            "value": "Oman",
+            "churned": 5.0,
+            "retained": 8.0
+        },
+        {
+            "value": "Colombia",
+            "churned": 6.0,
+            "retained": 8.0
+        }
+    ]
+}

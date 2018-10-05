@@ -7,8 +7,8 @@
         },
         {
             "value": "Samsung",
-            "churned": 749.0,
-            "retained": 544.0
+            "churned": 1547.0,
+            "retained": 1168.0
         },
         {
             "value": "Xiaomi",
@@ -37,8 +37,8 @@
         },
         {
             "value": "One Plus",
-            "churned": 1547.0,
-            "retained": 1168.0
+            "churned": 749.0,
+            "retained": 544.0
         }
     ]
 }

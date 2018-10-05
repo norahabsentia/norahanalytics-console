@@ -1,0 +1,46 @@
+{
+    "current_level": [
+        {
+            "value": 7.0,
+            "Low_Risk": 126.0,
+            "Medium_Risk": 99.0,
+            "High_Risk": 439.0
+        },
+        {
+            "value": 1.0,
+            "Low_Risk": 253.0,
+            "Medium_Risk": 334.0,
+            "High_Risk": 564.0
+        },
+        {
+            "value": 4.0,
+            "Low_Risk": 1148.0,
+            "Medium_Risk": 1004.0,
+            "High_Risk": 2631.0
+        },
+        {
+            "value": 3.0,
+            "Low_Risk": 543.0,
+            "Medium_Risk": 672.0,
+            "High_Risk": 1370.0
+        },
+        {
+            "value": 2.0,
+            "Low_Risk": 271.0,
+            "Medium_Risk": 232.0,
+            "High_Risk": 788.0
+        },
+        {
+            "value": 6.0,
+            "Low_Risk": 231.0,
+            "Medium_Risk": 243.0,
+            "High_Risk": 743.0
+        },
+        {
+            "value": 5.0,
+            "Low_Risk": 196.0,
+            "Medium_Risk": 368.0,
+            "High_Risk": 663.0
+        }
+    ]
+}

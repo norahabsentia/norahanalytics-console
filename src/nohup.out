@@ -1,0 +1,505 @@
+
+> ngx-admin@2.0.2 start /root/norahanalytics-console
+> ng serve  --host 0.0.0.0 --disable-host-check --aot --port 80
+
+WARNING Running a server with --disable-host-check is a security risk. See https://medium.com/webpack/webpack-dev-server-middleware-security-issues-1489d950874a for more information.
+** NG Live Development Server is listening on 0.0.0.0:80, open your browser on http://localhost:80/ **
+webpack: wait until bundle finished: /
+webpack: wait until bundle finished: /
+webpack: wait until bundle finished: /
+webpack: wait until bundle finished: /
+webpack: wait until bundle finished: /
+webpack: wait until bundle finished: /
+[0mDate: [1m[37m2018-10-05T13:09:05.847Z[39m[22m[0m
+[0mHash: [1m[37m3deb7cef191c00201680[39m[22m[0m
+[0mTime: [1m[37m110101[39m[22mms[0m
+[0mchunk {[1m[33mcharts.module[39m[22m} [1m[32mcharts.module.chunk.js[39m[22m () 15.5 kB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mcommon[39m[22m} [1m[32mcommon.chunk.js[39m[22m (common) 11.1 MB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mcomponents.module[39m[22m} [1m[32mcomponents.module.chunk.js[39m[22m () 531 kB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mfiller-library.module[39m[22m} [1m[32mfiller-library.module.chunk.js[39m[22m () 9.31 kB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mforms.module[39m[22m} [1m[32mforms.module.chunk.js[39m[22m () 179 kB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33minline[39m[22m} [1m[32minline.bundle.js[39m[22m (inline) 5.79 kB [1m[33m[entry][39m[22m[1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mmain[39m[22m} [1m[32mmain.bundle.js[39m[22m (main) 249 kB [1m[33m[initial][39m[22m[1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mmaps.module[39m[22m} [1m[32mmaps.module.chunk.js[39m[22m () 255 kB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mnorah-scheduler.module[39m[22m} [1m[32mnorah-scheduler.module.chunk.js[39m[22m () 111 kB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mnotificationlist.module[39m[22m} [1m[32mnotificationlist.module.chunk.js[39m[22m () 1.01 MB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mpages.module[39m[22m} [1m[32mpages.module.chunk.js[39m[22m () 4.28 MB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mpolyfills[39m[22m} [1m[32mpolyfills.bundle.js[39m[22m (polyfills) 1.64 MB [1m[33m[initial][39m[22m[1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mscripts[39m[22m} [1m[32mscripts.bundle.js[39m[22m (scripts) 2.66 MB [1m[33m[initial][39m[22m[1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33msmart-pricing.module[39m[22m} [1m[32msmart-pricing.module.chunk.js[39m[22m () 617 kB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mstyles[39m[22m} [1m[32mstyles.bundle.js[39m[22m (styles) 2.1 MB [1m[33m[initial][39m[22m[1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mtables.module[39m[22m} [1m[32mtables.module.chunk.js[39m[22m () 100 kB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mui-features.module[39m[22m} [1m[32mui-features.module.chunk.js[39m[22m () 692 kB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mvendor[39m[22m} [1m[32mvendor.bundle.js[39m[22m (vendor) 11.8 MB [1m[33m[initial][39m[22m[1m[32m [rendered][39m[22m[0m
+
+webpack: Compiled successfully.
+Killed
+
+npm ERR! Linux 4.15.0-1021-gcp
+npm ERR! argv "/usr/bin/nodejs" "/usr/bin/npm" "start"
+npm ERR! node v7.10.1
+npm ERR! npm  v4.2.0
+npm ERR! code ELIFECYCLE
+npm ERR! errno 137
+npm ERR! ngx-admin@2.0.2 start: `ng serve  --host 0.0.0.0 --disable-host-check --aot --port 80`
+npm ERR! Exit status 137
+npm ERR! 
+npm ERR! Failed at the ngx-admin@2.0.2 start script 'ng serve  --host 0.0.0.0 --disable-host-check --aot --port 80'.
+npm ERR! Make sure you have the latest version of node.js and npm installed.
+npm ERR! If you do, this is most likely a problem with the ngx-admin package,
+npm ERR! not with npm itself.
+npm ERR! Tell the author that this fails on your system:
+npm ERR!     ng serve  --host 0.0.0.0 --disable-host-check --aot --port 80
+npm ERR! You can get information on how to open an issue for this project with:
+npm ERR!     npm bugs ngx-admin
+npm ERR! Or if that isn't available, you can get their info via:
+npm ERR!     npm owner ls ngx-admin
+npm ERR! There is likely additional logging output above.
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /root/.npm/_logs/2018-10-05T13_09_08_155Z-debug.log
+
+> ngx-admin@2.0.2 start /root/norahanalytics-console
+> ng serve  --host 0.0.0.0 --disable-host-check --aot --port 80
+
+WARNING Running a server with --disable-host-check is a security risk. See https://medium.com/webpack/webpack-dev-server-middleware-security-issues-1489d950874a for more information.
+** NG Live Development Server is listening on 0.0.0.0:80, open your browser on http://localhost:80/ **
+[0mDate: [1m[37m2018-10-05T13:15:40.497Z[39m[22m[0m
+[0mHash: [1m[37m3deb7cef191c00201680[39m[22m[0m
+[0mTime: [1m[37m110213[39m[22mms[0m
+[0mchunk {[1m[33mcharts.module[39m[22m} [1m[32mcharts.module.chunk.js[39m[22m () 15.5 kB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mcommon[39m[22m} [1m[32mcommon.chunk.js[39m[22m (common) 11.1 MB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mcomponents.module[39m[22m} [1m[32mcomponents.module.chunk.js[39m[22m () 531 kB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mfiller-library.module[39m[22m} [1m[32mfiller-library.module.chunk.js[39m[22m () 9.31 kB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mforms.module[39m[22m} [1m[32mforms.module.chunk.js[39m[22m () 179 kB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33minline[39m[22m} [1m[32minline.bundle.js[39m[22m (inline) 5.79 kB [1m[33m[entry][39m[22m[1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mmain[39m[22m} [1m[32mmain.bundle.js[39m[22m (main) 249 kB [1m[33m[initial][39m[22m[1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mmaps.module[39m[22m} [1m[32mmaps.module.chunk.js[39m[22m () 255 kB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mnorah-scheduler.module[39m[22m} [1m[32mnorah-scheduler.module.chunk.js[39m[22m () 111 kB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mnotificationlist.module[39m[22m} [1m[32mnotificationlist.module.chunk.js[39m[22m () 1.01 MB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mpages.module[39m[22m} [1m[32mpages.module.chunk.js[39m[22m () 4.28 MB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mpolyfills[39m[22m} [1m[32mpolyfills.bundle.js[39m[22m (polyfills) 1.64 MB [1m[33m[initial][39m[22m[1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mscripts[39m[22m} [1m[32mscripts.bundle.js[39m[22m (scripts) 2.66 MB [1m[33m[initial][39m[22m[1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33msmart-pricing.module[39m[22m} [1m[32msmart-pricing.module.chunk.js[39m[22m () 617 kB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mstyles[39m[22m} [1m[32mstyles.bundle.js[39m[22m (styles) 2.1 MB [1m[33m[initial][39m[22m[1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mtables.module[39m[22m} [1m[32mtables.module.chunk.js[39m[22m () 100 kB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mui-features.module[39m[22m} [1m[32mui-features.module.chunk.js[39m[22m () 692 kB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mvendor[39m[22m} [1m[32mvendor.bundle.js[39m[22m (vendor) 11.8 MB [1m[33m[initial][39m[22m[1m[32m [rendered][39m[22m[0m
+
+webpack: Compiled successfully.
+webpack: Compiling...
+webpack: wait until bundle finished: /
+webpack: wait until bundle finished: /
+webpack: wait until bundle finished: /jquery.qtip.min.map
+[0mDate: [1m[37m2018-10-05T16:32:15.856Z[39m[22m - Hash: [1m[37mcae8f2cb9e8b2fefa884[39m[22m - Time: [1m[37m82134[39m[22mms[0m
+[0m8 unchanged chunks[0m
+[0mchunk {[1m[33mcommon[39m[22m} [1m[32mcommon.chunk.js[39m[22m (common) 11.1 MB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mcomponents.module[39m[22m} [1m[32mcomponents.module.chunk.js[39m[22m () 531 kB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mfiller-library.module[39m[22m} [1m[32mfiller-library.module.chunk.js[39m[22m () 19.3 kB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mmain[39m[22m} [1m[32mmain.bundle.js[39m[22m (main) 250 kB [1m[33m[initial][39m[22m[1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mmaps.module[39m[22m} [1m[32mmaps.module.chunk.js[39m[22m () 254 kB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mnorah-scheduler.module[39m[22m} [1m[32mnorah-scheduler.module.chunk.js[39m[22m () 112 kB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mnotificationlist.module[39m[22m} [1m[32mnotificationlist.module.chunk.js[39m[22m () 1.03 MB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mpages.module[39m[22m} [1m[32mpages.module.chunk.js[39m[22m () 4.31 MB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33msmart-pricing.module[39m[22m} [1m[32msmart-pricing.module.chunk.js[39m[22m () 620 kB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mui-features.module[39m[22m} [1m[32mui-features.module.chunk.js[39m[22m () 621 kB [1m[32m [rendered][39m[22m[0m
+
+webpack: Compiled successfully.
+webpack: Compiling...
+webpack: wait until bundle finished: //
+webpack: wait until bundle finished: /inline.bundle.js
+webpack: wait until bundle finished: /polyfills.bundle.js
+webpack: wait until bundle finished: /styles.bundle.js
+webpack: wait until bundle finished: /scripts.bundle.js
+webpack: wait until bundle finished: /vendor.bundle.js
+webpack: wait until bundle finished: /main.bundle.js
+[0mDate: [1m[37m2018-10-05T16:32:42.566Z[39m[22m - Hash: [1m[37m3b8fa6bde58e6a489a08[39m[22m - Time: [1m[37m25786[39m[22mms[0m
+[0m7 unchanged chunks[0m
+[0mchunk {[1m[33mcharts.module[39m[22m} [1m[32mcharts.module.chunk.js[39m[22m () 32 kB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mcommon[39m[22m} [1m[32mcommon.chunk.js[39m[22m (common) 11.1 MB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mcomponents.module[39m[22m} [1m[32mcomponents.module.chunk.js[39m[22m () 541 kB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mforms.module[39m[22m} [1m[32mforms.module.chunk.js[39m[22m () 155 kB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mmain[39m[22m} [1m[32mmain.bundle.js[39m[22m (main) 276 kB [1m[33m[initial][39m[22m[1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mmaps.module[39m[22m} [1m[32mmaps.module.chunk.js[39m[22m () 265 kB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mnorah-scheduler.module[39m[22m} [1m[32mnorah-scheduler.module.chunk.js[39m[22m () 122 kB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mpages.module[39m[22m} [1m[32mpages.module.chunk.js[39m[22m () 4.31 MB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33msmart-pricing.module[39m[22m} [1m[32msmart-pricing.module.chunk.js[39m[22m () 644 kB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mtables.module[39m[22m} [1m[32mtables.module.chunk.js[39m[22m () 117 kB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mui-features.module[39m[22m} [1m[32mui-features.module.chunk.js[39m[22m () 631 kB [1m[32m [rendered][39m[22m[0m
+
+webpack: Compiled successfully.
+webpack: Compiling...
+webpack: wait until bundle finished: //
+[0mDate: [1m[37m2018-10-05T16:43:54.691Z[39m[22m - Hash: [1m[37mc9a221baaad2cd322b3e[39m[22m - Time: [1m[37m23307[39m[22mms[0m
+[0m17 unchanged chunks[0m
+[0mchunk {[1m[33mtables.module[39m[22m} [1m[32mtables.module.chunk.js[39m[22m () 117 kB [1m[32m [rendered][39m[22m[0m
+
+webpack: Compiled successfully.
+webpack: Compiling...
+[0mDate: [1m[37m2018-10-05T17:02:10.928Z[39m[22m - Hash: [1m[37mebbbb431851c998246a1[39m[22m - Time: [1m[37m23643[39m[22mms[0m
+[0m17 unchanged chunks[0m
+[0mchunk {[1m[33mtables.module[39m[22m} [1m[32mtables.module.chunk.js[39m[22m () 114 kB [1m[32m [rendered][39m[22m[0m
+
+webpack: Compiled successfully.
+webpack: Compiling...
+webpack: wait until bundle finished: //
+webpack: wait until bundle finished: /
+[0mDate: [1m[37m2018-10-05T17:02:30.181Z[39m[22m - Hash: [1m[37m925ae9d31d4ef5d13d83[39m[22m - Time: [1m[37m18395[39m[22mms[0m
+[0m18 unchanged chunks[0m
+
+webpack: Compiled successfully.
+webpack: Compiling...
+[0mDate: [1m[37m2018-10-05T17:05:03.161Z[39m[22m - Hash: [1m[37mebe6448310ee3e87903f[39m[22m - Time: [1m[37m22685[39m[22mms[0m
+[0m17 unchanged chunks[0m
+[0mchunk {[1m[33mtables.module[39m[22m} [1m[32mtables.module.chunk.js[39m[22m () 115 kB [1m[32m [rendered][39m[22m[0m
+
+webpack: Compiled successfully.
+webpack: Compiling...
+[0mDate: [1m[37m2018-10-05T17:12:12.610Z[39m[22m - Hash: [1m[37m53cb376bf3172a487660[39m[22m - Time: [1m[37m24047[39m[22mms[0m
+[0m17 unchanged chunks[0m
+[0mchunk {[1m[33mtables.module[39m[22m} [1m[32mtables.module.chunk.js[39m[22m () 115 kB [1m[32m [rendered][39m[22m[0m
+
+webpack: Compiled successfully.
+webpack: Compiling...
+[0mDate: [1m[37m2018-10-05T17:13:29.963Z[39m[22m - Hash: [1m[37mebe6448310ee3e87903f[39m[22m - Time: [1m[37m20184[39m[22mms[0m
+[0m17 unchanged chunks[0m
+[0mchunk {[1m[33mtables.module[39m[22m} [1m[32mtables.module.chunk.js[39m[22m () 115 kB [1m[32m [rendered][39m[22m[0m
+
+webpack: Compiled successfully.
+webpack: Compiling...
+[0mDate: [1m[37m2018-10-05T17:16:32.253Z[39m[22m - Hash: [1m[37mfe0ae6a1ea51b2264d4d[39m[22m - Time: [1m[37m22394[39m[22mms[0m
+[0m17 unchanged chunks[0m
+[0mchunk {[1m[33mtables.module[39m[22m} [1m[32mtables.module.chunk.js[39m[22m () 114 kB [1m[32m [rendered][39m[22m[0m
+
+webpack: Compiled successfully.
+webpack: Compiling...
+webpack: wait until bundle finished: //
+webpack: wait until bundle finished: /
+[0mDate: [1m[37m2018-10-05T17:16:53.204Z[39m[22m - Hash: [1m[37m9b03190f6031cf986e40[39m[22m - Time: [1m[37m19871[39m[22mms[0m
+[0m18 unchanged chunks[0m
+
+webpack: Compiled successfully.
+webpack: Compiling...
+webpack: wait until bundle finished: //inline.bundle.js
+webpack: wait until bundle finished: //polyfills.bundle.js
+webpack: wait until bundle finished: //vendor.bundle.js
+webpack: wait until bundle finished: //styles.bundle.js
+webpack: wait until bundle finished: //scripts.bundle.js
+webpack: wait until bundle finished: //main.bundle.js
+webpack: wait until bundle finished: /inline.bundle.js
+webpack: wait until bundle finished: /polyfills.bundle.js
+webpack: wait until bundle finished: /styles.bundle.js
+webpack: wait until bundle finished: /scripts.bundle.js
+webpack: wait until bundle finished: /vendor.bundle.js
+webpack: wait until bundle finished: /main.bundle.js
+[0mDate: [1m[37m2018-10-05T17:17:13.396Z[39m[22m - Hash: [1m[37mfe0ae6a1ea51b2264d4d[39m[22m - Time: [1m[37m18866[39m[22mms[0m
+[0m18 unchanged chunks[0m
+
+webpack: Compiled successfully.
+webpack: Compiling...
+webpack: wait until bundle finished: /jquery.qtip.min.map
+webpack: wait until bundle finished: /fonts/Avenir/AvenirRegular.woff
+webpack: wait until bundle finished: /pages.module.chunk.js
+webpack: wait until bundle finished: /common.chunk.js
+[0mDate: [1m[37m2018-10-05T17:17:49.209Z[39m[22m - Hash: [1m[37mb0768b72c9ed39efe754[39m[22m - Time: [1m[37m33609[39m[22mms[0m
+[0m17 unchanged chunks[0m
+[0mchunk {[1m[33mpages.module[39m[22m} [1m[32mpages.module.chunk.js[39m[22m () 4.31 MB [1m[32m [rendered][39m[22m[0m
+
+webpack: Compiled successfully.
+webpack: Compiling...
+webpack: wait until bundle finished: //
+webpack: wait until bundle finished: /
+webpack: wait until bundle finished: /tables.module.chunk.js
+[0mDate: [1m[37m2018-10-05T17:18:17.626Z[39m[22m - Hash: [1m[37m7fdb32494ec1bc49f20a[39m[22m - Time: [1m[37m27614[39m[22mms[0m
+[0m17 unchanged chunks[0m
+[0mchunk {[1m[33mmain[39m[22m} [1m[32mmain.bundle.js[39m[22m (main) 276 kB [1m[33m[initial][39m[22m[1m[32m [rendered][39m[22m[0m
+
+webpack: Compiled successfully.
+webpack: Compiling...
+[0mDate: [1m[37m2018-10-05T17:20:42.073Z[39m[22m - Hash: [1m[37m34c62713e038b8665c06[39m[22m - Time: [1m[37m23753[39m[22mms[0m
+[0m17 unchanged chunks[0m
+[0mchunk {[1m[33mpages.module[39m[22m} [1m[32mpages.module.chunk.js[39m[22m () 4.3 MB [1m[32m [rendered][39m[22m[0m
+
+webpack: Compiled successfully.
+webpack: Compiling...
+[0mDate: [1m[37m2018-10-05T17:22:12.504Z[39m[22m - Hash: [1m[37m49f123abd5a52ec2dd92[39m[22m - Time: [1m[37m22191[39m[22mms[0m
+[0m18 unchanged chunks[0m
+
+webpack: Compiled successfully.
+webpack: Compiling...
+webpack: wait until bundle finished: //
+webpack: wait until bundle finished: /
+[0mDate: [1m[37m2018-10-05T17:23:49.764Z[39m[22m - Hash: [1m[37m87db8227a72909a9ba9d[39m[22m - Time: [1m[37m23586[39m[22mms[0m
+[0m17 unchanged chunks[0m
+[0mchunk {[1m[33mcommon[39m[22m} [1m[32mcommon.chunk.js[39m[22m (common) 11.1 MB [1m[32m [rendered][39m[22m[0m
+
+webpack: Compiled successfully.
+webpack: Compiling...
+[0mDate: [1m[37m2018-10-05T17:25:39.788Z[39m[22m - Hash: [1m[37mb8b516ccb9a85f2c4ab2[39m[22m - Time: [1m[37m24149[39m[22mms[0m
+[0m17 unchanged chunks[0m
+[0mchunk {[1m[33mcommon[39m[22m} [1m[32mcommon.chunk.js[39m[22m (common) 11.1 MB [1m[32m [rendered][39m[22m[0m
+
+webpack: Compiled successfully.
+webpack: Compiling...
+[0mDate: [1m[37m2018-10-05T17:31:59.255Z[39m[22m - Hash: [1m[37m1d308ec57e5d5fa5089c[39m[22m - Time: [1m[37m21231[39m[22mms[0m
+[0m18 unchanged chunks[0m
+
+webpack: Compiled successfully.
+webpack: Compiling...
+webpack: wait until bundle finished: /
+webpack: wait until bundle finished: /json/nazara/retention_booster/churn_predictions/overview/stats.json
+webpack: wait until bundle finished: /json/nazara/retention_booster/churn_predictions/tables/platform.json
+webpack: wait until bundle finished: /json/nazara/retention_booster/churn_predictions/charts/platform.json
+webpack: wait until bundle finished: /json/nazara/retention_booster/churn_predictions/charts/country.json
+webpack: wait until bundle finished: /json/nazara/retention_booster/churn_predictions/charts/engagement.json
+webpack: wait until bundle finished: /json/nazara/retention_booster/churn_predictions/tables/country.json
+[0mDate: [1m[37m2018-10-05T17:48:06.390Z[39m[22m - Hash: [1m[37mebdb97a92d6d86928bf7[39m[22m - Time: [1m[37m23790[39m[22mms[0m
+[0m17 unchanged chunks[0m
+[0mchunk {[1m[33mpages.module[39m[22m} [1m[32mpages.module.chunk.js[39m[22m () 4.3 MB [1m[32m [rendered][39m[22m[0m
+
+webpack: Compiled successfully.
+webpack: Compiling...
+[0mDate: [1m[37m2018-10-05T17:50:00.948Z[39m[22m - Hash: [1m[37me09a901b22708f58e5b7[39m[22m - Time: [1m[37m24249[39m[22mms[0m
+[0m18 unchanged chunks[0m
+
+webpack: Compiled successfully.
+webpack: Compiling...
+webpack: wait until bundle finished: /assets/images/user.png
+[0mDate: [1m[37m2018-10-05T17:50:45.935Z[39m[22m - Hash: [1m[37m4792fdf925db6dde66b1[39m[22m - Time: [1m[37m21133[39m[22mms[0m
+[0m17 unchanged chunks[0m
+[0mchunk {[1m[33mpages.module[39m[22m} [1m[32mpages.module.chunk.js[39m[22m () 4.3 MB [1m[32m [rendered][39m[22m[0m
+
+webpack: Compiled successfully.
+webpack: Compiling...
+webpack: wait until bundle finished: /
+webpack: wait until bundle finished: /
+webpack: wait until bundle finished: //
+webpack: wait until bundle finished: /json/nazara/retention_booster/notifications_performance/overview/stats.json
+webpack: wait until bundle finished: /json/nazara/retention_booster/notifications_performance/charts/not_churn.json
+webpack: wait until bundle finished: /json/nazara/retention_booster/notifications_performance/charts/notification_daily_reponse.json
+webpack: wait until bundle finished: /json/nazara/retention_booster/notifications_performance/charts/not_segment.json
+webpack: wait until bundle finished: /json/nazara/retention_booster/notifications_performance/charts/not_response.json
+[0mDate: [1m[37m2018-10-05T17:51:06.762Z[39m[22m - Hash: [1m[37m1777b8b69e8940015bba[39m[22m - Time: [1m[37m19773[39m[22mms[0m
+[0m18 unchanged chunks[0m
+
+webpack: Compiled successfully.
+webpack: Compiling...
+webpack: wait until bundle finished: //
+[0mDate: [1m[37m2018-10-05T17:53:10.762Z[39m[22m - Hash: [1m[37m218f22e0f21091531430[39m[22m - Time: [1m[37m24505[39m[22mms[0m
+[0m17 unchanged chunks[0m
+[0mchunk {[1m[33mcommon[39m[22m} [1m[32mcommon.chunk.js[39m[22m (common) 11.1 MB [1m[32m [rendered][39m[22m[0m
+
+webpack: Compiled successfully.
+webpack: Compiling...
+webpack: wait until bundle finished: /
+webpack: wait until bundle finished: //vendor.bundle.js
+webpack: wait until bundle finished: /
+webpack: wait until bundle finished: //styles.bundle.js
+webpack: wait until bundle finished: //inline.bundle.js
+webpack: wait until bundle finished: //polyfills.bundle.js
+webpack: wait until bundle finished: //scripts.bundle.js
+webpack: wait until bundle finished: //main.bundle.js
+[0mDate: [1m[37m2018-10-05T17:53:32.896Z[39m[22m - Hash: [1m[37m4cb78ba57e9f2901ad56[39m[22m - Time: [1m[37m21207[39m[22mms[0m
+[0m17 unchanged chunks[0m
+[0mchunk {[1m[33mcommon[39m[22m} [1m[32mcommon.chunk.js[39m[22m (common) 11.1 MB [1m[32m [rendered][39m[22m[0m
+
+webpack: Compiled successfully.
+webpack: Compiling...
+webpack: wait until bundle finished: /common.chunk.js
+webpack: wait until bundle finished: /pages.module.chunk.js
+[0mDate: [1m[37m2018-10-05T17:54:03.169Z[39m[22m - Hash: [1m[37m362ed010c5ee3dc6761d[39m[22m - Time: [1m[37m21134[39m[22mms[0m
+[0m17 unchanged chunks[0m
+[0mchunk {[1m[33mcommon[39m[22m} [1m[32mcommon.chunk.js[39m[22m (common) 11.1 MB [1m[32m [rendered][39m[22m[0m
+
+webpack: Compiled successfully.
+webpack: Compiling...
+[0mDate: [1m[37m2018-10-05T18:01:51.645Z[39m[22m - Hash: [1m[37m8f93381c99565d814b7d[39m[22m - Time: [1m[37m6565[39m[22mms[0m
+[0m18 unchanged chunks[0m
+
+webpack: Compiled successfully.
+webpack: Compiling...
+[0mDate: [1m[37m2018-10-05T18:08:33.507Z[39m[22m - Hash: [1m[37m7ef37017e16c2dcc7d14[39m[22m - Time: [1m[37m25218[39m[22mms[0m
+[0m17 unchanged chunks[0m
+[0mchunk {[1m[33msmart-pricing.module[39m[22m} [1m[32msmart-pricing.module.chunk.js[39m[22m () 643 kB [1m[32m [rendered][39m[22m[0m
+
+webpack: Compiled successfully.
+webpack: Compiling...
+webpack: wait until bundle finished: /
+webpack: wait until bundle finished: /
+webpack: wait until bundle finished: //
+[0mDate: [1m[37m2018-10-05T18:08:55.498Z[39m[22m - Hash: [1m[37m4ae3a3facda23d1a6774[39m[22m - Time: [1m[37m21203[39m[22mms[0m
+[0m18 unchanged chunks[0m
+
+webpack: Compiled successfully.
+webpack: Compiling...
+[0mDate: [1m[37m2018-10-05T18:09:36.405Z[39m[22m - Hash: [1m[37m8748abff57fa2cb6d3ce[39m[22m - Time: [1m[37m20730[39m[22mms[0m
+[0m17 unchanged chunks[0m
+[0mchunk {[1m[33mpages.module[39m[22m} [1m[32mpages.module.chunk.js[39m[22m () 4.3 MB [1m[32m [rendered][39m[22m[0m
+
+webpack: Compiled successfully.
+webpack: Compiling...
+[0mDate: [1m[37m2018-10-05T18:36:37.447Z[39m[22m - Hash: [1m[37m646d628bb411582aaaab[39m[22m - Time: [1m[37m6889[39m[22mms[0m
+[0m18 unchanged chunks[0m
+
+webpack: Compiled successfully.
+Killed
+
+npm ERR! Linux 4.15.0-1021-gcp
+npm ERR! argv "/usr/bin/nodejs" "/usr/bin/npm" "start"
+npm ERR! node v7.10.1
+npm ERR! npm  v4.2.0
+npm ERR! code ELIFECYCLE
+npm ERR! errno 137
+npm ERR! ngx-admin@2.0.2 start: `ng serve  --host 0.0.0.0 --disable-host-check --aot --port 80`
+npm ERR! Exit status 137
+npm ERR! 
+npm ERR! Failed at the ngx-admin@2.0.2 start script 'ng serve  --host 0.0.0.0 --disable-host-check --aot --port 80'.
+npm ERR! Make sure you have the latest version of node.js and npm installed.
+npm ERR! If you do, this is most likely a problem with the ngx-admin package,
+npm ERR! not with npm itself.
+npm ERR! Tell the author that this fails on your system:
+npm ERR!     ng serve  --host 0.0.0.0 --disable-host-check --aot --port 80
+npm ERR! You can get information on how to open an issue for this project with:
+npm ERR!     npm bugs ngx-admin
+npm ERR! Or if that isn't available, you can get their info via:
+npm ERR!     npm owner ls ngx-admin
+npm ERR! There is likely additional logging output above.
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /root/.npm/_logs/2018-10-05T18_39_50_807Z-debug.log
+
+> ngx-admin@2.0.2 start /root/norahanalytics-console
+> ng serve  --host 0.0.0.0 --disable-host-check --aot --port 80
+
+WARNING Running a server with --disable-host-check is a security risk. See https://medium.com/webpack/webpack-dev-server-middleware-security-issues-1489d950874a for more information.
+** NG Live Development Server is listening on 0.0.0.0:80, open your browser on http://localhost:80/ **
+Killed
+
+npm ERR! Linux 4.15.0-1021-gcp
+npm ERR! argv "/usr/bin/nodejs" "/usr/bin/npm" "start"
+npm ERR! node v7.10.1
+npm ERR! npm  v4.2.0
+npm ERR! code ELIFECYCLE
+npm ERR! errno 137
+npm ERR! ngx-admin@2.0.2 start: `ng serve  --host 0.0.0.0 --disable-host-check --aot --port 80`
+npm ERR! Exit status 137
+npm ERR! 
+npm ERR! Failed at the ngx-admin@2.0.2 start script 'ng serve  --host 0.0.0.0 --disable-host-check --aot --port 80'.
+npm ERR! Make sure you have the latest version of node.js and npm installed.
+npm ERR! If you do, this is most likely a problem with the ngx-admin package,
+npm ERR! not with npm itself.
+npm ERR! Tell the author that this fails on your system:
+npm ERR!     ng serve  --host 0.0.0.0 --disable-host-check --aot --port 80
+npm ERR! You can get information on how to open an issue for this project with:
+npm ERR!     npm bugs ngx-admin
+npm ERR! Or if that isn't available, you can get their info via:
+npm ERR!     npm owner ls ngx-admin
+npm ERR! There is likely additional logging output above.
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /root/.npm/_logs/2018-10-05T19_54_36_354Z-debug.log
+
+> ngx-admin@2.0.2 start /root/norahanalytics-console
+> ng serve  --host 0.0.0.0 --disable-host-check --aot --port 80
+
+WARNING Running a server with --disable-host-check is a security risk. See https://medium.com/webpack/webpack-dev-server-middleware-security-issues-1489d950874a for more information.
+** NG Live Development Server is listening on 0.0.0.0:80, open your browser on http://localhost:80/ **
+Killed
+
+> ngx-admin@2.0.2 start /root/norahanalytics-console
+> ng serve  --host 0.0.0.0 --disable-host-check --aot --port 80
+
+WARNING Running a server with --disable-host-check is a security risk. See https://medium.com/webpack/webpack-dev-server-middleware-security-issues-1489d950874a for more information.
+** NG Live Development Server is listening on 0.0.0.0:80, open your browser on http://localhost:80/ **
+[0mDate: [1m[37m2018-10-05T20:02:33.857Z[39m[22m[0m
+[0mHash: [1m[37md1ec22d984fee1fa7099[39m[22m[0m
+[0mTime: [1m[37m108511[39m[22mms[0m
+[0mchunk {[1m[33mcharts.module[39m[22m} [1m[32mcharts.module.chunk.js[39m[22m () 15.5 kB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mcommon[39m[22m} [1m[32mcommon.chunk.js[39m[22m (common) 11.1 MB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mcomponents.module[39m[22m} [1m[32mcomponents.module.chunk.js[39m[22m () 531 kB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mfiller-library.module[39m[22m} [1m[32mfiller-library.module.chunk.js[39m[22m () 9.31 kB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mforms.module[39m[22m} [1m[32mforms.module.chunk.js[39m[22m () 179 kB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33minline[39m[22m} [1m[32minline.bundle.js[39m[22m (inline) 5.79 kB [1m[33m[entry][39m[22m[1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mmain[39m[22m} [1m[32mmain.bundle.js[39m[22m (main) 249 kB [1m[33m[initial][39m[22m[1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mmaps.module[39m[22m} [1m[32mmaps.module.chunk.js[39m[22m () 255 kB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mnorah-scheduler.module[39m[22m} [1m[32mnorah-scheduler.module.chunk.js[39m[22m () 111 kB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mnotificationlist.module[39m[22m} [1m[32mnotificationlist.module.chunk.js[39m[22m () 1.01 MB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mpages.module[39m[22m} [1m[32mpages.module.chunk.js[39m[22m () 4.27 MB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mpolyfills[39m[22m} [1m[32mpolyfills.bundle.js[39m[22m (polyfills) 1.64 MB [1m[33m[initial][39m[22m[1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mscripts[39m[22m} [1m[32mscripts.bundle.js[39m[22m (scripts) 2.66 MB [1m[33m[initial][39m[22m[1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33msmart-pricing.module[39m[22m} [1m[32msmart-pricing.module.chunk.js[39m[22m () 618 kB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mstyles[39m[22m} [1m[32mstyles.bundle.js[39m[22m (styles) 2.1 MB [1m[33m[initial][39m[22m[1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mtables.module[39m[22m} [1m[32mtables.module.chunk.js[39m[22m () 99.7 kB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mui-features.module[39m[22m} [1m[32mui-features.module.chunk.js[39m[22m () 692 kB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mvendor[39m[22m} [1m[32mvendor.bundle.js[39m[22m (vendor) 11.8 MB [1m[33m[initial][39m[22m[1m[32m [rendered][39m[22m[0m
+
+webpack: Compiled successfully.
+webpack: Compiling...
+webpack: wait until bundle finished: /common.chunk.js
+webpack: wait until bundle finished: /pages.module.chunk.js
+webpack: wait until bundle finished: /assets/country-currency.json
+webpack: wait until bundle finished: /assets/images/user.png
+webpack: wait until bundle finished: /fonts/Avenir/AvenirRegular.woff
+[0mDate: [1m[37m2018-10-05T20:03:49.274Z[39m[22m - Hash: [1m[37m85fd9e8014af693f4d76[39m[22m - Time: [1m[37m71530[39m[22mms[0m
+[0m7 unchanged chunks[0m
+[0mchunk {[1m[33mcommon[39m[22m} [1m[32mcommon.chunk.js[39m[22m (common) 11.1 MB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mcomponents.module[39m[22m} [1m[32mcomponents.module.chunk.js[39m[22m () 531 kB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mfiller-library.module[39m[22m} [1m[32mfiller-library.module.chunk.js[39m[22m () 19.3 kB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mmain[39m[22m} [1m[32mmain.bundle.js[39m[22m (main) 250 kB [1m[33m[initial][39m[22m[1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mmaps.module[39m[22m} [1m[32mmaps.module.chunk.js[39m[22m () 254 kB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mnorah-scheduler.module[39m[22m} [1m[32mnorah-scheduler.module.chunk.js[39m[22m () 112 kB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mnotificationlist.module[39m[22m} [1m[32mnotificationlist.module.chunk.js[39m[22m () 1.03 MB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mpages.module[39m[22m} [1m[32mpages.module.chunk.js[39m[22m () 4.28 MB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33msmart-pricing.module[39m[22m} [1m[32msmart-pricing.module.chunk.js[39m[22m () 619 kB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mtables.module[39m[22m} [1m[32mtables.module.chunk.js[39m[22m () 100 kB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mui-features.module[39m[22m} [1m[32mui-features.module.chunk.js[39m[22m () 621 kB [1m[32m [rendered][39m[22m[0m
+
+webpack: Compiled successfully.
+webpack: Compiling...
+webpack: wait until bundle finished: /
+webpack: wait until bundle finished: /
+[0mDate: [1m[37m2018-10-05T20:04:14.348Z[39m[22m - Hash: [1m[37m6ec94c7d749ded89555b[39m[22m - Time: [1m[37m22307[39m[22mms[0m
+[0m7 unchanged chunks[0m
+[0mchunk {[1m[33mcharts.module[39m[22m} [1m[32mcharts.module.chunk.js[39m[22m () 32 kB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mcommon[39m[22m} [1m[32mcommon.chunk.js[39m[22m (common) 11.1 MB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mcomponents.module[39m[22m} [1m[32mcomponents.module.chunk.js[39m[22m () 541 kB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mforms.module[39m[22m} [1m[32mforms.module.chunk.js[39m[22m () 155 kB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mmain[39m[22m} [1m[32mmain.bundle.js[39m[22m (main) 276 kB [1m[33m[initial][39m[22m[1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mmaps.module[39m[22m} [1m[32mmaps.module.chunk.js[39m[22m () 265 kB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mnorah-scheduler.module[39m[22m} [1m[32mnorah-scheduler.module.chunk.js[39m[22m () 122 kB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mpages.module[39m[22m} [1m[32mpages.module.chunk.js[39m[22m () 4.3 MB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33msmart-pricing.module[39m[22m} [1m[32msmart-pricing.module.chunk.js[39m[22m () 643 kB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mtables.module[39m[22m} [1m[32mtables.module.chunk.js[39m[22m () 117 kB [1m[32m [rendered][39m[22m[0m
+[0mchunk {[1m[33mui-features.module[39m[22m} [1m[32mui-features.module.chunk.js[39m[22m () 631 kB [1m[32m [rendered][39m[22m[0m
+
+webpack: Compiled successfully.
+webpack: Compiling...
+webpack: wait until bundle finished: /jquery.qtip.min.map
+[0mDate: [1m[37m2018-10-05T20:06:11.161Z[39m[22m - Hash: [1m[37m5df5e68000da78769171[39m[22m - Time: [1m[37m22457[39m[22mms[0m
+[0m17 unchanged chunks[0m
+[0mchunk {[1m[33mtables.module[39m[22m} [1m[32mtables.module.chunk.js[39m[22m () 116 kB [1m[32m [rendered][39m[22m[0m
+
+webpack: Compiled successfully.
+webpack: Compiling...
+[0mDate: [1m[37m2018-10-05T20:07:50.955Z[39m[22m - Hash: [1m[37m902230335735b56ee295[39m[22m - Time: [1m[37m20509[39m[22mms[0m
+[0m17 unchanged chunks[0m
+[0mchunk {[1m[33mtables.module[39m[22m} [1m[32mtables.module.chunk.js[39m[22m () 116 kB [1m[32m [rendered][39m[22m[0m
+
+webpack: Compiled successfully.
+webpack: Compiling...
+[0mDate: [1m[37m2018-10-05T20:10:18.566Z[39m[22m - Hash: [1m[37m8252c053b31ad794a6ed[39m[22m - Time: [1m[37m23635[39m[22mms[0m
+[0m17 unchanged chunks[0m
+[0mchunk {[1m[33mtables.module[39m[22m} [1m[32mtables.module.chunk.js[39m[22m () 117 kB [1m[32m [rendered][39m[22m[0m
+
+webpack: Compiled successfully.
+webpack: Compiling...
+[0mDate: [1m[37m2018-10-05T20:15:26.633Z[39m[22m - Hash: [1m[37m3d2f5972be7422726cd6[39m[22m - Time: [1m[37m33001[39m[22mms[0m
+[0m17 unchanged chunks[0m
+[0mchunk {[1m[33mpages.module[39m[22m} [1m[32mpages.module.chunk.js[39m[22m () 4.3 MB [1m[32m [rendered][39m[22m[0m
+
+webpack: Compiled successfully.
+webpack: Compiling...
+[0mDate: [1m[37m2018-10-05T20:22:22.290Z[39m[22m - Hash: [1m[37mf999f6be1078b45b102e[39m[22m - Time: [1m[37m7477[39m[22mms[0m
+[0m18 unchanged chunks[0m
+
+webpack: Compiled successfully.

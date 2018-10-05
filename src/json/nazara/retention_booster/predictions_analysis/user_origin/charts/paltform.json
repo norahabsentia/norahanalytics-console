@@ -5,12 +5,10 @@
             "churned": 3725.0,
             "retained": 4938.0
         }
-    ],
-    "": [
-        {
-            "value": "iOS",
-            "churned": 2389.0,
-            "retained": 1878.0
-        }
-    ]
+    ,{
+        "value": "iOS",
+        "churned": 2389.0,
+        "retained": 1878.0
+    }
+]
 }
